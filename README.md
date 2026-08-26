@@ -72,8 +72,7 @@ si le système sait dire qu'il ne sait pas. Détail dans
 [`corpus_exemple/LISEZ_MOI.md`](corpus_exemple/LISEZ_MOI.md).
 
 **Phase 1 — local uniquement.** Le déploiement VPS est une étape séparée et
-ultérieure. Et il manque encore un `requirements.txt` : l'installation demande de
-suivre la section ci-dessous à la main.
+ultérieure.
 
 ## Ce que c'est vraiment
 
@@ -102,10 +101,18 @@ n'existe »*.
 ## Installation
 
 ```bash
-pip install chromadb sentence-transformers rank_bm25 ollama pyyaml --break-system-packages
-pip install pdfplumber python-docx --break-system-packages   # selon les formats du corpus
+pip install -r requirements.txt
 ollama serve && ollama pull qwen3:8b
 ```
+
+Les bornes de `requirements.txt` sont relevées sur un environnement où le projet
+tourne — Python 3.11.15, chromadb 1.5.9, sentence-transformers 5.5.0 — et non
+déduites d'une documentation. Les lecteurs de `.pdf` et `.docx` y sont commentés :
+leurs imports sont paresseux, un corpus en `.txt` et `.md` n'en a pas besoin.
+
+Il faut compter le téléchargement des modèles au premier lancement : environ 1 Go
+pour l'embeddeur, 400 Mo pour le reranker du profil `moyen`, et 5 Go pour
+`qwen3:8b`. Le profil `minimal` n'a besoin que du premier.
 
 ## Usage
 

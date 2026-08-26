@@ -1,0 +1,44 @@
+# ═══════════════════════════════════════════════════════════════════════
+# requirements.txt — createur-rag
+#
+#   pip install -r requirements.txt
+#
+# Les bornes ci-dessous sont RELEVÉES sur un environnement où le projet
+# tourne réellement (26 août 2026), pas déduites d'une documentation :
+#
+#   Python 3.11.15 · chromadb 1.5.9 · sentence-transformers 5.5.0
+#   rank-bm25 0.2.2 · ollama 0.6.2 · PyYAML 6.0.3 · torch 2.12.0
+#   transformers 5.8.1 · numpy 2.4.4 · pdfplumber 0.11.10 · python-docx 1.2.0
+#
+# Le plafond de chaque ligne est la majeure suivante : ce qui a été vérifié,
+# c'est la version installée, pas la compatibilité future.
+# ═══════════════════════════════════════════════════════════════════════
+
+# ── Cœur : sans ces cinq lignes, createur.py ne démarre pas ────────────
+# yaml — createur.py et catalogue.py lisent les profils et le catalogue
+pyyaml>=6.0,<7.0
+# index vectoriel
+chromadb>=1.5,<2.0
+# embeddeurs et reranker cross-encoder (tire torch et transformers)
+sentence-transformers>=5.0,<6.0
+# recherche lexicale BM25
+rank-bm25>=0.2.2,<0.3
+# client du serveur de génération local
+ollama>=0.6,<1.0
+
+# ── Lecture de formats supplémentaires ─────────────────────────────────
+# À décommenter selon le corpus. Ces deux imports sont paresseux
+# (ingestion.py, lignes 122 et 130) : un corpus en .txt et .md n'en a pas
+# besoin, et le corpus d'exemple livré est entièrement en .md.
+# pdfplumber>=0.11,<0.12       # documents .pdf
+# python-docx>=1.2,<2.0        # documents .docx
+
+# ── Ce qui n'est PAS déclaré ici, et pourquoi ──────────────────────────
+# torch, transformers, numpy : installés comme dépendances de
+# sentence-transformers, qui connaît mieux que ce fichier les versions
+# compatibles avec la plateforme (CUDA, MPS, CPU). Les épingler ici
+# créerait des conflits d'installation sans rien garantir de plus.
+#
+# Les contrôles d'intégration continue, eux, n'ont besoin que de pyyaml :
+# voir .github/workflows/controles.yml. C'est volontaire — un test qui
+# exigerait chromadb ou un modèle ne serait plus un test de logique pure.
