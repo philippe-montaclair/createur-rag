@@ -30,22 +30,34 @@ de briques dans un fichier YAML, pas du code.
 | Modèles chargés | l'embeddeur seul (~1 Go en float32) | + un cross-encoder (~211 Mo en float16) | idem `moyen` |
 | À quoi ça sert | plancher de comparaison, machines contraintes | **le défaut** — reproduit `tuteur-local` à l'identique, sert de témoin de non-régression | corpus hétérogènes, où trier la question et filtrer les chunks paie |
 
-Des mesures plutôt que des promesses. Sur le corpus d'exemple livré, profil
-`moyen`, 25 questions ([`MESURES.md`](MESURES.md), daté et reproductible) :
+Des mesures plutôt que des promesses. Les trois profils ont été mesurés sur le
+corpus d'exemple livré, 25 questions chacun, avec RAGAS sur backend Ollama local
+([`COMPARAISON.md`](COMPARAISON.md), daté et reproductible) :
 
-| | |
-|---|---|
-| Questions hors-corpus refusées | **6/6** — relevé à la main |
-| Pièges évités | **4/5** — le cinquième produit l'erreur qui avait été prédite par écrit |
-| `context_precision` / `context_recall` | **0,977** / **0,921** |
-| `faithfulness` / `answer_correctness` | **0,826** / **0,705** |
-| `answer_relevancy` | **0,639** |
-| Latence médiane | **8 980 ms** (écart-type 3 089 ms, 25 mesures) |
+| | `minimal` | `moyen` | `complet` |
+|---|---|---|---|
+| Briques | 5 | 8 | 10 |
+| Latence médiane | **8 055 ms** | 8 980 ms | 11 806 ms |
+| `answer_correctness` | **0,726** | 0,705 | 0,680 |
+| `answer_relevancy` | **0,663** | 0,639 | 0,645 |
+| `context_recall` | 0,921 | 0,921 | 0,921 |
+| `faithfulness` | 0,821 | **0,826** | **0,826** |
+| Hors-corpus refusées | 6/6 | 6/6 | 6/6 |
+| Pièges évités | 4/5 | 4/5 | 4/5 |
 
-La récupération est presque parfaite, la génération est le maillon faible : sur
-ce corpus, ce n'est pas retrouver le bon passage qui coûte, c'est en tirer une
-réponse qui réponde. Un résultat attendu sur 14 chunks — et qui indique où
-régler.
+**Sur ce corpus, le plancher gagne.** BM25, la fusion RRF et le reranker ne font
+bouger aucune métrique au-delà du bruit, et coûtent une à quatre secondes par
+question. C'est précisément ce que le profil `minimal` existe pour rendre
+visible : une brique qui ne bat pas le plancher n'a rien à faire dans la chaîne.
+
+**Et c'est un résultat sur ce corpus, pas une conclusion sur la méthode.** Sept
+documents font 14 chunks : `k: 4` en retient 29 %, il n'y a presque rien à
+écarter, donc les briques qui trient n'ont rien à faire. Elles sont conçues pour
+des corpus hétérogènes de plusieurs milliers de chunks, où le bruit est le
+problème. Un profil qui n'apporte rien ici ne prouve pas qu'il n'apporte rien —
+il prouve que ce corpus ne pose pas le problème qu'il résout. La conclusion utile
+est ailleurs : **il faut mesurer sur SON corpus avant de charger des modèles**,
+et c'est exactement ce que cet outillage permet de faire.
 
 Et sur le réglage, une expérience conservée en mémoire : décharger le reranker
 entre deux questions fait passer le temps total de **12 197 ms à 8 274 ms** — soit

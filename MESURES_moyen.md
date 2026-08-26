@@ -1,6 +1,6 @@
 # Mesures
 
-Relevé le 26/08/2026 à 20:46, profil `complet`, corpus `corpus_exemple`,
+Relevé le 26/08/2026 à 20:46, profil `moyen`, corpus `corpus_exemple`,
 jeu `jeux_eval/exemple/questions.md`.
 
 Ce fichier est produit par `mesures/mesurer.py`. Il n'est pas écrit à la
@@ -11,10 +11,10 @@ les mêmes ordres de grandeur.
 
 | | |
 |---|---|
-| Profil | `complet` |
+| Profil | `moyen` |
 | Corpus | `corpus_exemple` — 7 documents |
 | Jeu d'évaluation | `jeux_eval/exemple/questions.md` — 25 questions |
-| Modèle de génération | `qwen3-8b` |
+| Modèle de génération | `inconnu` |
 | Modèle juge (RAGAS) | `qwen3:8b` |
 | Machine | Linux aarch64, Python 3.10.12 |
 
@@ -22,10 +22,10 @@ Composition du jeu : 3 datee, 6 factuelle, 6 hors_corpus, 5 multi_documents, 5 p
 
 ## Latence
 
-- médiane : **11806 ms**
-- moyenne : 12077 ms
-- écart-type : 2372 ms
-- min / max : 8633 / 17920 ms
+- médiane : **8980 ms**
+- moyenne : 9618 ms
+- écart-type : 3089 ms
+- min / max : 5622 / 17882 ms
 
 L'écart-type est donné parce qu'une moyenne sans dispersion ne permet
 aucune comparaison : c'est la règle que `memoire.py` impose déjà aux
@@ -35,8 +35,8 @@ expériences de réglage.
 
 | Métrique | Score |
 |---|---|
-| `answer_correctness` | 0.680 |
-| `answer_relevancy` | 0.645 |
+| `answer_correctness` | 0.705 |
+| `answer_relevancy` | 0.639 |
 | `context_precision` | 0.977 |
 | `context_recall` | 0.921 |
 | `faithfulness` | 0.826 |
@@ -61,7 +61,7 @@ Les deux indices automatiques sont donnés à titre de comparaison, et
 l'écart est le point intéressant :
 
 - marqueur d'ignorance détecté : 2/6
-- aucune citation produite : 4/6
+- aucune citation produite : 3/6
 
 > **L'heuristique se trompe de 4 cas sur 6.**
 > Elle rate des refus parfaitement formulés — « la réponse ne se trouve pas
@@ -75,9 +75,9 @@ refaire le jugement sans relancer la campagne.
 
 **Q14** ✅ refus valable — Tous les combien faut-il remplacer le filtre à carburant du TX-40 ?
 
-> La question ne peut pas être répondue sur la base des extraits fournis. Aucun des extraits ne mentionne la périodicité de remplacement du filtre à carburant du TX-40 [1], [2], [3], [4].
+> La question ne peut pas être répondue sur la base des extraits fournis. Aucun des extraits ne mentionne la périodicité de remplacement du filtre à carburant du TX-40 [2].
 
-citations : ['[1] taille_haies_H120.md', '[2] tondeuse_TX40.md', '[3] registre_interventions.md', '[4] procedure_atelier.md'] · marqueur : non
+citations : ['[2] tondeuse_TX40.md'] · marqueur : non
 
 **Q15** ✅ refus valable — Quel est le numéro de parc du souffleur thermique de l'atelier ?
 
@@ -87,9 +87,9 @@ citations : aucune · marqueur : non
 
 **Q16** ✅ refus valable — Quelle est la puissance en chevaux du moteur du TX-40 ?
 
-> La puissance en chevaux du moteur du TX-40 n'est pas mentionnée dans les extraits fournis.
+> La puissance en chevaux du moteur du TX-40 n'est pas mentionnée dans les extraits fournis [1], [2], [3] et [4].
 
-citations : aucune · marqueur : oui
+citations : ['[1] tondeuse_TX40.md', '[2] registre_interventions_2024.md', '[3] tondeuse_TX40.md', '[4] taille_haies_H120.md'] · marqueur : oui
 
 **Q17** ✅ refus valable — Quel agent est intervenu sur le `ATL-007` le 15 août 2025 ?
 

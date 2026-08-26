@@ -308,7 +308,9 @@ def main() -> int:
     ap.add_argument("--modele-embeddings", default="nomic-embed-text",
                     help="modèle d'embeddings pour RAGAS (ollama pull nomic-embed-text)")
     ap.add_argument("--hote-ollama", default="http://localhost:11434")
-    ap.add_argument("--sortie", default="MESURES.md")
+    ap.add_argument("--sortie", default=None,
+                    help="par défaut MESURES_<profil>.md — un rapport par profil, "
+                         "sinon chaque campagne écrase la précédente")
     ap.add_argument("--sans-ragas", action="store_true",
                     help="produire les réponses et la latence sans noter la qualité")
     ap.add_argument("--pas-de-reindex", action="store_true")
@@ -324,6 +326,7 @@ def main() -> int:
                          "'tous' les accepte toutes. Sans cette option, le rapport "
                          "affiche les indices automatiques et les marque à confirmer.")
     args = ap.parse_args()
+    sortie = args.sortie or f"MESURES_{args.profil}.md"
 
     questions = lire_jeu(RACINE / args.jeu)
     notables, hors = separer(questions)
@@ -364,10 +367,10 @@ def main() -> int:
                 "modele_juge": "—" if not d.get("ragas") else args.modele_juge,
                 "machine": f"{platform.system()} {platform.machine()}, "
                            f"Python {platform.python_version()}"}
-        ecrire_rapport(RACINE / args.sortie, d.get("profil", args.profil), questions,
+        ecrire_rapport(RACINE / sortie, d.get("profil", args.profil), questions,
                        d["notables"], d["hors_corpus"], d.get("ragas"), meta,
                        refus_valides, pieges_reussis)
-        print(f"✅ Rapport réécrit dans {args.sortie} depuis {brut.name} — rien n'a été réinterrogé.")
+        print(f"✅ Rapport réécrit dans {sortie} depuis {brut.name} — rien n'a été réinterrogé.")
         return 0
 
     # Contrôle préalable, avant toute indexation. Sans lui, l'absence de chromadb
@@ -442,10 +445,10 @@ def main() -> int:
         "modele_juge": args.modele_juge if not args.sans_ragas else "—",
         "machine": f"{platform.system()} {platform.machine()}, Python {platform.python_version()}",
     }
-    ecrire_rapport(RACINE / args.sortie, args.profil, questions,
+    ecrire_rapport(RACINE / sortie, args.profil, questions,
                    notables_res, hors_res, scores, meta, refus_valides, pieges_reussis)
 
-    print(f"\n✅ Rapport écrit dans {args.sortie}")
+    print(f"\n✅ Rapport écrit dans {sortie}")
     print(f"   Réponses brutes dans {brut.relative_to(RACINE)}")
     print("   Relire les réponses hors-corpus AVANT de publier le taux de refus.")
     return 0

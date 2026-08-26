@@ -20,6 +20,10 @@ jeux_eval/*
 # les passages récupérés. Anodin sur corpus_exemple, mais ce serait du corpus
 # client dès la première mesure faite pour de vrai.
 mesures/runs/
+mesures/dernier_run.json
+
+# Fichiers écartés en attente de suppression manuelle
+*.old
 
 # Notes de session — l'historique, c'est git.
 session_handoff.md
