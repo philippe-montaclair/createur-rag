@@ -35,3 +35,10 @@ jobs:
 
       - name: mémoire de réglage et comparabilité des mesures
         run: python3 tests/test_regleur.py
+
+      # Le lecteur de jeux d'évaluation porte tout chiffre publié dans
+      # MESURES.md : s'il avale un bloc en silence ou range une hors-corpus
+      # avec les autres, le score annoncé décrit une autre population que
+      # celle qu'il prétend décrire.
+      - name: lecteur de jeux d'évaluation
+        run: python3 tests/test_jeu.py

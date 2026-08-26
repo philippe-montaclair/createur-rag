@@ -16,6 +16,11 @@ jeux_eval/*
 # donc publiable — c'est même sa raison d'être.
 !jeux_eval/exemple/
 
+# Sortie brute d'une campagne de mesure : contient les réponses complètes et
+# les passages récupérés. Anodin sur corpus_exemple, mais ce serait du corpus
+# client dès la première mesure faite pour de vrai.
+mesures/dernier_run.json
+
 # Notes de session — l'historique, c'est git.
 session_handoff.md
 prompt_reprise_*.md

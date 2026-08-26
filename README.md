@@ -39,8 +39,8 @@ publié : il porte le nom du corpus d'un client.
 
 ## État
 
-Les 218 assertions de `tests/test_briques.py` et `tests/test_regleur.py` montent
-les briques, les trois profils et la mémoire de réglage **sans aucun modèle, sans
+Les 243 assertions de trois fichiers montent les briques, les trois profils, la
+mémoire de réglage et le lecteur de jeux d'évaluation **sans aucun modèle, sans
 Ollama et sans index** — PyYAML est leur seule dépendance, parce que les profils
 sont des fichiers YAML. C'est exactement ce que fait la CI :
 
@@ -48,6 +48,7 @@ sont des fichiers YAML. C'est exactement ce que fait la CI :
 pip install pyyaml
 python3 tests/test_briques.py     # 179 réussis, 0 échoués, ~1 s
 python3 tests/test_regleur.py     #  39 réussis, 0 échoués
+python3 tests/test_jeu.py         #  25 réussis, 0 échoués
 ```
 
 `tests/test_non_regression.py` est d'une autre nature : il exige `chromadb` et une
@@ -64,6 +65,33 @@ plutôt que la chaîne. Ici, aucune référence n'existe hors du corpus.
 python createur.py --source corpus_exemple --collection demo --profil moyen \
     --question "Tous les combien faut-il changer le filtre à air du TX-40 ?"
 ```
+
+## Mesurer
+
+```bash
+python mesures/mesurer.py --profil moyen
+```
+
+Fait tourner le jeu d'évaluation sur le corpus, chronomètre chaque question, et
+écrit un `MESURES.md` daté. La notation de qualité passe par
+[`rag-evaluation-agent`](https://github.com/philippe-montaclair/rag-evaluation-agent)
+— RAGAS sur backend Ollama, donc **aucun appel sortant** — attendu par défaut
+dans un dossier voisin, sinon `--agent-eval <chemin>`. Sans lui,
+`--sans-ragas` produit quand même les réponses et la latence.
+
+**Le point de méthode qui vaut le détour.** Les questions dont la réponse est
+dans le corpus et les questions hors-corpus sont mesurées **séparément**, sur
+deux grandeurs différentes : les premières par RAGAS (fidélité aux passages
+récupérés), les secondes par le taux de refus. Les mélanger produirait un score
+moyen qui *monte* quand le système se met à inventer sur les hors-corpus. C'est
+`mesures/jeu.separer()` qui impose la séparation, et `tests/test_jeu.py` refuse
+un jeu où une hors-corpus porterait une vraie réponse.
+
+Le refus, lui, n'est pas automatisable honnêtement : il est approché par deux
+indices structurels — absence de citation, présence d'un marqueur d'ignorance —
+dont aucun n'est une preuve. Le rapport recopie donc les réponses hors-corpus
+intégralement et marque le chiffre « à confirmer » tant qu'un humain n'a pas
+tranché. Un taux de refus calculé par mots-clés mesurerait la liste de mots-clés.
 
 `jeux_eval/exemple/questions.md` en donne 25 questions avec leurs réponses,
 écrites avant toute interrogation du système : 6 factuelles, 5 multi-documents,
