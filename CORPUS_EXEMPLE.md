@@ -4,6 +4,12 @@ Sept documents décrivant le parc de matériel d'un atelier municipal **qui
 n'existe pas**. Ils sont écrits pour ce dépôt, sans source extérieure, et sont
 couverts par la licence MIT du projet.
 
+> **Ce fichier est délibérément hors du dossier `corpus_exemple/`.** Il décrit
+> les pièges du jeu d'évaluation : indexé avec le corpus, il serait récupérable
+> par le système et lui soufflerait la structure des réponses. La première
+> campagne de mesure l'a d'ailleurs cité dans deux réponses avant que ce
+> déplacement ne soit fait. Une documentation de corpus n'est pas du corpus.
+
 ## Pourquoi un corpus inventé, et pas des documents libres de droits
 
 Ce n'est pas une commodité juridique, c'est une nécessité de mesure.

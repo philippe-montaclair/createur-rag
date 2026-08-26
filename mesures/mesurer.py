@@ -135,7 +135,9 @@ def noter_ragas(resultats: List[Dict[str, Any]], chemin_agent: Path,
 
 
 def ecrire_rapport(chemin: Path, profil: str, questions, notables_res, hors_res,
-                   scores_ragas, meta: Dict[str, Any]) -> None:
+                   scores_ragas, meta: Dict[str, Any],
+                   refus_valides: set[str] | None = None,
+                   pieges_reussis: set[str] | None = None) -> None:
     horodatage = datetime.now().strftime("%d/%m/%Y à %H:%M")
     durees = [r["duree_ms"] for r in notables_res + hors_res]
 
@@ -196,26 +198,84 @@ def ecrire_rapport(chemin: Path, profil: str, questions, notables_res, hors_res,
     avec_marqueur = sum(1 for r in hors_res if r["indices_refus"]["marqueur"])
     sans_citation = sum(1 for r in hors_res if r["indices_refus"]["sans_citation"])
     n = len(hors_res)
-    lignes += [
-        f"Sur {n} questions hors-corpus :",
-        "",
-        f"- **{avec_marqueur}/{n}** contiennent un marqueur d'ignorance explicite",
-        f"- **{sans_citation}/{n}** ne produisent aucune citation",
-        "",
-        "> ⚠️ **Chiffres à confirmer à la main.** Ces deux indices sont structurels,",
-        "> aucun n'est une preuve de refus : une réponse peut inventer tout en citant,",
-        "> ou refuser sans employer l'un des marqueurs. Les réponses sont recopiées",
-        "> ci-dessous pour qu'un humain tranche. Un taux de refus calculé par",
-        "> mots-clés et publié tel quel mesurerait la liste de mots-clés.",
-        "",
-    ]
+    lignes += [f"Sur {n} questions hors-corpus :", ""]
+
+    if refus_valides is not None:
+        valides = sum(1 for r in hors_res if r["id"] in refus_valides)
+        lignes += [
+            f"### Taux de refus : **{valides}/{n}** ({valides / n:.0%})",
+            "",
+            "**Relevé par lecture humaine des réponses**, question par question. C'est",
+            "ce chiffre-là qui fait foi, et lui seul.",
+            "",
+            "Les deux indices automatiques sont donnés à titre de comparaison, et",
+            "l'écart est le point intéressant :",
+            "",
+            f"- marqueur d'ignorance détecté : {avec_marqueur}/{n}",
+            f"- aucune citation produite : {sans_citation}/{n}",
+            "",
+        ]
+        if avec_marqueur != valides:
+            lignes += [
+                f"> **L'heuristique se trompe de {abs(valides - avec_marqueur)} cas sur {n}.**",
+                "> Elle rate des refus parfaitement formulés — « la réponse ne se trouve pas",
+                "> dans les extraits fournis » n'emploie aucun des marqueurs de la liste.",
+                "> Publier le chiffre automatique aurait donné un taux faux, et allonger la",
+                "> liste de marqueurs pour le corriger reviendrait à mesurer la liste.",
+                "> C'est la raison pour laquelle ce taux est relevé à la main.",
+                "",
+            ]
+        non_valides = [r["id"] for r in hors_res if r["id"] not in refus_valides]
+        if non_valides:
+            lignes += [f"Questions où le refus n'a **pas** été jugé valable : "
+                       + ", ".join(f"`{i}`" for i in non_valides) + ".", ""]
+    else:
+        lignes += [
+            f"- **{avec_marqueur}/{n}** contiennent un marqueur d'ignorance explicite",
+            f"- **{sans_citation}/{n}** ne produisent aucune citation",
+            "",
+            "> ⚠️ **Chiffres à confirmer à la main.** Ces deux indices sont structurels,",
+            "> aucun n'est une preuve de refus : une réponse peut inventer tout en citant,",
+            "> ou refuser sans employer l'un des marqueurs. Les réponses sont recopiées",
+            "> ci-dessous pour qu'un humain tranche. Un taux de refus calculé par",
+            "> mots-clés et publié tel quel mesurerait la liste de mots-clés.",
+            "",
+        ]
+
+    lignes += ["Les six réponses sont recopiées ci-dessous : un lecteur doit pouvoir",
+               "refaire le jugement sans relancer la campagne.", ""]
     for r in hors_res:
-        lignes += [f"**{r['id']}** — {r['question']}", "",
+        marque = ""
+        if refus_valides is not None:
+            marque = " ✅ refus valable" if r["id"] in refus_valides else " ❌ refus non valable"
+        lignes += [f"**{r['id']}**{marque} — {r['question']}", "",
                    "> " + (r["reponse_systeme"] or "(réponse vide)").replace("\n", "\n> "),
                    "",
                    f"citations : {r['citations'] or 'aucune'} · "
                    f"marqueur : {'oui' if r['indices_refus']['marqueur'] else 'non'}",
                    ""]
+
+    pieges = [r for r in notables_res if r["type"] == "piege"]
+    if pieges:
+        lignes += ["## Pièges — les questions écrites pour faire échouer la chaîne", ""]
+        if pieges_reussis is not None:
+            reussis = sum(1 for r in pieges if r["id"] in pieges_reussis)
+            lignes += [f"### {reussis}/{len(pieges)} évités", "",
+                       "Relevé à la main. Chaque piège a été écrit **avec l'erreur attendue**,",
+                       "avant toute interrogation : c'est ce qui distingue un piège d'une",
+                       "question difficile. Une erreur prédite qui se produit n'est pas une",
+                       "surprise, c'est une mesure.", ""]
+        else:
+            lignes += ["Verdict non relevé. Relancer avec `--depuis-json --pieges-reussis …`",
+                       "après lecture.", ""]
+        for r in pieges:
+            marque = ""
+            if pieges_reussis is not None:
+                marque = " ✅ évité" if r["id"] in pieges_reussis else " ❌ **l'erreur attendue s'est produite**"
+            lignes += [f"**{r['id']}**{marque} — {r['question']}", ""]
+            if r.get("erreur_attendue"):
+                lignes += [f"*Erreur attendue :* {r['erreur_attendue']}", ""]
+            lignes += ["> " + (r["reponse_systeme"] or "(vide)").replace("\n", "\n> "), ""]
 
     lignes += ["## Ce que ces chiffres ne disent pas", "",
                "Le corpus d'exemple fait 14 chunks : `k: 4` en récupère 29 %. Les scores",
@@ -244,11 +304,60 @@ def main() -> int:
     ap.add_argument("--sans-ragas", action="store_true",
                     help="produire les réponses et la latence sans noter la qualité")
     ap.add_argument("--pas-de-reindex", action="store_true")
+    ap.add_argument("--depuis-json", action="store_true",
+                    help="réécrire le rapport depuis mesures/dernier_run.json, sans "
+                         "réinterroger le système — pour intégrer un verdict humain")
+    ap.add_argument("--pieges-reussis", default=None,
+                    help="identifiants des pièges évités, relevés APRÈS lecture : "
+                         "Q9,Q11,Q19,Q20. 'tous' les accepte toutes.")
+    ap.add_argument("--refus-valides", default=None,
+                    help="identifiants des hors-corpus dont le refus a été jugé valable "
+                         "APRÈS lecture, séparés par des virgules : Q14,Q15,Q16. "
+                         "'tous' les accepte toutes. Sans cette option, le rapport "
+                         "affiche les indices automatiques et les marque à confirmer.")
     args = ap.parse_args()
 
     questions = lire_jeu(RACINE / args.jeu)
     notables, hors = separer(questions)
     print(f"\n{len(questions)} questions — {len(notables)} notables, {len(hors)} hors-corpus")
+
+    refus_valides = None
+    if args.refus_valides:
+        refus_valides = ({q["id"] for q in hors} if args.refus_valides.strip().lower() == "tous"
+                         else {i.strip() for i in args.refus_valides.split(",") if i.strip()})
+        inconnus = refus_valides - {q["id"] for q in hors}
+        if inconnus:
+            print(f"\n⛔ Identifiants absents des hors-corpus : {', '.join(sorted(inconnus))}")
+            return 1
+
+    pieges_reussis = None
+    if args.pieges_reussis:
+        ids_pieges = {q["id"] for q in questions if q["type"] == "piege"}
+        pieges_reussis = (ids_pieges if args.pieges_reussis.strip().lower() == "tous"
+                          else {i.strip() for i in args.pieges_reussis.split(",") if i.strip()})
+        inconnus = pieges_reussis - ids_pieges
+        if inconnus:
+            print(f"\n⛔ Identifiants qui ne sont pas des pièges : {', '.join(sorted(inconnus))}")
+            return 1
+
+    if args.depuis_json:
+        brut = RACINE / "mesures" / "dernier_run.json"
+        if not brut.exists():
+            print(f"⛔ {brut} absent : lancer une campagne avant --depuis-json.")
+            return 1
+        d = json.loads(brut.read_text(encoding="utf-8"))
+        import platform
+        meta = {"corpus": args.source, "jeu": args.jeu,
+                "n_documents": len(list((RACINE / args.source).glob("*.md"))),
+                "modele_generation": d.get("modele_generation", "inconnu"),
+                "modele_juge": "—" if not d.get("ragas") else args.modele_juge,
+                "machine": f"{platform.system()} {platform.machine()}, "
+                           f"Python {platform.python_version()}"}
+        ecrire_rapport(RACINE / args.sortie, d.get("profil", args.profil), questions,
+                       d["notables"], d["hors_corpus"], d.get("ragas"), meta,
+                       refus_valides, pieges_reussis)
+        print(f"✅ Rapport réécrit dans {args.sortie} depuis {brut.name} — rien n'a été réinterrogé.")
+        return 0
 
     from createur import creer_rag                             # noqa: E402
     print(f"Montage du profil '{args.profil}' sur '{args.source}'…")
@@ -265,12 +374,6 @@ def main() -> int:
         scores = noter_ragas(notables_res, (RACINE / args.agent_eval).resolve(),
                              args.modele_juge, args.hote_ollama, args.modele_embeddings)
 
-    brut = RACINE / "mesures" / "dernier_run.json"
-    brut.write_text(json.dumps(
-        {"profil": args.profil, "horodatage": datetime.now().isoformat(),
-         "notables": notables_res, "hors_corpus": hors_res, "ragas": scores},
-        ensure_ascii=False, indent=2), encoding="utf-8")
-
     import platform
     # Le modèle de génération est celui du PROFIL, pas celui passé en option :
     # confondre les deux ferait publier un rapport qui attribue les réponses au
@@ -285,17 +388,23 @@ def main() -> int:
     except Exception:
         pass
 
+    brut = RACINE / "mesures" / "dernier_run.json"
+    brut.write_text(json.dumps(
+        {"profil": args.profil, "horodatage": datetime.now().isoformat(),
+         "modele_generation": modele_generation,
+         "notables": notables_res, "hors_corpus": hors_res, "ragas": scores},
+        ensure_ascii=False, indent=2), encoding="utf-8")
+
     meta = {
         "corpus": args.source,
         "jeu": args.jeu,
-        "n_documents": len([p for p in (RACINE / args.source).glob("*.md")
-                            if p.name != "LISEZ_MOI.md"]),
+        "n_documents": len(list((RACINE / args.source).glob("*.md"))),
         "modele_generation": modele_generation,
         "modele_juge": args.modele_juge if not args.sans_ragas else "—",
         "machine": f"{platform.system()} {platform.machine()}, Python {platform.python_version()}",
     }
     ecrire_rapport(RACINE / args.sortie, args.profil, questions,
-                   notables_res, hors_res, scores, meta)
+                   notables_res, hors_res, scores, meta, refus_valides, pieges_reussis)
 
     print(f"\n✅ Rapport écrit dans {args.sortie}")
     print(f"   Réponses brutes dans mesures/dernier_run.json")

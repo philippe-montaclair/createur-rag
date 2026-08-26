@@ -30,12 +30,21 @@ de briques dans un fichier YAML, pas du code.
 | Modèles chargés | l'embeddeur seul (~1 Go en float32) | + un cross-encoder (~211 Mo en float16) | idem `moyen` |
 | À quoi ça sert | plancher de comparaison, machines contraintes | **le défaut** — reproduit `tuteur-local` à l'identique, sert de témoin de non-régression | corpus hétérogènes, où trier la question et filtrer les chunks paie |
 
-Une mesure réelle plutôt qu'une promesse : sur `moyen`, décharger le reranker entre
-deux questions fait passer le temps total de **12 197 ms à 8 274 ms** — soit
-−3 923 ms pour un bruit de 203 ms sur 6 mesures, à réponse identique. Le détail du
-format et de la lecture est dans [`MEMOIRE_FORMAT.md`](MEMOIRE_FORMAT.md), et la
-ligne brute dans `memoire.exemple.jsonl`. Le fichier de mesures complet n'est pas
-publié : il porte le nom du corpus d'un client.
+Des mesures plutôt que des promesses. Sur le corpus d'exemple livré, profil
+`moyen`, 25 questions ([`MESURES.md`](MESURES.md), daté et reproductible) :
+
+| | |
+|---|---|
+| Questions hors-corpus refusées | **6/6** — relevé à la main |
+| Pièges évités | **4/5** — le cinquième produit l'erreur qui avait été prédite par écrit |
+| Latence médiane | **8 980 ms** (écart-type 3 089 ms, 25 mesures) |
+
+Et sur le réglage, une expérience conservée en mémoire : décharger le reranker
+entre deux questions fait passer le temps total de **12 197 ms à 8 274 ms** — soit
+−3 923 ms pour un bruit de 203 ms sur 6 mesures, à réponse identique. Format et
+lecture dans [`MEMOIRE_FORMAT.md`](MEMOIRE_FORMAT.md), ligne brute dans
+`memoire.exemple.jsonl`. Le fichier de mesures complet n'est pas publié : il porte
+le nom du corpus d'un client.
 
 ## État
 
@@ -97,7 +106,7 @@ tranché. Un taux de refus calculé par mots-clés mesurerait la liste de mots-c
 écrites avant toute interrogation du système : 6 factuelles, 5 multi-documents,
 5 pièges, 3 datées et **6 hors-corpus**, ces dernières étant les seules à mesurer
 si le système sait dire qu'il ne sait pas. Détail dans
-[`corpus_exemple/LISEZ_MOI.md`](corpus_exemple/LISEZ_MOI.md).
+[`CORPUS_EXEMPLE.md`](CORPUS_EXEMPLE.md).
 
 **Phase 1 — local uniquement.** Le déploiement VPS est une étape séparée et
 ultérieure.
