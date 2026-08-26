@@ -12,6 +12,9 @@ corpus/
 # complets (chemins de fichiers .docx inclus). Seul le gabarit est publié.
 jeux_eval/*
 !jeux_eval/GABARIT.md
+# Le jeu d'exemple, lui, porte sur corpus_exemple/ : inventé pour ce dépôt,
+# donc publiable — c'est même sa raison d'être.
+!jeux_eval/exemple/
 
 # Notes de session — l'historique, c'est git.
 session_handoff.md

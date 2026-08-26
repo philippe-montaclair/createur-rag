@@ -54,10 +54,26 @@ python3 tests/test_regleur.py     #  39 réussis, 0 échoués
 collection déjà indexée, donc il ne tourne ni en CI ni sur une machine dépourvue de
 corpus. C'est le témoin 7/7, et il se lance à la main.
 
+Un corpus d'exemple est livré. Il décrit le parc de matériel d'un atelier
+municipal **inventé pour ce dépôt** — sept documents, 14 chunks — et cette
+invention est délibérée : sur des documents réels, un modèle de langue peut
+répondre juste sans avoir rien récupéré, et l'évaluation mesure alors sa mémoire
+plutôt que la chaîne. Ici, aucune référence n'existe hors du corpus.
+
+```bash
+python createur.py --source corpus_exemple --collection demo --profil moyen \
+    --question "Tous les combien faut-il changer le filtre à air du TX-40 ?"
+```
+
+`jeux_eval/exemple/questions.md` en donne 25 questions avec leurs réponses,
+écrites avant toute interrogation du système : 6 factuelles, 5 multi-documents,
+5 pièges, 3 datées et **6 hors-corpus**, ces dernières étant les seules à mesurer
+si le système sait dire qu'il ne sait pas. Détail dans
+[`corpus_exemple/LISEZ_MOI.md`](corpus_exemple/LISEZ_MOI.md).
+
 **Phase 1 — local uniquement.** Le déploiement VPS est une étape séparée et
-ultérieure. Ce qui manque aussi, et c'est dit franchement : il n'y a pas encore de
-`requirements.txt` ni de corpus d'exemple livré, donc l'installation demande encore
-de suivre la section ci-dessous à la main.
+ultérieure. Et il manque encore un `requirements.txt` : l'installation demande de
+suivre la section ci-dessous à la main.
 
 ## Ce que c'est vraiment
 
