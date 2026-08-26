@@ -240,7 +240,7 @@ attendus = {
     "moyen": ["recherche_vectorielle", "recherche_bm25", "fusion", "reranker",
               "constructeur_contexte", "prompt_engineering", "agent_llm",
               "post_processing"],
-    "total": ["routeur", "recherche_vectorielle", "recherche_bm25", "fusion",
+    "complet": ["routeur", "recherche_vectorielle", "recherche_bm25", "fusion",
               "reranker", "validateur_chunks", "constructeur_contexte",
               "prompt_engineering", "agent_llm", "post_processing"],
 }
@@ -346,7 +346,7 @@ etat = catalogue.verifier_compatibilite(CollectionVide(), FauxModele(768), "m", 
 verifier("index vide → non vérifiable, mais pas d'exception", etat["verifie"] is False)
 
 # Les profils doivent tous référencer des alias connus.
-for nom_profil in ("minimal", "moyen", "total"):
+for nom_profil in ("minimal", "moyen", "complet"):
     cfg = charger_profil(nom_profil)
     fe = catalogue.resoudre("embeddeurs", cfg["ingestion"]["embeddings"]["modele"])
     verifier(f"profil '{nom_profil}' : embeddeur au catalogue",
@@ -477,7 +477,7 @@ verifier("après remise à zéro, le repli fonctionne de nouveau",
          res["bilan"]["erreurs"][-1]["repli"] is True)
 
 # Les profils livrés restent valides
-for nom_profil in ("minimal", "moyen", "total"):
+for nom_profil in ("minimal", "moyen", "complet"):
     cfg = charger_profil(nom_profil)
     politiques = {}
     for etape in cfg["pipeline"]:
@@ -488,11 +488,11 @@ for nom_profil in ("minimal", "moyen", "total"):
     verifier(f"profil '{nom_profil}' : aucune brique vitale n'est repliable",
              all(politiques.get(b, "arreter") == "arreter" for b in vitales))
 
-cfg_total = charger_profil("total")
-noms_replies = [n for e in cfg_total["pipeline"] if isinstance(e, dict)
+cfg_complet = charger_profil("complet")
+noms_replies = [n for e in cfg_complet["pipeline"] if isinstance(e, dict)
                 for n, prm in [next(iter(e.items()))]
                 if (prm or {}).get("sur_erreur") == "ignorer"]
-verifier("profil 'total' : 5 briques repliables déclarées",
+verifier("profil 'complet' : 5 briques repliables déclarées",
          len(noms_replies) == 5, ", ".join(noms_replies))
 
 cfg_moyen = charger_profil("moyen")
@@ -812,8 +812,8 @@ verifier("index ancien : ne bloque pas le démarrage", etat["verifie"] is True)
 verifier("index ancien : mais l'identité est signalée comme non vérifiée",
          etat.get("identite_verifiee") is not True)
 
-cfg_t = charger_profil("total")
-verifier("total.yaml : reranker aligné sur moyen (float16)",
+cfg_t = charger_profil("complet")
+verifier("complet.yaml : reranker aligné sur moyen (float16)",
          cfg_t["reranker"]["precision"] == "float16")
 verifier("moyen.yaml : reranker toujours en float16",
          charger_profil("moyen")["reranker"]["precision"] == "float16")
@@ -859,7 +859,7 @@ verifier("resumer : un repli est visible à l'écran, pas seulement dans le JSON
          "repli" in resumer(bilan_r) and "casse" in resumer(bilan_r))
 
 # Les trois profils se montent toujours avec leurs nouveaux paramètres.
-for nom_profil in ("minimal", "moyen", "total"):
+for nom_profil in ("minimal", "moyen", "complet"):
     cfg = charger_profil(nom_profil)
     montees = _construire_briques(cfg, Ressources({}))
     verifier(f"profil '{nom_profil}' : se monte avec les paramètres du 31/07",

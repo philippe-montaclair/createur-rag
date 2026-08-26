@@ -38,6 +38,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import os
 import statistics
 import sys
 import time
@@ -348,9 +349,12 @@ def main() -> int:
             return 1
 
     if args.depuis_json:
-        brut = RACINE / "mesures" / "dernier_run.json"
+        brut = RACINE / "mesures" / "runs" / f"{args.profil}.json"
         if not brut.exists():
-            print(f"⛔ {brut} absent : lancer une campagne avant --depuis-json.")
+            dispo = sorted(p.stem for p in (RACINE / "mesures" / "runs").glob("*.json"))
+            print(f"⛔ {brut} absent : aucune campagne pour le profil '{args.profil}'.")
+            if dispo:
+                print(f"   Campagnes disponibles : {', '.join(dispo)}")
             return 1
         d = json.loads(brut.read_text(encoding="utf-8"))
         import platform
@@ -365,6 +369,30 @@ def main() -> int:
                        refus_valides, pieges_reussis)
         print(f"✅ Rapport réécrit dans {args.sortie} depuis {brut.name} — rien n'a été réinterrogé.")
         return 0
+
+    # Contrôle préalable, avant toute indexation. Sans lui, l'absence de chromadb
+    # se révèle par une trace de pile au fond d'ingestion.py, une fois le jeu lu
+    # et le profil monté. Le cas est banal : la notation RAGAS tourne dans le venv
+    # de l'agent d'évaluation, et si l'on enchaîne sans en sortir, `python` reste
+    # celui du venv — les deux environnements s'empilent, le premier du PATH gagne.
+    manquants = []
+    for module, paquet in (("chromadb", "chromadb"),
+                           ("sentence_transformers", "sentence-transformers"),
+                           ("yaml", "pyyaml")):
+        try:
+            __import__(module)
+        except ImportError:
+            manquants.append(paquet)
+    if manquants:
+        import shutil
+        print(f"\n⛔ Modules absents de cet environnement : {', '.join(manquants)}")
+        print(f"   python utilisé : {sys.executable}")
+        if "VIRTUAL_ENV" in os.environ:
+            print(f"   Un venv est actif : {os.environ['VIRTUAL_ENV']}")
+            print("   S'il s'agit de celui de l'agent d'évaluation, en sortir : deactivate")
+        print("   Sinon : pip install -r requirements.txt")
+        print("\n   Rien n'a été indexé.")
+        return 1
 
     from createur import creer_rag                             # noqa: E402
     print(f"Montage du profil '{args.profil}' sur '{args.source}'…")
@@ -395,7 +423,11 @@ def main() -> int:
     except Exception:
         pass
 
-    brut = RACINE / "mesures" / "dernier_run.json"
+    # Un fichier par profil : sans cela, mesurer 'complet' effacerait la
+    # campagne 'moyen', et la comparaison entre profils deviendrait impossible
+    # sans tout relancer — dont trente minutes de notation par question.
+    (RACINE / "mesures" / "runs").mkdir(parents=True, exist_ok=True)
+    brut = RACINE / "mesures" / "runs" / f"{args.profil}.json"
     brut.write_text(json.dumps(
         {"profil": args.profil, "horodatage": datetime.now().isoformat(),
          "modele_generation": modele_generation,
@@ -414,7 +446,7 @@ def main() -> int:
                    notables_res, hors_res, scores, meta, refus_valides, pieges_reussis)
 
     print(f"\n✅ Rapport écrit dans {args.sortie}")
-    print(f"   Réponses brutes dans mesures/dernier_run.json")
+    print(f"   Réponses brutes dans {brut.relative_to(RACINE)}")
     print("   Relire les réponses hors-corpus AVANT de publier le taux de refus.")
     return 0
 

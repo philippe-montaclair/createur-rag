@@ -1,0 +1,1088 @@
+{
+  "profil": "moyen",
+  "horodatage": "2026-08-26T18:56:12.196327",
+  "notables": [
+    {
+      "id": "Q1",
+      "type": "factuelle",
+      "question": "Tous les combien faut-il remplacer le filtre à air du TX-40 ?",
+      "reponse": "Toutes les 100 heures de fonctionnement, référence `FA-2210`.",
+      "source": "tondeuse_TX40.md",
+      "sans_reponse": false,
+      "autre_source": "",
+      "erreur_attendue": "",
+      "reponse_systeme": "Il faut remplacer le filtre à air du TX-40 toutes les 100 heures [2].",
+      "citations": [
+        "[2] tondeuse_TX40.md"
+      ],
+      "contextes": [
+        "Le filtre à air se **nettoie** toutes les 25 heures et se **remplace** toutes\nles 100 heures : ce sont deux opérations distinctes, et la seconde ne dispense\npas de la première. ## Points de vigilance La référence de bougie `BG-441` est commune au TX-40 et au H-120 ; la référence\nde filtre à air `FA-2210` **ne l'est pas** — sur le H-120 elle désigne le filtre\nd'origine, remplacé depuis par le `FA-3105`, de dimensions différentes. Monter\nun `FA-2210` sur un H-120 après remplacement laisse passer les poussières. Le carburant deux temps se dégrade : un mélange de plus de trente jours est\nécarté, quel que soit son aspect.",
+        "# Tondeuse autoportée TX-40 — notice d'entretien ## Identification Modèle TX-40, mise en service le 12 mars 2022, numéro de parc `ATL-007`. Moteur thermique quatre temps, 452 cm³, refroidissement par air. Largeur de coupe 92 cm. Réservoir de carburant : 5,7 litres. Masse à vide : 218 kg. ## Périodicités d'entretien Les périodicités sont exprimées en heures de fonctionnement, relevées au\ncompteur situé sous le volant. À défaut d'usage, aucune opération n'est due. | Opération | Périodicité | Référence de pièce |\n|---|---|---|\n| Vidange d'huile moteur | toutes les 50 heures | huile SAE 30, 1,4 litre |\n| Remplacement du filtre à air | toutes les 100 heures | `FA-2210` |\n| Remplacement de la bougie | toutes les 200 heures | `BG-441` |\n| Affûtage des lames | toutes les 25 heures | — |\n| Remplacement des lames | toutes les 400 heures | `LM-920` (jeu de deux) |\n| Contrôle de la courroie de coupe | toutes les 100 heures | `CR-118` |",
+        "## Observations **22/03/2025** — La courroie `CR-118` a cédé à 445 heures, soit bien avant son\ncontrôle des 500 heures. Le carter de coupe était colmaté. Le contrôle est\navancé à toutes les 80 heures sur cette machine, en dérogation à la notice. **11/04/2025** — Le filtre `FA-2210` commandé pour le `ATL-014` ne correspondait\npas : dimensions différentes. Remplacé par un `FA-3105`. C'est cet incident qui\na donné lieu à la procédure P-04. **30/10/2025** — Dernière intervention de l'année sur le `ATL-007`. La machine\nest remisée pour l'hiver, réservoir vidangé.",
+        "La première vidange fait exception : elle est due au bout de **5 heures** après\nla mise en service, puis la périodicité de 50 heures s'applique. ## Pression des pneumatiques Roues avant : 1,0 bar. Roues arrière : 0,7 bar. Le contrôle se fait à froid,\navant le démarrage. Un écart de plus de 0,2 bar entre les deux roues arrière\nprovoque une coupe irrégulière sur toute la largeur. ## Points de vigilance Le carter de coupe se colmate par temps humide. Un colmatage non traité fait\nchuter la puissance disponible et surcharge la courroie `CR-118`, qui est la\npièce qui casse en premier sur cette machine. Le TX-40 ne dispose **pas** de coupure automatique de lame au relevage du siège. Cette sécurité, présente sur les modèles postérieurs à 2023, doit être suppléée\npar la procédure d'atelier."
+      ],
+      "sources_retrouvees": [
+        "registre_interventions.md",
+        "taille_haies_H120.md",
+        "tondeuse_TX40.md"
+      ],
+      "duree_ms": 7505.6,
+      "indices_refus": {
+        "marqueur": false,
+        "sans_citation": false
+      }
+    },
+    {
+      "id": "Q2",
+      "type": "factuelle",
+      "question": "Quelle est la capacité du réservoir de carburant du TX-40 ?",
+      "reponse": "5,7 litres.",
+      "source": "tondeuse_TX40.md",
+      "sans_reponse": false,
+      "autre_source": "",
+      "erreur_attendue": "",
+      "reponse_systeme": "La capacité du réservoir de carburant du TX-40 est de 5,7 litres [1].",
+      "citations": [
+        "[1] tondeuse_TX40.md"
+      ],
+      "contextes": [
+        "# Tondeuse autoportée TX-40 — notice d'entretien ## Identification Modèle TX-40, mise en service le 12 mars 2022, numéro de parc `ATL-007`. Moteur thermique quatre temps, 452 cm³, refroidissement par air. Largeur de coupe 92 cm. Réservoir de carburant : 5,7 litres. Masse à vide : 218 kg. ## Périodicités d'entretien Les périodicités sont exprimées en heures de fonctionnement, relevées au\ncompteur situé sous le volant. À défaut d'usage, aucune opération n'est due. | Opération | Périodicité | Référence de pièce |\n|---|---|---|\n| Vidange d'huile moteur | toutes les 50 heures | huile SAE 30, 1,4 litre |\n| Remplacement du filtre à air | toutes les 100 heures | `FA-2210` |\n| Remplacement de la bougie | toutes les 200 heures | `BG-441` |\n| Affûtage des lames | toutes les 25 heures | — |\n| Remplacement des lames | toutes les 400 heures | `LM-920` (jeu de deux) |\n| Contrôle de la courroie de coupe | toutes les 100 heures | `CR-118` |",
+        "Le filtre à air se **nettoie** toutes les 25 heures et se **remplace** toutes\nles 100 heures : ce sont deux opérations distinctes, et la seconde ne dispense\npas de la première. ## Points de vigilance La référence de bougie `BG-441` est commune au TX-40 et au H-120 ; la référence\nde filtre à air `FA-2210` **ne l'est pas** — sur le H-120 elle désigne le filtre\nd'origine, remplacé depuis par le `FA-3105`, de dimensions différentes. Monter\nun `FA-2210` sur un H-120 après remplacement laisse passer les poussières. Le carburant deux temps se dégrade : un mélange de plus de trente jours est\nécarté, quel que soit son aspect.",
+        "# Tronçonneuse thermique T-85 — notice d'entretien ## Identification Modèle T-85, mise en service le 17 juin 2021, numéro de parc `ATL-003`. Moteur thermique deux temps, 45,2 cm³. Longueur de guide : 40 cm. Réservoir de carburant : 0,55 litre. Réservoir d'huile de chaîne : 0,26 litre. Masse à vide : 5,6 kg. Comme le H-120, le T-85 fonctionne au mélange deux temps 50:1. Les deux machines\npeuvent donc partager le même bidon rouge, à condition qu'il soit daté. ## Périodicités d'entretien | Opération | Périodicité | Référence de pièce |\n|---|---|---|\n| Nettoyage du filtre à air | toutes les 10 heures | `FA-3105` |\n| Remplacement du filtre à air | toutes les 100 heures | `FA-3105` |\n| Remplacement de la bougie | toutes les 100 heures | `BG-512` |\n| Affûtage de la chaîne | toutes les 5 heures | — |\n| Remplacement de la chaîne | toutes les 150 heures | `CH-401` |\n| Remplacement du guide | toutes les 300 heures | `GD-408` |\n| Contrôle du frein de chaîne | **avant chaque usage** | — |",
+        "# Procédures de l'atelier municipal ## Champ d'application Ces procédures s'appliquent à l'ensemble du parc thermique de l'atelier, dont la\ntondeuse autoportée TX-40 (`ATL-007`) et le taille-haies H-120 (`ATL-014`). ## P-01 · Consignation avant intervention Toute intervention sur une machine thermique impose, dans cet ordre : 1. arrêt moteur et retrait de la clé ;\n2. **débranchement du capuchon de bougie** ;\n3. attente de dix minutes pour le refroidissement de l'échappement ;\n4. inscription au registre des interventions. L'étape 2 n'est pas facultative sur le TX-40 : cette machine étant dépourvue de\ncoupure automatique de lame au relevage du siège, un démarrage intempestif reste\npossible tant que la bougie est connectée. ## P-02 · Stockage des carburants L'essence pure et le mélange deux temps sont stockés dans des bidons de couleurs\ndistinctes : **vert pour l'essence pure**, **rouge pour le mélange 50:1**. Tout\nbidon rouge est daté de son jour de préparation."
+      ],
+      "sources_retrouvees": [
+        "procedure_atelier.md",
+        "taille_haies_H120.md",
+        "tondeuse_TX40.md",
+        "tronconneuse_T85.md"
+      ],
+      "duree_ms": 9055.1,
+      "indices_refus": {
+        "marqueur": false,
+        "sans_citation": false
+      }
+    },
+    {
+      "id": "Q3",
+      "type": "factuelle",
+      "question": "Dans quelle proportion se prépare le mélange deux temps du H-120 ?",
+      "reponse": "50:1, soit 20 ml d'huile deux temps par litre d'essence.",
+      "source": "taille_haies_H120.md",
+      "sans_reponse": false,
+      "autre_source": "",
+      "erreur_attendue": "",
+      "reponse_systeme": "Le mélange deux temps du H-120 se prépare dans une proportion de **50:1** [1].",
+      "citations": [
+        "[1] taille_haies_H120.md"
+      ],
+      "contextes": [
+        "# Taille-haies thermique H-120 — notice d'entretien ## Identification Modèle H-120, mise en service le 4 septembre 2023, numéro de parc `ATL-014`. Moteur thermique deux temps, 25,4 cm³. Longueur de lame : 60 cm. Réservoir de carburant : 0,5 litre. Masse à vide : 5,2 kg. Le H-120 fonctionne au **mélange deux temps**, proportion 50:1 (soit 20 ml\nd'huile deux temps par litre d'essence). L'emploi d'essence pure détruit le\nmoteur en quelques minutes de fonctionnement. ## Périodicités d'entretien | Opération | Périodicité | Référence de pièce |\n|---|---|---|\n| Nettoyage du filtre à air | toutes les 25 heures | `FA-2210` |\n| Remplacement du filtre à air | toutes les 100 heures | `FA-3105` |\n| Remplacement de la bougie | toutes les 100 heures | `BG-441` |\n| Graissage des lames | toutes les 10 heures | graisse lithium |\n| Affûtage des lames | toutes les 50 heures | — |\n| Remplacement du filtre à carburant | toutes les 200 heures | `FC-076` |",
+        "# Procédures de l'atelier municipal ## Champ d'application Ces procédures s'appliquent à l'ensemble du parc thermique de l'atelier, dont la\ntondeuse autoportée TX-40 (`ATL-007`) et le taille-haies H-120 (`ATL-014`). ## P-01 · Consignation avant intervention Toute intervention sur une machine thermique impose, dans cet ordre : 1. arrêt moteur et retrait de la clé ;\n2. **débranchement du capuchon de bougie** ;\n3. attente de dix minutes pour le refroidissement de l'échappement ;\n4. inscription au registre des interventions. L'étape 2 n'est pas facultative sur le TX-40 : cette machine étant dépourvue de\ncoupure automatique de lame au relevage du siège, un démarrage intempestif reste\npossible tant que la bougie est connectée. ## P-02 · Stockage des carburants L'essence pure et le mélange deux temps sont stockés dans des bidons de couleurs\ndistinctes : **vert pour l'essence pure**, **rouge pour le mélange 50:1**. Tout\nbidon rouge est daté de son jour de préparation.",
+        "# Tronçonneuse thermique T-85 — notice d'entretien ## Identification Modèle T-85, mise en service le 17 juin 2021, numéro de parc `ATL-003`. Moteur thermique deux temps, 45,2 cm³. Longueur de guide : 40 cm. Réservoir de carburant : 0,55 litre. Réservoir d'huile de chaîne : 0,26 litre. Masse à vide : 5,6 kg. Comme le H-120, le T-85 fonctionne au mélange deux temps 50:1. Les deux machines\npeuvent donc partager le même bidon rouge, à condition qu'il soit daté. ## Périodicités d'entretien | Opération | Périodicité | Référence de pièce |\n|---|---|---|\n| Nettoyage du filtre à air | toutes les 10 heures | `FA-3105` |\n| Remplacement du filtre à air | toutes les 100 heures | `FA-3105` |\n| Remplacement de la bougie | toutes les 100 heures | `BG-512` |\n| Affûtage de la chaîne | toutes les 5 heures | — |\n| Remplacement de la chaîne | toutes les 150 heures | `CH-401` |\n| Remplacement du guide | toutes les 300 heures | `GD-408` |\n| Contrôle du frein de chaîne | **avant chaque usage** | — |",
+        "Le filtre à air se **nettoie** toutes les 25 heures et se **remplace** toutes\nles 100 heures : ce sont deux opérations distinctes, et la seconde ne dispense\npas de la première. ## Points de vigilance La référence de bougie `BG-441` est commune au TX-40 et au H-120 ; la référence\nde filtre à air `FA-2210` **ne l'est pas** — sur le H-120 elle désigne le filtre\nd'origine, remplacé depuis par le `FA-3105`, de dimensions différentes. Monter\nun `FA-2210` sur un H-120 après remplacement laisse passer les poussières. Le carburant deux temps se dégrade : un mélange de plus de trente jours est\nécarté, quel que soit son aspect."
+      ],
+      "sources_retrouvees": [
+        "procedure_atelier.md",
+        "taille_haies_H120.md",
+        "tronconneuse_T85.md"
+      ],
+      "duree_ms": 5622.5,
+      "indices_refus": {
+        "marqueur": false,
+        "sans_citation": false
+      }
+    },
+    {
+      "id": "Q4",
+      "type": "factuelle",
+      "question": "Quelle pression faut-il aux roues avant du TX-40 ?",
+      "reponse": "1,0 bar, contrôlée à froid avant le démarrage.",
+      "source": "tondeuse_TX40.md",
+      "sans_reponse": false,
+      "autre_source": "",
+      "erreur_attendue": "",
+      "reponse_systeme": "La pression des pneumatiques des roues avant du TX-40 doit être de **1,0 bar** [1].",
+      "citations": [
+        "[1] tondeuse_TX40.md"
+      ],
+      "contextes": [
+        "La première vidange fait exception : elle est due au bout de **5 heures** après\nla mise en service, puis la périodicité de 50 heures s'applique. ## Pression des pneumatiques Roues avant : 1,0 bar. Roues arrière : 0,7 bar. Le contrôle se fait à froid,\navant le démarrage. Un écart de plus de 0,2 bar entre les deux roues arrière\nprovoque une coupe irrégulière sur toute la largeur. ## Points de vigilance Le carter de coupe se colmate par temps humide. Un colmatage non traité fait\nchuter la puissance disponible et surcharge la courroie `CR-118`, qui est la\npièce qui casse en premier sur cette machine. Le TX-40 ne dispose **pas** de coupure automatique de lame au relevage du siège. Cette sécurité, présente sur les modèles postérieurs à 2023, doit être suppléée\npar la procédure d'atelier.",
+        "Le filtre à air se **nettoie** toutes les 25 heures et se **remplace** toutes\nles 100 heures : ce sont deux opérations distinctes, et la seconde ne dispense\npas de la première. ## Points de vigilance La référence de bougie `BG-441` est commune au TX-40 et au H-120 ; la référence\nde filtre à air `FA-2210` **ne l'est pas** — sur le H-120 elle désigne le filtre\nd'origine, remplacé depuis par le `FA-3105`, de dimensions différentes. Monter\nun `FA-2210` sur un H-120 après remplacement laisse passer les poussières. Le carburant deux temps se dégrade : un mélange de plus de trente jours est\nécarté, quel que soit son aspect.",
+        "# Registre des interventions — atelier municipal, année 2024 Ce registre est clos. Il est conservé pour l'historique des machines et l'analyse\ndes incidents. Le registre en cours est `registre_interventions.md`. | Date | Machine | Compteur | Intervention | Agent |\n|---|---|---|---|---|\n| 09/02/2024 | `ATL-007` | 318 h | Vidange d'huile moteur | R. Vasseur |\n| 09/02/2024 | `ATL-003` | 202 h | Remplacement chaîne `CH-401` | L. Fournier |\n| 21/03/2024 | `ATL-007` | 341 h | Remplacement bougie `BG-441` | R. Vasseur |\n| 12/05/2024 | `ATL-003` | 218 h | Nettoyage filtre à air `FA-3105` | L. Fournier |\n| 12/05/2024 | `ATL-014` | 41 h | Nettoyage filtre à air | M. Kessler |\n| 27/06/2024 | `ATL-007` | 372 h | Affûtage des lames | R. Vasseur |\n| 05/09/2024 | `ATL-014` | 63 h | **Remplacement moteur complet** | prestataire |\n| 18/11/2024 | `ATL-003` | 244 h | Remplacement guide `GD-408` | L. Fournier |",
+        "# Tronçonneuse thermique T-85 — notice d'entretien ## Identification Modèle T-85, mise en service le 17 juin 2021, numéro de parc `ATL-003`. Moteur thermique deux temps, 45,2 cm³. Longueur de guide : 40 cm. Réservoir de carburant : 0,55 litre. Réservoir d'huile de chaîne : 0,26 litre. Masse à vide : 5,6 kg. Comme le H-120, le T-85 fonctionne au mélange deux temps 50:1. Les deux machines\npeuvent donc partager le même bidon rouge, à condition qu'il soit daté. ## Périodicités d'entretien | Opération | Périodicité | Référence de pièce |\n|---|---|---|\n| Nettoyage du filtre à air | toutes les 10 heures | `FA-3105` |\n| Remplacement du filtre à air | toutes les 100 heures | `FA-3105` |\n| Remplacement de la bougie | toutes les 100 heures | `BG-512` |\n| Affûtage de la chaîne | toutes les 5 heures | — |\n| Remplacement de la chaîne | toutes les 150 heures | `CH-401` |\n| Remplacement du guide | toutes les 300 heures | `GD-408` |\n| Contrôle du frein de chaîne | **avant chaque usage** | — |"
+      ],
+      "sources_retrouvees": [
+        "registre_interventions_2024.md",
+        "taille_haies_H120.md",
+        "tondeuse_TX40.md",
+        "tronconneuse_T85.md"
+      ],
+      "duree_ms": 10304.7,
+      "indices_refus": {
+        "marqueur": false,
+        "sans_citation": false
+      }
+    },
+    {
+      "id": "Q5",
+      "type": "factuelle",
+      "question": "Au bout de combien d'heures la première vidange du TX-40 est-elle due ?",
+      "reponse": "5 heures après la mise en service. La périodicité de 50 heures ne s'applique qu'ensuite.",
+      "source": "tondeuse_TX40.md",
+      "sans_reponse": false,
+      "autre_source": "",
+      "erreur_attendue": "",
+      "reponse_systeme": "La première vidange du TX-40 est due au bout de **5 heures** après la mise en service [1].",
+      "citations": [
+        "[1] tondeuse_TX40.md"
+      ],
+      "contextes": [
+        "La première vidange fait exception : elle est due au bout de **5 heures** après\nla mise en service, puis la périodicité de 50 heures s'applique. ## Pression des pneumatiques Roues avant : 1,0 bar. Roues arrière : 0,7 bar. Le contrôle se fait à froid,\navant le démarrage. Un écart de plus de 0,2 bar entre les deux roues arrière\nprovoque une coupe irrégulière sur toute la largeur. ## Points de vigilance Le carter de coupe se colmate par temps humide. Un colmatage non traité fait\nchuter la puissance disponible et surcharge la courroie `CR-118`, qui est la\npièce qui casse en premier sur cette machine. Le TX-40 ne dispose **pas** de coupure automatique de lame au relevage du siège. Cette sécurité, présente sur les modèles postérieurs à 2023, doit être suppléée\npar la procédure d'atelier.",
+        "# Tondeuse autoportée TX-40 — notice d'entretien ## Identification Modèle TX-40, mise en service le 12 mars 2022, numéro de parc `ATL-007`. Moteur thermique quatre temps, 452 cm³, refroidissement par air. Largeur de coupe 92 cm. Réservoir de carburant : 5,7 litres. Masse à vide : 218 kg. ## Périodicités d'entretien Les périodicités sont exprimées en heures de fonctionnement, relevées au\ncompteur situé sous le volant. À défaut d'usage, aucune opération n'est due. | Opération | Périodicité | Référence de pièce |\n|---|---|---|\n| Vidange d'huile moteur | toutes les 50 heures | huile SAE 30, 1,4 litre |\n| Remplacement du filtre à air | toutes les 100 heures | `FA-2210` |\n| Remplacement de la bougie | toutes les 200 heures | `BG-441` |\n| Affûtage des lames | toutes les 25 heures | — |\n| Remplacement des lames | toutes les 400 heures | `LM-920` (jeu de deux) |\n| Contrôle de la courroie de coupe | toutes les 100 heures | `CR-118` |",
+        "Le filtre à air se **nettoie** toutes les 25 heures et se **remplace** toutes\nles 100 heures : ce sont deux opérations distinctes, et la seconde ne dispense\npas de la première. ## Points de vigilance La référence de bougie `BG-441` est commune au TX-40 et au H-120 ; la référence\nde filtre à air `FA-2210` **ne l'est pas** — sur le H-120 elle désigne le filtre\nd'origine, remplacé depuis par le `FA-3105`, de dimensions différentes. Monter\nun `FA-2210` sur un H-120 après remplacement laisse passer les poussières. Le carburant deux temps se dégrade : un mélange de plus de trente jours est\nécarté, quel que soit son aspect.",
+        "## Observations **22/03/2025** — La courroie `CR-118` a cédé à 445 heures, soit bien avant son\ncontrôle des 500 heures. Le carter de coupe était colmaté. Le contrôle est\navancé à toutes les 80 heures sur cette machine, en dérogation à la notice. **11/04/2025** — Le filtre `FA-2210` commandé pour le `ATL-014` ne correspondait\npas : dimensions différentes. Remplacé par un `FA-3105`. C'est cet incident qui\na donné lieu à la procédure P-04. **30/10/2025** — Dernière intervention de l'année sur le `ATL-007`. La machine\nest remisée pour l'hiver, réservoir vidangé."
+      ],
+      "sources_retrouvees": [
+        "registre_interventions.md",
+        "taille_haies_H120.md",
+        "tondeuse_TX40.md"
+      ],
+      "duree_ms": 8979.9,
+      "indices_refus": {
+        "marqueur": false,
+        "sans_citation": false
+      }
+    },
+    {
+      "id": "Q6",
+      "type": "multi_documents",
+      "question": "Pourquoi le débranchement du capuchon de bougie est-il particulièrement impératif sur le TX-40 ?",
+      "reponse": "Parce que le TX-40 n'a pas de coupure automatique de lame au relevage du siège — sécurité présente seulement sur les modèles postérieurs à 2023. Tant que la bougie est connectée, un démarrage intempestif reste possible, et la procédure P-01 supplée cette absence.",
+      "source": "procedure_atelier.md",
+      "autre_source": "tondeuse_TX40.md",
+      "sans_reponse": false,
+      "erreur_attendue": "",
+      "reponse_systeme": "Le débranchement du capuchon de bougie est particulièrement impératif sur le TX-40 car cette machine est dépourvue de coupure automatique de lame au relevage du siège, ce qui rend un démarrage intempestif possible tant que la bougie est connectée [1]. Cet incident a même conduit à la modification des procédures, passant du statut de « recommandé » à « obligatoire » [4].",
+      "citations": [
+        "[1] procedure_atelier.md",
+        "[4] registre_interventions_2024.md"
+      ],
+      "contextes": [
+        "# Procédures de l'atelier municipal ## Champ d'application Ces procédures s'appliquent à l'ensemble du parc thermique de l'atelier, dont la\ntondeuse autoportée TX-40 (`ATL-007`) et le taille-haies H-120 (`ATL-014`). ## P-01 · Consignation avant intervention Toute intervention sur une machine thermique impose, dans cet ordre : 1. arrêt moteur et retrait de la clé ;\n2. **débranchement du capuchon de bougie** ;\n3. attente de dix minutes pour le refroidissement de l'échappement ;\n4. inscription au registre des interventions. L'étape 2 n'est pas facultative sur le TX-40 : cette machine étant dépourvue de\ncoupure automatique de lame au relevage du siège, un démarrage intempestif reste\npossible tant que la bougie est connectée. ## P-02 · Stockage des carburants L'essence pure et le mélange deux temps sont stockés dans des bidons de couleurs\ndistinctes : **vert pour l'essence pure**, **rouge pour le mélange 50:1**. Tout\nbidon rouge est daté de son jour de préparation.",
+        "# Procédures de l'atelier municipal — version 2023 (ABROGÉE) > **Ce document est abrogé depuis le 1er janvier 2025.** Il est conservé au titre\n> du suivi documentaire. La version en vigueur est `procedure_atelier.md`. En cas\n> de divergence, c'est la version en vigueur qui s'applique. ## P-01 · Consignation avant intervention (version 2023) Toute intervention sur une machine thermique impose : 1. arrêt moteur et retrait de la clé ;\n2. attente de **cinq minutes** pour le refroidissement de l'échappement ;\n3. inscription au registre des interventions. Le débranchement du capuchon de bougie est **recommandé** sans être obligatoire. ## P-02 · Stockage des carburants (version 2023) L'essence pure et le mélange deux temps sont stockés dans des bidons distincts. Aucune couleur n'est imposée ; l'étiquetage manuscrit suffit. Un mélange de plus de **soixante jours** est vidangé. ## P-03 · Suivi des heures (version 2023) Le compteur horaire est relevé en fin de mois.",
+        "Le filtre à air se **nettoie** toutes les 25 heures et se **remplace** toutes\nles 100 heures : ce sont deux opérations distinctes, et la seconde ne dispense\npas de la première. ## Points de vigilance La référence de bougie `BG-441` est commune au TX-40 et au H-120 ; la référence\nde filtre à air `FA-2210` **ne l'est pas** — sur le H-120 elle désigne le filtre\nd'origine, remplacé depuis par le `FA-3105`, de dimensions différentes. Monter\nun `FA-2210` sur un H-120 après remplacement laisse passer les poussières. Le carburant deux temps se dégrade : un mélange de plus de trente jours est\nécarté, quel que soit son aspect.",
+        "## Observations **21/03/2024** — Démarrage intempestif du `ATL-007` pendant une intervention :\nl'agent avait relevé le siège en laissant la bougie connectée, et la machine ne\ndispose d'aucune coupure automatique de lame. Sans blessure. Ce fait est à\nl'origine du passage du débranchement de bougie de « recommandé » à\n« obligatoire » dans la révision de procédure du 1er janvier 2025. **05/09/2024** — Moteur du `ATL-014` détruit : de l'essence pure a été versée\ndans le réservoir au lieu du mélange 50:1, les deux bidons portant une étiquette\nmanuscrite décolorée. Remplacement du moteur par un prestataire, machine\nimmobilisée sept semaines. C'est l'incident qui a imposé le code couleur vert\net rouge. **Bilan des heures au 31/12/2024** — `ATL-007` : 396 h. `ATL-003` : 251 h.\n`ATL-014` : 68 h, compteur remis à zéro au remplacement moteur puis recalé à la\nvaleur d'avant incident sur décision de l'atelier, pour ne pas perdre\nl'historique des périodicités."
+      ],
+      "sources_retrouvees": [
+        "procedure_atelier.md",
+        "procedure_atelier_2023_abrogee.md",
+        "registre_interventions_2024.md",
+        "taille_haies_H120.md"
+      ],
+      "duree_ms": 13728.3,
+      "indices_refus": {
+        "marqueur": false,
+        "sans_citation": false
+      }
+    },
+    {
+      "id": "Q7",
+      "type": "multi_documents",
+      "question": "Quelle référence de pièce est réellement commune au TX-40 et au H-120 ?",
+      "reponse": "La bougie `BG-441`. La référence `FA-2210` figure dans les deux notices mais ne désigne pas la même pièce, ce que rappelle la procédure P-04.",
+      "source": "taille_haies_H120.md",
+      "autre_source": "procedure_atelier.md",
+      "sans_reponse": false,
+      "erreur_attendue": "",
+      "reponse_systeme": "La référence de pièce réellement commune au TX-40 et au H-120 est le filtre à air `FA-3105` [2].",
+      "citations": [
+        "[2] tronconneuse_T85.md"
+      ],
+      "contextes": [
+        "Le filtre à air se **nettoie** toutes les 25 heures et se **remplace** toutes\nles 100 heures : ce sont deux opérations distinctes, et la seconde ne dispense\npas de la première. ## Points de vigilance La référence de bougie `BG-441` est commune au TX-40 et au H-120 ; la référence\nde filtre à air `FA-2210` **ne l'est pas** — sur le H-120 elle désigne le filtre\nd'origine, remplacé depuis par le `FA-3105`, de dimensions différentes. Monter\nun `FA-2210` sur un H-120 après remplacement laisse passer les poussières. Le carburant deux temps se dégrade : un mélange de plus de trente jours est\nécarté, quel que soit son aspect.",
+        "Le filtre `FA-3105` est ici la référence d'origine ; c'est la même pièce que\ncelle montée en remplacement sur le H-120. Le T-85 et le H-120 partagent donc\nréellement leur filtre à air — mais **pas** leur bougie : `BG-512` pour le T-85,\n`BG-441` pour le H-120. ## Huile de chaîne Huile spécifique adhésive, jamais d'huile moteur ni d'huile de vidange. Le\nniveau se contrôle à chaque plein de carburant : les deux réservoirs se vident\napproximativement en même temps, et une chaîne tournant à sec détruit le guide\nen quelques minutes. ## Point de vigilance Le frein de chaîne est le seul organe du parc dont le contrôle est dû **avant\nchaque usage** et non selon un compteur horaire. Un contrôle reporté à la\npériodicité horaire est une non-conformité, pas un retard.",
+        "# Taille-haies thermique H-120 — notice d'entretien ## Identification Modèle H-120, mise en service le 4 septembre 2023, numéro de parc `ATL-014`. Moteur thermique deux temps, 25,4 cm³. Longueur de lame : 60 cm. Réservoir de carburant : 0,5 litre. Masse à vide : 5,2 kg. Le H-120 fonctionne au **mélange deux temps**, proportion 50:1 (soit 20 ml\nd'huile deux temps par litre d'essence). L'emploi d'essence pure détruit le\nmoteur en quelques minutes de fonctionnement. ## Périodicités d'entretien | Opération | Périodicité | Référence de pièce |\n|---|---|---|\n| Nettoyage du filtre à air | toutes les 25 heures | `FA-2210` |\n| Remplacement du filtre à air | toutes les 100 heures | `FA-3105` |\n| Remplacement de la bougie | toutes les 100 heures | `BG-441` |\n| Graissage des lames | toutes les 10 heures | graisse lithium |\n| Affûtage des lames | toutes les 50 heures | — |\n| Remplacement du filtre à carburant | toutes les 200 heures | `FC-076` |",
+        "# Procédures de l'atelier municipal ## Champ d'application Ces procédures s'appliquent à l'ensemble du parc thermique de l'atelier, dont la\ntondeuse autoportée TX-40 (`ATL-007`) et le taille-haies H-120 (`ATL-014`). ## P-01 · Consignation avant intervention Toute intervention sur une machine thermique impose, dans cet ordre : 1. arrêt moteur et retrait de la clé ;\n2. **débranchement du capuchon de bougie** ;\n3. attente de dix minutes pour le refroidissement de l'échappement ;\n4. inscription au registre des interventions. L'étape 2 n'est pas facultative sur le TX-40 : cette machine étant dépourvue de\ncoupure automatique de lame au relevage du siège, un démarrage intempestif reste\npossible tant que la bougie est connectée. ## P-02 · Stockage des carburants L'essence pure et le mélange deux temps sont stockés dans des bidons de couleurs\ndistinctes : **vert pour l'essence pure**, **rouge pour le mélange 50:1**. Tout\nbidon rouge est daté de son jour de préparation."
+      ],
+      "sources_retrouvees": [
+        "procedure_atelier.md",
+        "taille_haies_H120.md",
+        "tronconneuse_T85.md"
+      ],
+      "duree_ms": 7917.7,
+      "indices_refus": {
+        "marqueur": false,
+        "sans_citation": false
+      }
+    },
+    {
+      "id": "Q8",
+      "type": "multi_documents",
+      "question": "Combien de temps un mélange deux temps peut-il être conservé avant d'être écarté ?",
+      "reponse": "Trente jours. Au-delà il est vidangé et traité en déchet, jamais versé dans une machine à essence pure.",
+      "source": "taille_haies_H120.md",
+      "autre_source": "procedure_atelier.md",
+      "sans_reponse": false,
+      "erreur_attendue": "",
+      "reponse_systeme": "Un mélange deux temps peut être conservé **jusqu'à trente jours** avant d'être écarté [1]. Cette durée est mentionnée dans le contexte de la péremption du mélange, qui est écarté si son âge dépasse cette période.",
+      "citations": [
+        "[1] taille_haies_H120.md"
+      ],
+      "contextes": [
+        "Le filtre à air se **nettoie** toutes les 25 heures et se **remplace** toutes\nles 100 heures : ce sont deux opérations distinctes, et la seconde ne dispense\npas de la première. ## Points de vigilance La référence de bougie `BG-441` est commune au TX-40 et au H-120 ; la référence\nde filtre à air `FA-2210` **ne l'est pas** — sur le H-120 elle désigne le filtre\nd'origine, remplacé depuis par le `FA-3105`, de dimensions différentes. Monter\nun `FA-2210` sur un H-120 après remplacement laisse passer les poussières. Le carburant deux temps se dégrade : un mélange de plus de trente jours est\nécarté, quel que soit son aspect.",
+        "# Procédures de l'atelier municipal — version 2023 (ABROGÉE) > **Ce document est abrogé depuis le 1er janvier 2025.** Il est conservé au titre\n> du suivi documentaire. La version en vigueur est `procedure_atelier.md`. En cas\n> de divergence, c'est la version en vigueur qui s'applique. ## P-01 · Consignation avant intervention (version 2023) Toute intervention sur une machine thermique impose : 1. arrêt moteur et retrait de la clé ;\n2. attente de **cinq minutes** pour le refroidissement de l'échappement ;\n3. inscription au registre des interventions. Le débranchement du capuchon de bougie est **recommandé** sans être obligatoire. ## P-02 · Stockage des carburants (version 2023) L'essence pure et le mélange deux temps sont stockés dans des bidons distincts. Aucune couleur n'est imposée ; l'étiquetage manuscrit suffit. Un mélange de plus de **soixante jours** est vidangé. ## P-03 · Suivi des heures (version 2023) Le compteur horaire est relevé en fin de mois.",
+        "## Ce qui a changé au 1er janvier 2025 | Point | 2023 | En vigueur |\n|---|---|---|\n| Capuchon de bougie | recommandé | **obligatoire**, étape 2 |\n| Refroidissement | 5 minutes | **10 minutes** |\n| Bidons | étiquetage libre | **vert = essence pure, rouge = mélange** |\n| Péremption du mélange | 60 jours | **30 jours** |\n| Relevé des compteurs | mensuel | **hebdomadaire** | La révision fait suite à deux incidents de 2024 : un démarrage intempestif sur\nle `ATL-007` en mars, et un moteur détruit par de l'essence pure versée dans le\n`ATL-014` en septembre.",
+        "Un mélange de plus de trente jours est vidangé et traité en déchet, jamais versé\ndans une machine à essence pure. ## P-03 · Suivi des heures Le compteur horaire de chaque machine est relevé en fin de semaine et reporté au\nregistre. Les périodicités d'entretien des notices constructeur sont exprimées\nen heures de fonctionnement : sans relevé, aucune échéance n'est calculable. Une machine dont le compteur est en panne est retirée du service jusqu'à sa\nréparation. Une périodicité estimée n'est pas une périodicité. ## P-04 · Pièces communes au parc Certaines références sont partagées entre machines, d'autres ne le sont pas\nmalgré un numéro identique. Avant toute commande, la référence est vérifiée sur\nla notice de **la machine concernée**, et non sur celle d'une machine voisine. Le cas connu de l'atelier est le filtre à air : la référence `FA-2210` figure\ndans les deux notices, sans désigner la même pièce."
+      ],
+      "sources_retrouvees": [
+        "procedure_atelier.md",
+        "procedure_atelier_2023_abrogee.md",
+        "taille_haies_H120.md"
+      ],
+      "duree_ms": 7644.5,
+      "indices_refus": {
+        "marqueur": false,
+        "sans_citation": false
+      }
+    },
+    {
+      "id": "Q9",
+      "type": "piege",
+      "question": "Le filtre à air `FA-2210` est-il utilisable indifféremment sur le TX-40 et sur le H-120 ?",
+      "reponse": "Non. Sur le H-120, `FA-2210` désigne le filtre d'origine, remplacé depuis par le `FA-3105`, de dimensions différentes. Monter un `FA-2210` sur un H-120 laisse passer les poussières.",
+      "source": "taille_haies_H120.md",
+      "autre_source": "procedure_atelier.md",
+      "erreur_attendue": "répondre « oui, c'est la même référence » — la chaîne récupère les deux notices, y lit le même code `FA-2210`, et conclut à l'identité de la pièce. C'est l'erreur que la procédure P-04 a été écrite pour empêcher chez les agents ; elle piège un système exactement de la même façon.",
+      "sans_reponse": false,
+      "reponse_systeme": "Le filtre à air `FA-2210` est utilisable sur le TX-40, car il est référencé comme étant la référence d'origine pour le remplacement sur ce modèle [4]. Cependant, il n'est **pas** utilisable indifféremment sur le H-120, car sur ce modèle, le `FA-2210` désigne le filtre d'origine, remplacé depuis par le `FA-3105` [1]. Monter un `FA-2210` sur un H-120 après remplacement laisse passer les poussières.",
+      "citations": [
+        "[1] taille_haies_H120.md",
+        "[4] tondeuse_TX40.md"
+      ],
+      "contextes": [
+        "Le filtre à air se **nettoie** toutes les 25 heures et se **remplace** toutes\nles 100 heures : ce sont deux opérations distinctes, et la seconde ne dispense\npas de la première. ## Points de vigilance La référence de bougie `BG-441` est commune au TX-40 et au H-120 ; la référence\nde filtre à air `FA-2210` **ne l'est pas** — sur le H-120 elle désigne le filtre\nd'origine, remplacé depuis par le `FA-3105`, de dimensions différentes. Monter\nun `FA-2210` sur un H-120 après remplacement laisse passer les poussières. Le carburant deux temps se dégrade : un mélange de plus de trente jours est\nécarté, quel que soit son aspect.",
+        "Le filtre `FA-3105` est ici la référence d'origine ; c'est la même pièce que\ncelle montée en remplacement sur le H-120. Le T-85 et le H-120 partagent donc\nréellement leur filtre à air — mais **pas** leur bougie : `BG-512` pour le T-85,\n`BG-441` pour le H-120. ## Huile de chaîne Huile spécifique adhésive, jamais d'huile moteur ni d'huile de vidange. Le\nniveau se contrôle à chaque plein de carburant : les deux réservoirs se vident\napproximativement en même temps, et une chaîne tournant à sec détruit le guide\nen quelques minutes. ## Point de vigilance Le frein de chaîne est le seul organe du parc dont le contrôle est dû **avant\nchaque usage** et non selon un compteur horaire. Un contrôle reporté à la\npériodicité horaire est une non-conformité, pas un retard.",
+        "# Taille-haies thermique H-120 — notice d'entretien ## Identification Modèle H-120, mise en service le 4 septembre 2023, numéro de parc `ATL-014`. Moteur thermique deux temps, 25,4 cm³. Longueur de lame : 60 cm. Réservoir de carburant : 0,5 litre. Masse à vide : 5,2 kg. Le H-120 fonctionne au **mélange deux temps**, proportion 50:1 (soit 20 ml\nd'huile deux temps par litre d'essence). L'emploi d'essence pure détruit le\nmoteur en quelques minutes de fonctionnement. ## Périodicités d'entretien | Opération | Périodicité | Référence de pièce |\n|---|---|---|\n| Nettoyage du filtre à air | toutes les 25 heures | `FA-2210` |\n| Remplacement du filtre à air | toutes les 100 heures | `FA-3105` |\n| Remplacement de la bougie | toutes les 100 heures | `BG-441` |\n| Graissage des lames | toutes les 10 heures | graisse lithium |\n| Affûtage des lames | toutes les 50 heures | — |\n| Remplacement du filtre à carburant | toutes les 200 heures | `FC-076` |",
+        "# Tondeuse autoportée TX-40 — notice d'entretien ## Identification Modèle TX-40, mise en service le 12 mars 2022, numéro de parc `ATL-007`. Moteur thermique quatre temps, 452 cm³, refroidissement par air. Largeur de coupe 92 cm. Réservoir de carburant : 5,7 litres. Masse à vide : 218 kg. ## Périodicités d'entretien Les périodicités sont exprimées en heures de fonctionnement, relevées au\ncompteur situé sous le volant. À défaut d'usage, aucune opération n'est due. | Opération | Périodicité | Référence de pièce |\n|---|---|---|\n| Vidange d'huile moteur | toutes les 50 heures | huile SAE 30, 1,4 litre |\n| Remplacement du filtre à air | toutes les 100 heures | `FA-2210` |\n| Remplacement de la bougie | toutes les 200 heures | `BG-441` |\n| Affûtage des lames | toutes les 25 heures | — |\n| Remplacement des lames | toutes les 400 heures | `LM-920` (jeu de deux) |\n| Contrôle de la courroie de coupe | toutes les 100 heures | `CR-118` |"
+      ],
+      "sources_retrouvees": [
+        "taille_haies_H120.md",
+        "tondeuse_TX40.md",
+        "tronconneuse_T85.md"
+      ],
+      "duree_ms": 13255.8,
+      "indices_refus": {
+        "marqueur": false,
+        "sans_citation": false
+      }
+    },
+    {
+      "id": "Q10",
+      "type": "piege",
+      "question": "Tous les combien faut-il nettoyer le filtre à air du TX-40 ?",
+      "reponse": "La notice du TX-40 ne prévoit aucun nettoyage du filtre à air, mais son remplacement toutes les 100 heures. Le nettoyage toutes les 25 heures est une opération du H-120.",
+      "source": "tondeuse_TX40.md",
+      "erreur_attendue": "répondre « toutes les 25 heures », en transposant au TX-40 une périodicité qui appartient à l'autre machine. La question présuppose une opération inexistante : un bon système corrige la prémisse au lieu de la suivre.",
+      "sans_reponse": false,
+      "autre_source": "",
+      "reponse_systeme": "Le filtre à air du TX-40 doit être **remplacé** toutes les 100 heures [2]. Cependant, il est précisé que le filtre à air se **nettoie** toutes les 25 heures [1]. Ainsi, il faut nettoyer le filtre à air toutes les 25 heures.",
+      "citations": [
+        "[1] taille_haies_H120.md",
+        "[2] tondeuse_TX40.md"
+      ],
+      "contextes": [
+        "Le filtre à air se **nettoie** toutes les 25 heures et se **remplace** toutes\nles 100 heures : ce sont deux opérations distinctes, et la seconde ne dispense\npas de la première. ## Points de vigilance La référence de bougie `BG-441` est commune au TX-40 et au H-120 ; la référence\nde filtre à air `FA-2210` **ne l'est pas** — sur le H-120 elle désigne le filtre\nd'origine, remplacé depuis par le `FA-3105`, de dimensions différentes. Monter\nun `FA-2210` sur un H-120 après remplacement laisse passer les poussières. Le carburant deux temps se dégrade : un mélange de plus de trente jours est\nécarté, quel que soit son aspect.",
+        "# Tondeuse autoportée TX-40 — notice d'entretien ## Identification Modèle TX-40, mise en service le 12 mars 2022, numéro de parc `ATL-007`. Moteur thermique quatre temps, 452 cm³, refroidissement par air. Largeur de coupe 92 cm. Réservoir de carburant : 5,7 litres. Masse à vide : 218 kg. ## Périodicités d'entretien Les périodicités sont exprimées en heures de fonctionnement, relevées au\ncompteur situé sous le volant. À défaut d'usage, aucune opération n'est due. | Opération | Périodicité | Référence de pièce |\n|---|---|---|\n| Vidange d'huile moteur | toutes les 50 heures | huile SAE 30, 1,4 litre |\n| Remplacement du filtre à air | toutes les 100 heures | `FA-2210` |\n| Remplacement de la bougie | toutes les 200 heures | `BG-441` |\n| Affûtage des lames | toutes les 25 heures | — |\n| Remplacement des lames | toutes les 400 heures | `LM-920` (jeu de deux) |\n| Contrôle de la courroie de coupe | toutes les 100 heures | `CR-118` |",
+        "## Observations **22/03/2025** — La courroie `CR-118` a cédé à 445 heures, soit bien avant son\ncontrôle des 500 heures. Le carter de coupe était colmaté. Le contrôle est\navancé à toutes les 80 heures sur cette machine, en dérogation à la notice. **11/04/2025** — Le filtre `FA-2210` commandé pour le `ATL-014` ne correspondait\npas : dimensions différentes. Remplacé par un `FA-3105`. C'est cet incident qui\na donné lieu à la procédure P-04. **30/10/2025** — Dernière intervention de l'année sur le `ATL-007`. La machine\nest remisée pour l'hiver, réservoir vidangé.",
+        "La première vidange fait exception : elle est due au bout de **5 heures** après\nla mise en service, puis la périodicité de 50 heures s'applique. ## Pression des pneumatiques Roues avant : 1,0 bar. Roues arrière : 0,7 bar. Le contrôle se fait à froid,\navant le démarrage. Un écart de plus de 0,2 bar entre les deux roues arrière\nprovoque une coupe irrégulière sur toute la largeur. ## Points de vigilance Le carter de coupe se colmate par temps humide. Un colmatage non traité fait\nchuter la puissance disponible et surcharge la courroie `CR-118`, qui est la\npièce qui casse en premier sur cette machine. Le TX-40 ne dispose **pas** de coupure automatique de lame au relevage du siège. Cette sécurité, présente sur les modèles postérieurs à 2023, doit être suppléée\npar la procédure d'atelier."
+      ],
+      "sources_retrouvees": [
+        "registre_interventions.md",
+        "taille_haies_H120.md",
+        "tondeuse_TX40.md"
+      ],
+      "duree_ms": 8374.9,
+      "indices_refus": {
+        "marqueur": false,
+        "sans_citation": false
+      }
+    },
+    {
+      "id": "Q11",
+      "type": "piege",
+      "question": "Tous les combien la courroie `CR-118` du `ATL-007` doit-elle être contrôlée aujourd'hui ?",
+      "reponse": "Toutes les 80 heures. La notice prévoit 100 heures, mais après la rupture du 22/03/2025 à 445 heures sur carter colmaté, le contrôle a été avancé à 80 heures en dérogation à la notice.",
+      "source": "registre_interventions.md",
+      "autre_source": "tondeuse_TX40.md",
+      "erreur_attendue": "répondre « toutes les 100 heures » d'après la seule notice. Le registre prime sur le constructeur, et rien dans la notice ne le signale : il faut avoir récupéré les deux documents et su lequel fait foi.",
+      "sans_reponse": false,
+      "reponse_systeme": "La courroie `CR-118` du `ATL-007` doit être contrôlée toutes les 80 heures, en dérogation à la notice [1].",
+      "citations": [
+        "[1] registre_interventions.md"
+      ],
+      "contextes": [
+        "## Observations **22/03/2025** — La courroie `CR-118` a cédé à 445 heures, soit bien avant son\ncontrôle des 500 heures. Le carter de coupe était colmaté. Le contrôle est\navancé à toutes les 80 heures sur cette machine, en dérogation à la notice. **11/04/2025** — Le filtre `FA-2210` commandé pour le `ATL-014` ne correspondait\npas : dimensions différentes. Remplacé par un `FA-3105`. C'est cet incident qui\na donné lieu à la procédure P-04. **30/10/2025** — Dernière intervention de l'année sur le `ATL-007`. La machine\nest remisée pour l'hiver, réservoir vidangé.",
+        "La première vidange fait exception : elle est due au bout de **5 heures** après\nla mise en service, puis la périodicité de 50 heures s'applique. ## Pression des pneumatiques Roues avant : 1,0 bar. Roues arrière : 0,7 bar. Le contrôle se fait à froid,\navant le démarrage. Un écart de plus de 0,2 bar entre les deux roues arrière\nprovoque une coupe irrégulière sur toute la largeur. ## Points de vigilance Le carter de coupe se colmate par temps humide. Un colmatage non traité fait\nchuter la puissance disponible et surcharge la courroie `CR-118`, qui est la\npièce qui casse en premier sur cette machine. Le TX-40 ne dispose **pas** de coupure automatique de lame au relevage du siège. Cette sécurité, présente sur les modèles postérieurs à 2023, doit être suppléée\npar la procédure d'atelier.",
+        "## Observations **21/03/2024** — Démarrage intempestif du `ATL-007` pendant une intervention :\nl'agent avait relevé le siège en laissant la bougie connectée, et la machine ne\ndispose d'aucune coupure automatique de lame. Sans blessure. Ce fait est à\nl'origine du passage du débranchement de bougie de « recommandé » à\n« obligatoire » dans la révision de procédure du 1er janvier 2025. **05/09/2024** — Moteur du `ATL-014` détruit : de l'essence pure a été versée\ndans le réservoir au lieu du mélange 50:1, les deux bidons portant une étiquette\nmanuscrite décolorée. Remplacement du moteur par un prestataire, machine\nimmobilisée sept semaines. C'est l'incident qui a imposé le code couleur vert\net rouge. **Bilan des heures au 31/12/2024** — `ATL-007` : 396 h. `ATL-003` : 251 h.\n`ATL-014` : 68 h, compteur remis à zéro au remplacement moteur puis recalé à la\nvaleur d'avant incident sur décision de l'atelier, pour ne pas perdre\nl'historique des périodicités.",
+        "# Registre des interventions — atelier municipal Une ligne par intervention. Le compteur est celui relevé au moment de l'acte. ## Année 2025 | Date | Machine | Compteur | Intervention | Agent |\n|---|---|---|---|---|\n| 14/01/2025 | `ATL-007` | 412 h | Vidange d'huile moteur | R. Vasseur |\n| 14/01/2025 | `ATL-007` | 412 h | Affûtage des lames | R. Vasseur |\n| 03/03/2025 | `ATL-014` | 96 h | Nettoyage du filtre à air | M. Kessler |\n| 22/03/2025 | `ATL-007` | 445 h | Remplacement courroie `CR-118` | R. Vasseur |\n| 22/03/2025 | `ATL-007` | 445 h | Contrôle pression pneumatiques | R. Vasseur |\n| 11/04/2025 | `ATL-014` | 104 h | Remplacement filtre à air `FA-3105` | M. Kessler |\n| 11/04/2025 | `ATL-014` | 104 h | Remplacement bougie `BG-441` | M. Kessler |\n| 06/06/2025 | `ATL-007` | 468 h | Vidange d'huile moteur | R. Vasseur |\n| 06/06/2025 | `ATL-007` | 468 h | Remplacement des lames `LM-920` | R. Vasseur |\n| 19/09/2025 | `ATL-014` | 128 h | Graissage des lames | M. Kessler |\n| 30/10/2025 | `ATL-007` | 501 h | Remplacement filtre à air `FA-2210` | R. Vasseur |\n| 30/10/2025 | `ATL-007` | 501 h | Remplacement bougie `BG-441` | R. Vasseur |"
+      ],
+      "sources_retrouvees": [
+        "registre_interventions.md",
+        "registre_interventions_2024.md",
+        "tondeuse_TX40.md"
+      ],
+      "duree_ms": 6634.0,
+      "indices_refus": {
+        "marqueur": false,
+        "sans_citation": false
+      }
+    },
+    {
+      "id": "Q12",
+      "type": "datee",
+      "question": "Au 1er février 2025, quelle était la périodicité de contrôle de la courroie du `ATL-007` ?",
+      "reponse": "100 heures, celle de la notice. La dérogation à 80 heures ne date que du 22 mars 2025.",
+      "source": "tondeuse_TX40.md",
+      "autre_source": "registre_interventions.md",
+      "sans_reponse": false,
+      "erreur_attendue": "",
+      "reponse_systeme": "Au 1er février 2025, la périodicité de contrôle de la courroie du `ATL-007` était toutes les 80 heures [1].",
+      "citations": [
+        "[1] registre_interventions.md"
+      ],
+      "contextes": [
+        "## Observations **22/03/2025** — La courroie `CR-118` a cédé à 445 heures, soit bien avant son\ncontrôle des 500 heures. Le carter de coupe était colmaté. Le contrôle est\navancé à toutes les 80 heures sur cette machine, en dérogation à la notice. **11/04/2025** — Le filtre `FA-2210` commandé pour le `ATL-014` ne correspondait\npas : dimensions différentes. Remplacé par un `FA-3105`. C'est cet incident qui\na donné lieu à la procédure P-04. **30/10/2025** — Dernière intervention de l'année sur le `ATL-007`. La machine\nest remisée pour l'hiver, réservoir vidangé.",
+        "## Observations **21/03/2024** — Démarrage intempestif du `ATL-007` pendant une intervention :\nl'agent avait relevé le siège en laissant la bougie connectée, et la machine ne\ndispose d'aucune coupure automatique de lame. Sans blessure. Ce fait est à\nl'origine du passage du débranchement de bougie de « recommandé » à\n« obligatoire » dans la révision de procédure du 1er janvier 2025. **05/09/2024** — Moteur du `ATL-014` détruit : de l'essence pure a été versée\ndans le réservoir au lieu du mélange 50:1, les deux bidons portant une étiquette\nmanuscrite décolorée. Remplacement du moteur par un prestataire, machine\nimmobilisée sept semaines. C'est l'incident qui a imposé le code couleur vert\net rouge. **Bilan des heures au 31/12/2024** — `ATL-007` : 396 h. `ATL-003` : 251 h.\n`ATL-014` : 68 h, compteur remis à zéro au remplacement moteur puis recalé à la\nvaleur d'avant incident sur décision de l'atelier, pour ne pas perdre\nl'historique des périodicités.",
+        "# Tondeuse autoportée TX-40 — notice d'entretien ## Identification Modèle TX-40, mise en service le 12 mars 2022, numéro de parc `ATL-007`. Moteur thermique quatre temps, 452 cm³, refroidissement par air. Largeur de coupe 92 cm. Réservoir de carburant : 5,7 litres. Masse à vide : 218 kg. ## Périodicités d'entretien Les périodicités sont exprimées en heures de fonctionnement, relevées au\ncompteur situé sous le volant. À défaut d'usage, aucune opération n'est due. | Opération | Périodicité | Référence de pièce |\n|---|---|---|\n| Vidange d'huile moteur | toutes les 50 heures | huile SAE 30, 1,4 litre |\n| Remplacement du filtre à air | toutes les 100 heures | `FA-2210` |\n| Remplacement de la bougie | toutes les 200 heures | `BG-441` |\n| Affûtage des lames | toutes les 25 heures | — |\n| Remplacement des lames | toutes les 400 heures | `LM-920` (jeu de deux) |\n| Contrôle de la courroie de coupe | toutes les 100 heures | `CR-118` |",
+        "# Registre des interventions — atelier municipal Une ligne par intervention. Le compteur est celui relevé au moment de l'acte. ## Année 2025 | Date | Machine | Compteur | Intervention | Agent |\n|---|---|---|---|---|\n| 14/01/2025 | `ATL-007` | 412 h | Vidange d'huile moteur | R. Vasseur |\n| 14/01/2025 | `ATL-007` | 412 h | Affûtage des lames | R. Vasseur |\n| 03/03/2025 | `ATL-014` | 96 h | Nettoyage du filtre à air | M. Kessler |\n| 22/03/2025 | `ATL-007` | 445 h | Remplacement courroie `CR-118` | R. Vasseur |\n| 22/03/2025 | `ATL-007` | 445 h | Contrôle pression pneumatiques | R. Vasseur |\n| 11/04/2025 | `ATL-014` | 104 h | Remplacement filtre à air `FA-3105` | M. Kessler |\n| 11/04/2025 | `ATL-014` | 104 h | Remplacement bougie `BG-441` | M. Kessler |\n| 06/06/2025 | `ATL-007` | 468 h | Vidange d'huile moteur | R. Vasseur |\n| 06/06/2025 | `ATL-007` | 468 h | Remplacement des lames `LM-920` | R. Vasseur |\n| 19/09/2025 | `ATL-014` | 128 h | Graissage des lames | M. Kessler |\n| 30/10/2025 | `ATL-007` | 501 h | Remplacement filtre à air `FA-2210` | R. Vasseur |\n| 30/10/2025 | `ATL-007` | 501 h | Remplacement bougie `BG-441` | R. Vasseur |"
+      ],
+      "sources_retrouvees": [
+        "registre_interventions.md",
+        "registre_interventions_2024.md",
+        "tondeuse_TX40.md"
+      ],
+      "duree_ms": 6678.2,
+      "indices_refus": {
+        "marqueur": false,
+        "sans_citation": false
+      }
+    },
+    {
+      "id": "Q13",
+      "type": "datee",
+      "question": "Quelle bougie équipait le `ATL-014` au 1er avril 2025 ?",
+      "reponse": "Sa bougie d'origine. Le remplacement par une `BG-441` n'a eu lieu que le 11 avril 2025, à 104 heures au compteur.",
+      "source": "registre_interventions.md",
+      "sans_reponse": false,
+      "autre_source": "",
+      "erreur_attendue": "",
+      "reponse_systeme": "La question ne peut pas être répondue à partir des extraits fournis. Aucune information n'est donnée sur le type de bougie équipant le `ATL-014` au 1er avril 2025.",
+      "citations": [],
+      "contextes": [
+        "## Ce qui a changé au 1er janvier 2025 | Point | 2023 | En vigueur |\n|---|---|---|\n| Capuchon de bougie | recommandé | **obligatoire**, étape 2 |\n| Refroidissement | 5 minutes | **10 minutes** |\n| Bidons | étiquetage libre | **vert = essence pure, rouge = mélange** |\n| Péremption du mélange | 60 jours | **30 jours** |\n| Relevé des compteurs | mensuel | **hebdomadaire** | La révision fait suite à deux incidents de 2024 : un démarrage intempestif sur\nle `ATL-007` en mars, et un moteur détruit par de l'essence pure versée dans le\n`ATL-014` en septembre.",
+        "## Observations **21/03/2024** — Démarrage intempestif du `ATL-007` pendant une intervention :\nl'agent avait relevé le siège en laissant la bougie connectée, et la machine ne\ndispose d'aucune coupure automatique de lame. Sans blessure. Ce fait est à\nl'origine du passage du débranchement de bougie de « recommandé » à\n« obligatoire » dans la révision de procédure du 1er janvier 2025. **05/09/2024** — Moteur du `ATL-014` détruit : de l'essence pure a été versée\ndans le réservoir au lieu du mélange 50:1, les deux bidons portant une étiquette\nmanuscrite décolorée. Remplacement du moteur par un prestataire, machine\nimmobilisée sept semaines. C'est l'incident qui a imposé le code couleur vert\net rouge. **Bilan des heures au 31/12/2024** — `ATL-007` : 396 h. `ATL-003` : 251 h.\n`ATL-014` : 68 h, compteur remis à zéro au remplacement moteur puis recalé à la\nvaleur d'avant incident sur décision de l'atelier, pour ne pas perdre\nl'historique des périodicités.",
+        "## Observations **22/03/2025** — La courroie `CR-118` a cédé à 445 heures, soit bien avant son\ncontrôle des 500 heures. Le carter de coupe était colmaté. Le contrôle est\navancé à toutes les 80 heures sur cette machine, en dérogation à la notice. **11/04/2025** — Le filtre `FA-2210` commandé pour le `ATL-014` ne correspondait\npas : dimensions différentes. Remplacé par un `FA-3105`. C'est cet incident qui\na donné lieu à la procédure P-04. **30/10/2025** — Dernière intervention de l'année sur le `ATL-007`. La machine\nest remisée pour l'hiver, réservoir vidangé.",
+        "# Procédures de l'atelier municipal ## Champ d'application Ces procédures s'appliquent à l'ensemble du parc thermique de l'atelier, dont la\ntondeuse autoportée TX-40 (`ATL-007`) et le taille-haies H-120 (`ATL-014`). ## P-01 · Consignation avant intervention Toute intervention sur une machine thermique impose, dans cet ordre : 1. arrêt moteur et retrait de la clé ;\n2. **débranchement du capuchon de bougie** ;\n3. attente de dix minutes pour le refroidissement de l'échappement ;\n4. inscription au registre des interventions. L'étape 2 n'est pas facultative sur le TX-40 : cette machine étant dépourvue de\ncoupure automatique de lame au relevage du siège, un démarrage intempestif reste\npossible tant que la bougie est connectée. ## P-02 · Stockage des carburants L'essence pure et le mélange deux temps sont stockés dans des bidons de couleurs\ndistinctes : **vert pour l'essence pure**, **rouge pour le mélange 50:1**. Tout\nbidon rouge est daté de son jour de préparation."
+      ],
+      "sources_retrouvees": [
+        "procedure_atelier.md",
+        "procedure_atelier_2023_abrogee.md",
+        "registre_interventions.md",
+        "registre_interventions_2024.md"
+      ],
+      "duree_ms": 9900.2,
+      "indices_refus": {
+        "marqueur": true,
+        "sans_citation": true
+      }
+    },
+    {
+      "id": "Q19",
+      "type": "piege",
+      "question": "Combien de temps faut-il attendre après l'arrêt moteur avant d'intervenir sur une machine thermique ?",
+      "reponse": "Dix minutes. La version 2023 disait cinq minutes, mais elle est abrogée depuis le 1er janvier 2025.",
+      "source": "procedure_atelier.md",
+      "autre_source": "procedure_atelier_2023_abrogee.md",
+      "erreur_attendue": "répondre « cinq minutes ». Les deux procédures se ressemblent au point que la récupération par similarité les classe côte à côte ; rien dans le texte de l'étape elle-même ne dit laquelle est en vigueur. Le système doit avoir lu le bandeau d'abrogation, pas seulement le paragraphe pertinent.",
+      "sans_reponse": false,
+      "reponse_systeme": "Selon la procédure en vigueur, il faut attendre **dix minutes** après l'arrêt moteur avant d'intervenir sur une machine thermique [2].",
+      "citations": [
+        "[2] procedure_atelier.md"
+      ],
+      "contextes": [
+        "# Procédures de l'atelier municipal — version 2023 (ABROGÉE) > **Ce document est abrogé depuis le 1er janvier 2025.** Il est conservé au titre\n> du suivi documentaire. La version en vigueur est `procedure_atelier.md`. En cas\n> de divergence, c'est la version en vigueur qui s'applique. ## P-01 · Consignation avant intervention (version 2023) Toute intervention sur une machine thermique impose : 1. arrêt moteur et retrait de la clé ;\n2. attente de **cinq minutes** pour le refroidissement de l'échappement ;\n3. inscription au registre des interventions. Le débranchement du capuchon de bougie est **recommandé** sans être obligatoire. ## P-02 · Stockage des carburants (version 2023) L'essence pure et le mélange deux temps sont stockés dans des bidons distincts. Aucune couleur n'est imposée ; l'étiquetage manuscrit suffit. Un mélange de plus de **soixante jours** est vidangé. ## P-03 · Suivi des heures (version 2023) Le compteur horaire est relevé en fin de mois.",
+        "# Procédures de l'atelier municipal ## Champ d'application Ces procédures s'appliquent à l'ensemble du parc thermique de l'atelier, dont la\ntondeuse autoportée TX-40 (`ATL-007`) et le taille-haies H-120 (`ATL-014`). ## P-01 · Consignation avant intervention Toute intervention sur une machine thermique impose, dans cet ordre : 1. arrêt moteur et retrait de la clé ;\n2. **débranchement du capuchon de bougie** ;\n3. attente de dix minutes pour le refroidissement de l'échappement ;\n4. inscription au registre des interventions. L'étape 2 n'est pas facultative sur le TX-40 : cette machine étant dépourvue de\ncoupure automatique de lame au relevage du siège, un démarrage intempestif reste\npossible tant que la bougie est connectée. ## P-02 · Stockage des carburants L'essence pure et le mélange deux temps sont stockés dans des bidons de couleurs\ndistinctes : **vert pour l'essence pure**, **rouge pour le mélange 50:1**. Tout\nbidon rouge est daté de son jour de préparation.",
+        "La première vidange fait exception : elle est due au bout de **5 heures** après\nla mise en service, puis la périodicité de 50 heures s'applique. ## Pression des pneumatiques Roues avant : 1,0 bar. Roues arrière : 0,7 bar. Le contrôle se fait à froid,\navant le démarrage. Un écart de plus de 0,2 bar entre les deux roues arrière\nprovoque une coupe irrégulière sur toute la largeur. ## Points de vigilance Le carter de coupe se colmate par temps humide. Un colmatage non traité fait\nchuter la puissance disponible et surcharge la courroie `CR-118`, qui est la\npièce qui casse en premier sur cette machine. Le TX-40 ne dispose **pas** de coupure automatique de lame au relevage du siège. Cette sécurité, présente sur les modèles postérieurs à 2023, doit être suppléée\npar la procédure d'atelier.",
+        "## Observations **21/03/2024** — Démarrage intempestif du `ATL-007` pendant une intervention :\nl'agent avait relevé le siège en laissant la bougie connectée, et la machine ne\ndispose d'aucune coupure automatique de lame. Sans blessure. Ce fait est à\nl'origine du passage du débranchement de bougie de « recommandé » à\n« obligatoire » dans la révision de procédure du 1er janvier 2025. **05/09/2024** — Moteur du `ATL-014` détruit : de l'essence pure a été versée\ndans le réservoir au lieu du mélange 50:1, les deux bidons portant une étiquette\nmanuscrite décolorée. Remplacement du moteur par un prestataire, machine\nimmobilisée sept semaines. C'est l'incident qui a imposé le code couleur vert\net rouge. **Bilan des heures au 31/12/2024** — `ATL-007` : 396 h. `ATL-003` : 251 h.\n`ATL-014` : 68 h, compteur remis à zéro au remplacement moteur puis recalé à la\nvaleur d'avant incident sur décision de l'atelier, pour ne pas perdre\nl'historique des périodicités."
+      ],
+      "sources_retrouvees": [
+        "procedure_atelier.md",
+        "procedure_atelier_2023_abrogee.md",
+        "registre_interventions_2024.md",
+        "tondeuse_TX40.md"
+      ],
+      "duree_ms": 9403.3,
+      "indices_refus": {
+        "marqueur": false,
+        "sans_citation": false
+      }
+    },
+    {
+      "id": "Q20",
+      "type": "piege",
+      "question": "Le débranchement du capuchon de bougie est-il obligatoire avant une intervention ?",
+      "reponse": "Oui, depuis le 1er janvier 2025 — c'est l'étape 2 de la procédure P-01 en vigueur. Il n'était que recommandé dans la version 2023.",
+      "source": "procedure_atelier.md",
+      "autre_source": "procedure_atelier_2023_abrogee.md",
+      "erreur_attendue": "répondre « recommandé mais pas obligatoire », d'après le texte abrogé.",
+      "sans_reponse": false,
+      "reponse_systeme": "Oui, le débranchement du capuchon de bougie est **obligatoire** avant une intervention. Cette mesure a été rendue obligatoire à partir du 1er janvier 2025, suite à un incident de démarrage intempestif sur le `ATL-007` en mars 2024 [3]. La procédure en vigueur indique clairement que le débranchement du capuchon de bougie est une étape obligatoire [2].",
+      "citations": [
+        "[2] procedure_atelier.md",
+        "[3] registre_interventions_2024.md"
+      ],
+      "contextes": [
+        "# Procédures de l'atelier municipal — version 2023 (ABROGÉE) > **Ce document est abrogé depuis le 1er janvier 2025.** Il est conservé au titre\n> du suivi documentaire. La version en vigueur est `procedure_atelier.md`. En cas\n> de divergence, c'est la version en vigueur qui s'applique. ## P-01 · Consignation avant intervention (version 2023) Toute intervention sur une machine thermique impose : 1. arrêt moteur et retrait de la clé ;\n2. attente de **cinq minutes** pour le refroidissement de l'échappement ;\n3. inscription au registre des interventions. Le débranchement du capuchon de bougie est **recommandé** sans être obligatoire. ## P-02 · Stockage des carburants (version 2023) L'essence pure et le mélange deux temps sont stockés dans des bidons distincts. Aucune couleur n'est imposée ; l'étiquetage manuscrit suffit. Un mélange de plus de **soixante jours** est vidangé. ## P-03 · Suivi des heures (version 2023) Le compteur horaire est relevé en fin de mois.",
+        "# Procédures de l'atelier municipal ## Champ d'application Ces procédures s'appliquent à l'ensemble du parc thermique de l'atelier, dont la\ntondeuse autoportée TX-40 (`ATL-007`) et le taille-haies H-120 (`ATL-014`). ## P-01 · Consignation avant intervention Toute intervention sur une machine thermique impose, dans cet ordre : 1. arrêt moteur et retrait de la clé ;\n2. **débranchement du capuchon de bougie** ;\n3. attente de dix minutes pour le refroidissement de l'échappement ;\n4. inscription au registre des interventions. L'étape 2 n'est pas facultative sur le TX-40 : cette machine étant dépourvue de\ncoupure automatique de lame au relevage du siège, un démarrage intempestif reste\npossible tant que la bougie est connectée. ## P-02 · Stockage des carburants L'essence pure et le mélange deux temps sont stockés dans des bidons de couleurs\ndistinctes : **vert pour l'essence pure**, **rouge pour le mélange 50:1**. Tout\nbidon rouge est daté de son jour de préparation.",
+        "## Observations **21/03/2024** — Démarrage intempestif du `ATL-007` pendant une intervention :\nl'agent avait relevé le siège en laissant la bougie connectée, et la machine ne\ndispose d'aucune coupure automatique de lame. Sans blessure. Ce fait est à\nl'origine du passage du débranchement de bougie de « recommandé » à\n« obligatoire » dans la révision de procédure du 1er janvier 2025. **05/09/2024** — Moteur du `ATL-014` détruit : de l'essence pure a été versée\ndans le réservoir au lieu du mélange 50:1, les deux bidons portant une étiquette\nmanuscrite décolorée. Remplacement du moteur par un prestataire, machine\nimmobilisée sept semaines. C'est l'incident qui a imposé le code couleur vert\net rouge. **Bilan des heures au 31/12/2024** — `ATL-007` : 396 h. `ATL-003` : 251 h.\n`ATL-014` : 68 h, compteur remis à zéro au remplacement moteur puis recalé à la\nvaleur d'avant incident sur décision de l'atelier, pour ne pas perdre\nl'historique des périodicités.",
+        "## Ce qui a changé au 1er janvier 2025 | Point | 2023 | En vigueur |\n|---|---|---|\n| Capuchon de bougie | recommandé | **obligatoire**, étape 2 |\n| Refroidissement | 5 minutes | **10 minutes** |\n| Bidons | étiquetage libre | **vert = essence pure, rouge = mélange** |\n| Péremption du mélange | 60 jours | **30 jours** |\n| Relevé des compteurs | mensuel | **hebdomadaire** | La révision fait suite à deux incidents de 2024 : un démarrage intempestif sur\nle `ATL-007` en mars, et un moteur détruit par de l'essence pure versée dans le\n`ATL-014` en septembre."
+      ],
+      "sources_retrouvees": [
+        "procedure_atelier.md",
+        "procedure_atelier_2023_abrogee.md",
+        "registre_interventions_2024.md"
+      ],
+      "duree_ms": 12328.7,
+      "indices_refus": {
+        "marqueur": false,
+        "sans_citation": false
+      }
+    },
+    {
+      "id": "Q21",
+      "type": "multi_documents",
+      "question": "Quelles machines de l'atelier partagent réellement le même filtre à air ?",
+      "reponse": "Le T-85 et le H-120, tous deux en `FA-3105` — d'origine sur le T-85, en remplacement sur le H-120. Le TX-40 utilise un `FA-2210`, qui porte la même référence que l'ancien filtre du H-120 sans être la même pièce.",
+      "source": "tronconneuse_T85.md",
+      "autre_source": "taille_haies_H120.md",
+      "sans_reponse": false,
+      "erreur_attendue": "",
+      "reponse_systeme": "Les machines de l'atelier qui partagent réellement le même filtre à air sont le T-85 et le H-120 [1].",
+      "citations": [
+        "[1] tronconneuse_T85.md"
+      ],
+      "contextes": [
+        "Le filtre `FA-3105` est ici la référence d'origine ; c'est la même pièce que\ncelle montée en remplacement sur le H-120. Le T-85 et le H-120 partagent donc\nréellement leur filtre à air — mais **pas** leur bougie : `BG-512` pour le T-85,\n`BG-441` pour le H-120. ## Huile de chaîne Huile spécifique adhésive, jamais d'huile moteur ni d'huile de vidange. Le\nniveau se contrôle à chaque plein de carburant : les deux réservoirs se vident\napproximativement en même temps, et une chaîne tournant à sec détruit le guide\nen quelques minutes. ## Point de vigilance Le frein de chaîne est le seul organe du parc dont le contrôle est dû **avant\nchaque usage** et non selon un compteur horaire. Un contrôle reporté à la\npériodicité horaire est une non-conformité, pas un retard.",
+        "# Tronçonneuse thermique T-85 — notice d'entretien ## Identification Modèle T-85, mise en service le 17 juin 2021, numéro de parc `ATL-003`. Moteur thermique deux temps, 45,2 cm³. Longueur de guide : 40 cm. Réservoir de carburant : 0,55 litre. Réservoir d'huile de chaîne : 0,26 litre. Masse à vide : 5,6 kg. Comme le H-120, le T-85 fonctionne au mélange deux temps 50:1. Les deux machines\npeuvent donc partager le même bidon rouge, à condition qu'il soit daté. ## Périodicités d'entretien | Opération | Périodicité | Référence de pièce |\n|---|---|---|\n| Nettoyage du filtre à air | toutes les 10 heures | `FA-3105` |\n| Remplacement du filtre à air | toutes les 100 heures | `FA-3105` |\n| Remplacement de la bougie | toutes les 100 heures | `BG-512` |\n| Affûtage de la chaîne | toutes les 5 heures | — |\n| Remplacement de la chaîne | toutes les 150 heures | `CH-401` |\n| Remplacement du guide | toutes les 300 heures | `GD-408` |\n| Contrôle du frein de chaîne | **avant chaque usage** | — |",
+        "Un mélange de plus de trente jours est vidangé et traité en déchet, jamais versé\ndans une machine à essence pure. ## P-03 · Suivi des heures Le compteur horaire de chaque machine est relevé en fin de semaine et reporté au\nregistre. Les périodicités d'entretien des notices constructeur sont exprimées\nen heures de fonctionnement : sans relevé, aucune échéance n'est calculable. Une machine dont le compteur est en panne est retirée du service jusqu'à sa\nréparation. Une périodicité estimée n'est pas une périodicité. ## P-04 · Pièces communes au parc Certaines références sont partagées entre machines, d'autres ne le sont pas\nmalgré un numéro identique. Avant toute commande, la référence est vérifiée sur\nla notice de **la machine concernée**, et non sur celle d'une machine voisine. Le cas connu de l'atelier est le filtre à air : la référence `FA-2210` figure\ndans les deux notices, sans désigner la même pièce.",
+        "## Observations **22/03/2025** — La courroie `CR-118` a cédé à 445 heures, soit bien avant son\ncontrôle des 500 heures. Le carter de coupe était colmaté. Le contrôle est\navancé à toutes les 80 heures sur cette machine, en dérogation à la notice. **11/04/2025** — Le filtre `FA-2210` commandé pour le `ATL-014` ne correspondait\npas : dimensions différentes. Remplacé par un `FA-3105`. C'est cet incident qui\na donné lieu à la procédure P-04. **30/10/2025** — Dernière intervention de l'année sur le `ATL-007`. La machine\nest remisée pour l'hiver, réservoir vidangé."
+      ],
+      "sources_retrouvees": [
+        "procedure_atelier.md",
+        "registre_interventions.md",
+        "tronconneuse_T85.md"
+      ],
+      "duree_ms": 7207.7,
+      "indices_refus": {
+        "marqueur": false,
+        "sans_citation": false
+      }
+    },
+    {
+      "id": "Q22",
+      "type": "multi_documents",
+      "question": "Pourquoi le code couleur vert et rouge des bidons a-t-il été imposé ?",
+      "reponse": "À la suite de l'incident du 5 septembre 2024 : le moteur du `ATL-014` a été détruit par de l'essence pure versée à la place du mélange 50:1, les deux bidons portant des étiquettes manuscrites décolorées. Machine immobilisée sept semaines.",
+      "source": "registre_interventions_2024.md",
+      "autre_source": "procedure_atelier_2023_abrogee.md",
+      "sans_reponse": false,
+      "erreur_attendue": "",
+      "reponse_systeme": "Le code couleur vert et rouge des bidons a été imposé pour distinguer l'essence pure du mélange deux temps. L'essence pure est stockée dans des bidons verts, tandis que le mélange 50:1 est stocké dans des bidons rouges. Cette mesure a été introduite dans la procédure en vigueur, en remplacement de l'étiquetage manuscrit qui ne suffisait plus, notamment après l'incident du moteur du `ATL-014` causé par la confusion entre l'essence pure et le mélange deux temps [2].",
+      "citations": [
+        "[2] procedure_atelier.md"
+      ],
+      "contextes": [
+        "## Observations **21/03/2024** — Démarrage intempestif du `ATL-007` pendant une intervention :\nl'agent avait relevé le siège en laissant la bougie connectée, et la machine ne\ndispose d'aucune coupure automatique de lame. Sans blessure. Ce fait est à\nl'origine du passage du débranchement de bougie de « recommandé » à\n« obligatoire » dans la révision de procédure du 1er janvier 2025. **05/09/2024** — Moteur du `ATL-014` détruit : de l'essence pure a été versée\ndans le réservoir au lieu du mélange 50:1, les deux bidons portant une étiquette\nmanuscrite décolorée. Remplacement du moteur par un prestataire, machine\nimmobilisée sept semaines. C'est l'incident qui a imposé le code couleur vert\net rouge. **Bilan des heures au 31/12/2024** — `ATL-007` : 396 h. `ATL-003` : 251 h.\n`ATL-014` : 68 h, compteur remis à zéro au remplacement moteur puis recalé à la\nvaleur d'avant incident sur décision de l'atelier, pour ne pas perdre\nl'historique des périodicités.",
+        "# Procédures de l'atelier municipal ## Champ d'application Ces procédures s'appliquent à l'ensemble du parc thermique de l'atelier, dont la\ntondeuse autoportée TX-40 (`ATL-007`) et le taille-haies H-120 (`ATL-014`). ## P-01 · Consignation avant intervention Toute intervention sur une machine thermique impose, dans cet ordre : 1. arrêt moteur et retrait de la clé ;\n2. **débranchement du capuchon de bougie** ;\n3. attente de dix minutes pour le refroidissement de l'échappement ;\n4. inscription au registre des interventions. L'étape 2 n'est pas facultative sur le TX-40 : cette machine étant dépourvue de\ncoupure automatique de lame au relevage du siège, un démarrage intempestif reste\npossible tant que la bougie est connectée. ## P-02 · Stockage des carburants L'essence pure et le mélange deux temps sont stockés dans des bidons de couleurs\ndistinctes : **vert pour l'essence pure**, **rouge pour le mélange 50:1**. Tout\nbidon rouge est daté de son jour de préparation.",
+        "# Procédures de l'atelier municipal — version 2023 (ABROGÉE) > **Ce document est abrogé depuis le 1er janvier 2025.** Il est conservé au titre\n> du suivi documentaire. La version en vigueur est `procedure_atelier.md`. En cas\n> de divergence, c'est la version en vigueur qui s'applique. ## P-01 · Consignation avant intervention (version 2023) Toute intervention sur une machine thermique impose : 1. arrêt moteur et retrait de la clé ;\n2. attente de **cinq minutes** pour le refroidissement de l'échappement ;\n3. inscription au registre des interventions. Le débranchement du capuchon de bougie est **recommandé** sans être obligatoire. ## P-02 · Stockage des carburants (version 2023) L'essence pure et le mélange deux temps sont stockés dans des bidons distincts. Aucune couleur n'est imposée ; l'étiquetage manuscrit suffit. Un mélange de plus de **soixante jours** est vidangé. ## P-03 · Suivi des heures (version 2023) Le compteur horaire est relevé en fin de mois.",
+        "# Tronçonneuse thermique T-85 — notice d'entretien ## Identification Modèle T-85, mise en service le 17 juin 2021, numéro de parc `ATL-003`. Moteur thermique deux temps, 45,2 cm³. Longueur de guide : 40 cm. Réservoir de carburant : 0,55 litre. Réservoir d'huile de chaîne : 0,26 litre. Masse à vide : 5,6 kg. Comme le H-120, le T-85 fonctionne au mélange deux temps 50:1. Les deux machines\npeuvent donc partager le même bidon rouge, à condition qu'il soit daté. ## Périodicités d'entretien | Opération | Périodicité | Référence de pièce |\n|---|---|---|\n| Nettoyage du filtre à air | toutes les 10 heures | `FA-3105` |\n| Remplacement du filtre à air | toutes les 100 heures | `FA-3105` |\n| Remplacement de la bougie | toutes les 100 heures | `BG-512` |\n| Affûtage de la chaîne | toutes les 5 heures | — |\n| Remplacement de la chaîne | toutes les 150 heures | `CH-401` |\n| Remplacement du guide | toutes les 300 heures | `GD-408` |\n| Contrôle du frein de chaîne | **avant chaque usage** | — |"
+      ],
+      "sources_retrouvees": [
+        "procedure_atelier.md",
+        "procedure_atelier_2023_abrogee.md",
+        "registre_interventions_2024.md",
+        "tronconneuse_T85.md"
+      ],
+      "duree_ms": 17199.4,
+      "indices_refus": {
+        "marqueur": false,
+        "sans_citation": false
+      }
+    },
+    {
+      "id": "Q23",
+      "type": "factuelle",
+      "question": "Tous les combien contrôle-t-on le frein de chaîne du T-85 ?",
+      "reponse": "Avant chaque usage. C'est le seul organe du parc dont le contrôle ne suit pas un compteur horaire.",
+      "source": "tronconneuse_T85.md",
+      "sans_reponse": false,
+      "autre_source": "",
+      "erreur_attendue": "",
+      "reponse_systeme": "On contrôle le frein de chaîne du T-85 **avant chaque usage** [3].",
+      "citations": [
+        "[3] tronconneuse_T85.md"
+      ],
+      "contextes": [
+        "Le filtre `FA-3105` est ici la référence d'origine ; c'est la même pièce que\ncelle montée en remplacement sur le H-120. Le T-85 et le H-120 partagent donc\nréellement leur filtre à air — mais **pas** leur bougie : `BG-512` pour le T-85,\n`BG-441` pour le H-120. ## Huile de chaîne Huile spécifique adhésive, jamais d'huile moteur ni d'huile de vidange. Le\nniveau se contrôle à chaque plein de carburant : les deux réservoirs se vident\napproximativement en même temps, et une chaîne tournant à sec détruit le guide\nen quelques minutes. ## Point de vigilance Le frein de chaîne est le seul organe du parc dont le contrôle est dû **avant\nchaque usage** et non selon un compteur horaire. Un contrôle reporté à la\npériodicité horaire est une non-conformité, pas un retard.",
+        "## Observations **22/03/2025** — La courroie `CR-118` a cédé à 445 heures, soit bien avant son\ncontrôle des 500 heures. Le carter de coupe était colmaté. Le contrôle est\navancé à toutes les 80 heures sur cette machine, en dérogation à la notice. **11/04/2025** — Le filtre `FA-2210` commandé pour le `ATL-014` ne correspondait\npas : dimensions différentes. Remplacé par un `FA-3105`. C'est cet incident qui\na donné lieu à la procédure P-04. **30/10/2025** — Dernière intervention de l'année sur le `ATL-007`. La machine\nest remisée pour l'hiver, réservoir vidangé.",
+        "# Tronçonneuse thermique T-85 — notice d'entretien ## Identification Modèle T-85, mise en service le 17 juin 2021, numéro de parc `ATL-003`. Moteur thermique deux temps, 45,2 cm³. Longueur de guide : 40 cm. Réservoir de carburant : 0,55 litre. Réservoir d'huile de chaîne : 0,26 litre. Masse à vide : 5,6 kg. Comme le H-120, le T-85 fonctionne au mélange deux temps 50:1. Les deux machines\npeuvent donc partager le même bidon rouge, à condition qu'il soit daté. ## Périodicités d'entretien | Opération | Périodicité | Référence de pièce |\n|---|---|---|\n| Nettoyage du filtre à air | toutes les 10 heures | `FA-3105` |\n| Remplacement du filtre à air | toutes les 100 heures | `FA-3105` |\n| Remplacement de la bougie | toutes les 100 heures | `BG-512` |\n| Affûtage de la chaîne | toutes les 5 heures | — |\n| Remplacement de la chaîne | toutes les 150 heures | `CH-401` |\n| Remplacement du guide | toutes les 300 heures | `GD-408` |\n| Contrôle du frein de chaîne | **avant chaque usage** | — |",
+        "La première vidange fait exception : elle est due au bout de **5 heures** après\nla mise en service, puis la périodicité de 50 heures s'applique. ## Pression des pneumatiques Roues avant : 1,0 bar. Roues arrière : 0,7 bar. Le contrôle se fait à froid,\navant le démarrage. Un écart de plus de 0,2 bar entre les deux roues arrière\nprovoque une coupe irrégulière sur toute la largeur. ## Points de vigilance Le carter de coupe se colmate par temps humide. Un colmatage non traité fait\nchuter la puissance disponible et surcharge la courroie `CR-118`, qui est la\npièce qui casse en premier sur cette machine. Le TX-40 ne dispose **pas** de coupure automatique de lame au relevage du siège. Cette sécurité, présente sur les modèles postérieurs à 2023, doit être suppléée\npar la procédure d'atelier."
+      ],
+      "sources_retrouvees": [
+        "registre_interventions.md",
+        "tondeuse_TX40.md",
+        "tronconneuse_T85.md"
+      ],
+      "duree_ms": 6710.2,
+      "indices_refus": {
+        "marqueur": false,
+        "sans_citation": false
+      }
+    },
+    {
+      "id": "Q24",
+      "type": "datee",
+      "question": "Au 1er juin 2024, un mélange deux temps préparé quarante-cinq jours plus tôt pouvait-il être utilisé ?",
+      "reponse": "Oui. La limite était alors de soixante jours. Elle n'est passée à trente jours qu'au 1er janvier 2025.",
+      "source": "procedure_atelier_2023_abrogee.md",
+      "autre_source": "procedure_atelier.md",
+      "sans_reponse": false,
+      "erreur_attendue": "",
+      "reponse_systeme": "Non, au 1er juin 2024, un mélange deux temps préparé quarante-cinq jours plus tôt ne pouvait pas être utilisé. En effet, la péremption du mélange a été réduite de 60 jours à 30 jours à partir du 1er janvier 2025 [1]. Cela signifie que, avant cette date, la péremption était de 60 jours. Or, le 1er juin 2024 est antérieur au 1er janvier 2025, donc la péremption restait de 60 jours. Ainsi, un mélange préparé quarante-cinq jours avant le 1er juin 2024 (soit le 1er janvier 2024) était encore dans la période de validité de 60 jours [3]. Par conséquent, il pouvait être utilisé.",
+      "citations": [
+        "[1] procedure_atelier_2023_abrogee.md",
+        "[3] procedure_atelier_2023_abrogee.md"
+      ],
+      "contextes": [
+        "## Ce qui a changé au 1er janvier 2025 | Point | 2023 | En vigueur |\n|---|---|---|\n| Capuchon de bougie | recommandé | **obligatoire**, étape 2 |\n| Refroidissement | 5 minutes | **10 minutes** |\n| Bidons | étiquetage libre | **vert = essence pure, rouge = mélange** |\n| Péremption du mélange | 60 jours | **30 jours** |\n| Relevé des compteurs | mensuel | **hebdomadaire** | La révision fait suite à deux incidents de 2024 : un démarrage intempestif sur\nle `ATL-007` en mars, et un moteur détruit par de l'essence pure versée dans le\n`ATL-014` en septembre.",
+        "## Observations **21/03/2024** — Démarrage intempestif du `ATL-007` pendant une intervention :\nl'agent avait relevé le siège en laissant la bougie connectée, et la machine ne\ndispose d'aucune coupure automatique de lame. Sans blessure. Ce fait est à\nl'origine du passage du débranchement de bougie de « recommandé » à\n« obligatoire » dans la révision de procédure du 1er janvier 2025. **05/09/2024** — Moteur du `ATL-014` détruit : de l'essence pure a été versée\ndans le réservoir au lieu du mélange 50:1, les deux bidons portant une étiquette\nmanuscrite décolorée. Remplacement du moteur par un prestataire, machine\nimmobilisée sept semaines. C'est l'incident qui a imposé le code couleur vert\net rouge. **Bilan des heures au 31/12/2024** — `ATL-007` : 396 h. `ATL-003` : 251 h.\n`ATL-014` : 68 h, compteur remis à zéro au remplacement moteur puis recalé à la\nvaleur d'avant incident sur décision de l'atelier, pour ne pas perdre\nl'historique des périodicités.",
+        "# Procédures de l'atelier municipal — version 2023 (ABROGÉE) > **Ce document est abrogé depuis le 1er janvier 2025.** Il est conservé au titre\n> du suivi documentaire. La version en vigueur est `procedure_atelier.md`. En cas\n> de divergence, c'est la version en vigueur qui s'applique. ## P-01 · Consignation avant intervention (version 2023) Toute intervention sur une machine thermique impose : 1. arrêt moteur et retrait de la clé ;\n2. attente de **cinq minutes** pour le refroidissement de l'échappement ;\n3. inscription au registre des interventions. Le débranchement du capuchon de bougie est **recommandé** sans être obligatoire. ## P-02 · Stockage des carburants (version 2023) L'essence pure et le mélange deux temps sont stockés dans des bidons distincts. Aucune couleur n'est imposée ; l'étiquetage manuscrit suffit. Un mélange de plus de **soixante jours** est vidangé. ## P-03 · Suivi des heures (version 2023) Le compteur horaire est relevé en fin de mois.",
+        "Un mélange de plus de trente jours est vidangé et traité en déchet, jamais versé\ndans une machine à essence pure. ## P-03 · Suivi des heures Le compteur horaire de chaque machine est relevé en fin de semaine et reporté au\nregistre. Les périodicités d'entretien des notices constructeur sont exprimées\nen heures de fonctionnement : sans relevé, aucune échéance n'est calculable. Une machine dont le compteur est en panne est retirée du service jusqu'à sa\nréparation. Une périodicité estimée n'est pas une périodicité. ## P-04 · Pièces communes au parc Certaines références sont partagées entre machines, d'autres ne le sont pas\nmalgré un numéro identique. Avant toute commande, la référence est vérifiée sur\nla notice de **la machine concernée**, et non sur celle d'une machine voisine. Le cas connu de l'atelier est le filtre à air : la référence `FA-2210` figure\ndans les deux notices, sans désigner la même pièce."
+      ],
+      "sources_retrouvees": [
+        "procedure_atelier.md",
+        "procedure_atelier_2023_abrogee.md",
+        "registre_interventions_2024.md"
+      ],
+      "duree_ms": 17881.9,
+      "indices_refus": {
+        "marqueur": false,
+        "sans_citation": false
+      }
+    }
+  ],
+  "hors_corpus": [
+    {
+      "id": "Q14",
+      "type": "hors_corpus",
+      "question": "Tous les combien faut-il remplacer le filtre à carburant du TX-40 ?",
+      "reponse": "SANS_REPONSE",
+      "source": "—",
+      "erreur_attendue": "répondre « toutes les 200 heures, référence `FC-076` » — c'est la périodicité du H-120. Aucun filtre à carburant n'est mentionné pour le TX-40.",
+      "sans_reponse": true,
+      "autre_source": "",
+      "reponse_systeme": "La question ne peut pas être répondue sur la base des extraits fournis. Aucun des extraits ne mentionne la périodicité de remplacement du filtre à carburant du TX-40 [2].",
+      "citations": [
+        "[2] tondeuse_TX40.md"
+      ],
+      "contextes": [
+        "Le filtre à air se **nettoie** toutes les 25 heures et se **remplace** toutes\nles 100 heures : ce sont deux opérations distinctes, et la seconde ne dispense\npas de la première. ## Points de vigilance La référence de bougie `BG-441` est commune au TX-40 et au H-120 ; la référence\nde filtre à air `FA-2210` **ne l'est pas** — sur le H-120 elle désigne le filtre\nd'origine, remplacé depuis par le `FA-3105`, de dimensions différentes. Monter\nun `FA-2210` sur un H-120 après remplacement laisse passer les poussières. Le carburant deux temps se dégrade : un mélange de plus de trente jours est\nécarté, quel que soit son aspect.",
+        "# Tondeuse autoportée TX-40 — notice d'entretien ## Identification Modèle TX-40, mise en service le 12 mars 2022, numéro de parc `ATL-007`. Moteur thermique quatre temps, 452 cm³, refroidissement par air. Largeur de coupe 92 cm. Réservoir de carburant : 5,7 litres. Masse à vide : 218 kg. ## Périodicités d'entretien Les périodicités sont exprimées en heures de fonctionnement, relevées au\ncompteur situé sous le volant. À défaut d'usage, aucune opération n'est due. | Opération | Périodicité | Référence de pièce |\n|---|---|---|\n| Vidange d'huile moteur | toutes les 50 heures | huile SAE 30, 1,4 litre |\n| Remplacement du filtre à air | toutes les 100 heures | `FA-2210` |\n| Remplacement de la bougie | toutes les 200 heures | `BG-441` |\n| Affûtage des lames | toutes les 25 heures | — |\n| Remplacement des lames | toutes les 400 heures | `LM-920` (jeu de deux) |\n| Contrôle de la courroie de coupe | toutes les 100 heures | `CR-118` |",
+        "# Tronçonneuse thermique T-85 — notice d'entretien ## Identification Modèle T-85, mise en service le 17 juin 2021, numéro de parc `ATL-003`. Moteur thermique deux temps, 45,2 cm³. Longueur de guide : 40 cm. Réservoir de carburant : 0,55 litre. Réservoir d'huile de chaîne : 0,26 litre. Masse à vide : 5,6 kg. Comme le H-120, le T-85 fonctionne au mélange deux temps 50:1. Les deux machines\npeuvent donc partager le même bidon rouge, à condition qu'il soit daté. ## Périodicités d'entretien | Opération | Périodicité | Référence de pièce |\n|---|---|---|\n| Nettoyage du filtre à air | toutes les 10 heures | `FA-3105` |\n| Remplacement du filtre à air | toutes les 100 heures | `FA-3105` |\n| Remplacement de la bougie | toutes les 100 heures | `BG-512` |\n| Affûtage de la chaîne | toutes les 5 heures | — |\n| Remplacement de la chaîne | toutes les 150 heures | `CH-401` |\n| Remplacement du guide | toutes les 300 heures | `GD-408` |\n| Contrôle du frein de chaîne | **avant chaque usage** | — |",
+        "La première vidange fait exception : elle est due au bout de **5 heures** après\nla mise en service, puis la périodicité de 50 heures s'applique. ## Pression des pneumatiques Roues avant : 1,0 bar. Roues arrière : 0,7 bar. Le contrôle se fait à froid,\navant le démarrage. Un écart de plus de 0,2 bar entre les deux roues arrière\nprovoque une coupe irrégulière sur toute la largeur. ## Points de vigilance Le carter de coupe se colmate par temps humide. Un colmatage non traité fait\nchuter la puissance disponible et surcharge la courroie `CR-118`, qui est la\npièce qui casse en premier sur cette machine. Le TX-40 ne dispose **pas** de coupure automatique de lame au relevage du siège. Cette sécurité, présente sur les modèles postérieurs à 2023, doit être suppléée\npar la procédure d'atelier."
+      ],
+      "sources_retrouvees": [
+        "taille_haies_H120.md",
+        "tondeuse_TX40.md",
+        "tronconneuse_T85.md"
+      ],
+      "duree_ms": 9704.2,
+      "indices_refus": {
+        "marqueur": false,
+        "sans_citation": false
+      }
+    },
+    {
+      "id": "Q15",
+      "type": "hors_corpus",
+      "question": "Quel est le numéro de parc du souffleur thermique de l'atelier ?",
+      "reponse": "SANS_REPONSE",
+      "source": "—",
+      "erreur_attendue": "inventer un numéro sur le modèle de `ATL-007` et `ATL-014`. Aucun souffleur ne figure au parc décrit.",
+      "sans_reponse": true,
+      "autre_source": "",
+      "reponse_systeme": "La question ne peut pas être répondue sur la base des extraits fournis. Aucun des documents ne mentionne le numéro de parc d'un souffleur thermique.",
+      "citations": [],
+      "contextes": [
+        "# Procédures de l'atelier municipal ## Champ d'application Ces procédures s'appliquent à l'ensemble du parc thermique de l'atelier, dont la\ntondeuse autoportée TX-40 (`ATL-007`) et le taille-haies H-120 (`ATL-014`). ## P-01 · Consignation avant intervention Toute intervention sur une machine thermique impose, dans cet ordre : 1. arrêt moteur et retrait de la clé ;\n2. **débranchement du capuchon de bougie** ;\n3. attente de dix minutes pour le refroidissement de l'échappement ;\n4. inscription au registre des interventions. L'étape 2 n'est pas facultative sur le TX-40 : cette machine étant dépourvue de\ncoupure automatique de lame au relevage du siège, un démarrage intempestif reste\npossible tant que la bougie est connectée. ## P-02 · Stockage des carburants L'essence pure et le mélange deux temps sont stockés dans des bidons de couleurs\ndistinctes : **vert pour l'essence pure**, **rouge pour le mélange 50:1**. Tout\nbidon rouge est daté de son jour de préparation.",
+        "Un mélange de plus de trente jours est vidangé et traité en déchet, jamais versé\ndans une machine à essence pure. ## P-03 · Suivi des heures Le compteur horaire de chaque machine est relevé en fin de semaine et reporté au\nregistre. Les périodicités d'entretien des notices constructeur sont exprimées\nen heures de fonctionnement : sans relevé, aucune échéance n'est calculable. Une machine dont le compteur est en panne est retirée du service jusqu'à sa\nréparation. Une périodicité estimée n'est pas une périodicité. ## P-04 · Pièces communes au parc Certaines références sont partagées entre machines, d'autres ne le sont pas\nmalgré un numéro identique. Avant toute commande, la référence est vérifiée sur\nla notice de **la machine concernée**, et non sur celle d'une machine voisine. Le cas connu de l'atelier est le filtre à air : la référence `FA-2210` figure\ndans les deux notices, sans désigner la même pièce.",
+        "# Tronçonneuse thermique T-85 — notice d'entretien ## Identification Modèle T-85, mise en service le 17 juin 2021, numéro de parc `ATL-003`. Moteur thermique deux temps, 45,2 cm³. Longueur de guide : 40 cm. Réservoir de carburant : 0,55 litre. Réservoir d'huile de chaîne : 0,26 litre. Masse à vide : 5,6 kg. Comme le H-120, le T-85 fonctionne au mélange deux temps 50:1. Les deux machines\npeuvent donc partager le même bidon rouge, à condition qu'il soit daté. ## Périodicités d'entretien | Opération | Périodicité | Référence de pièce |\n|---|---|---|\n| Nettoyage du filtre à air | toutes les 10 heures | `FA-3105` |\n| Remplacement du filtre à air | toutes les 100 heures | `FA-3105` |\n| Remplacement de la bougie | toutes les 100 heures | `BG-512` |\n| Affûtage de la chaîne | toutes les 5 heures | — |\n| Remplacement de la chaîne | toutes les 150 heures | `CH-401` |\n| Remplacement du guide | toutes les 300 heures | `GD-408` |\n| Contrôle du frein de chaîne | **avant chaque usage** | — |",
+        "# Tondeuse autoportée TX-40 — notice d'entretien ## Identification Modèle TX-40, mise en service le 12 mars 2022, numéro de parc `ATL-007`. Moteur thermique quatre temps, 452 cm³, refroidissement par air. Largeur de coupe 92 cm. Réservoir de carburant : 5,7 litres. Masse à vide : 218 kg. ## Périodicités d'entretien Les périodicités sont exprimées en heures de fonctionnement, relevées au\ncompteur situé sous le volant. À défaut d'usage, aucune opération n'est due. | Opération | Périodicité | Référence de pièce |\n|---|---|---|\n| Vidange d'huile moteur | toutes les 50 heures | huile SAE 30, 1,4 litre |\n| Remplacement du filtre à air | toutes les 100 heures | `FA-2210` |\n| Remplacement de la bougie | toutes les 200 heures | `BG-441` |\n| Affûtage des lames | toutes les 25 heures | — |\n| Remplacement des lames | toutes les 400 heures | `LM-920` (jeu de deux) |\n| Contrôle de la courroie de coupe | toutes les 100 heures | `CR-118` |"
+      ],
+      "sources_retrouvees": [
+        "procedure_atelier.md",
+        "tondeuse_TX40.md",
+        "tronconneuse_T85.md"
+      ],
+      "duree_ms": 10638.1,
+      "indices_refus": {
+        "marqueur": false,
+        "sans_citation": true
+      }
+    },
+    {
+      "id": "Q16",
+      "type": "hors_corpus",
+      "question": "Quelle est la puissance en chevaux du moteur du TX-40 ?",
+      "reponse": "SANS_REPONSE",
+      "source": "—",
+      "erreur_attendue": "convertir la cylindrée de 452 cm³ en une puissance plausible. La cylindrée est donnée, la puissance ne l'est pas.",
+      "sans_reponse": true,
+      "autre_source": "",
+      "reponse_systeme": "La puissance en chevaux du moteur du TX-40 n'est pas mentionnée dans les extraits fournis [1], [2], [3] et [4].",
+      "citations": [
+        "[1] tondeuse_TX40.md",
+        "[2] registre_interventions_2024.md",
+        "[3] tondeuse_TX40.md",
+        "[4] taille_haies_H120.md"
+      ],
+      "contextes": [
+        "La première vidange fait exception : elle est due au bout de **5 heures** après\nla mise en service, puis la périodicité de 50 heures s'applique. ## Pression des pneumatiques Roues avant : 1,0 bar. Roues arrière : 0,7 bar. Le contrôle se fait à froid,\navant le démarrage. Un écart de plus de 0,2 bar entre les deux roues arrière\nprovoque une coupe irrégulière sur toute la largeur. ## Points de vigilance Le carter de coupe se colmate par temps humide. Un colmatage non traité fait\nchuter la puissance disponible et surcharge la courroie `CR-118`, qui est la\npièce qui casse en premier sur cette machine. Le TX-40 ne dispose **pas** de coupure automatique de lame au relevage du siège. Cette sécurité, présente sur les modèles postérieurs à 2023, doit être suppléée\npar la procédure d'atelier.",
+        "## Observations **21/03/2024** — Démarrage intempestif du `ATL-007` pendant une intervention :\nl'agent avait relevé le siège en laissant la bougie connectée, et la machine ne\ndispose d'aucune coupure automatique de lame. Sans blessure. Ce fait est à\nl'origine du passage du débranchement de bougie de « recommandé » à\n« obligatoire » dans la révision de procédure du 1er janvier 2025. **05/09/2024** — Moteur du `ATL-014` détruit : de l'essence pure a été versée\ndans le réservoir au lieu du mélange 50:1, les deux bidons portant une étiquette\nmanuscrite décolorée. Remplacement du moteur par un prestataire, machine\nimmobilisée sept semaines. C'est l'incident qui a imposé le code couleur vert\net rouge. **Bilan des heures au 31/12/2024** — `ATL-007` : 396 h. `ATL-003` : 251 h.\n`ATL-014` : 68 h, compteur remis à zéro au remplacement moteur puis recalé à la\nvaleur d'avant incident sur décision de l'atelier, pour ne pas perdre\nl'historique des périodicités.",
+        "# Tondeuse autoportée TX-40 — notice d'entretien ## Identification Modèle TX-40, mise en service le 12 mars 2022, numéro de parc `ATL-007`. Moteur thermique quatre temps, 452 cm³, refroidissement par air. Largeur de coupe 92 cm. Réservoir de carburant : 5,7 litres. Masse à vide : 218 kg. ## Périodicités d'entretien Les périodicités sont exprimées en heures de fonctionnement, relevées au\ncompteur situé sous le volant. À défaut d'usage, aucune opération n'est due. | Opération | Périodicité | Référence de pièce |\n|---|---|---|\n| Vidange d'huile moteur | toutes les 50 heures | huile SAE 30, 1,4 litre |\n| Remplacement du filtre à air | toutes les 100 heures | `FA-2210` |\n| Remplacement de la bougie | toutes les 200 heures | `BG-441` |\n| Affûtage des lames | toutes les 25 heures | — |\n| Remplacement des lames | toutes les 400 heures | `LM-920` (jeu de deux) |\n| Contrôle de la courroie de coupe | toutes les 100 heures | `CR-118` |",
+        "Le filtre à air se **nettoie** toutes les 25 heures et se **remplace** toutes\nles 100 heures : ce sont deux opérations distinctes, et la seconde ne dispense\npas de la première. ## Points de vigilance La référence de bougie `BG-441` est commune au TX-40 et au H-120 ; la référence\nde filtre à air `FA-2210` **ne l'est pas** — sur le H-120 elle désigne le filtre\nd'origine, remplacé depuis par le `FA-3105`, de dimensions différentes. Monter\nun `FA-2210` sur un H-120 après remplacement laisse passer les poussières. Le carburant deux temps se dégrade : un mélange de plus de trente jours est\nécarté, quel que soit son aspect."
+      ],
+      "sources_retrouvees": [
+        "registre_interventions_2024.md",
+        "taille_haies_H120.md",
+        "tondeuse_TX40.md"
+      ],
+      "duree_ms": 10304.7,
+      "indices_refus": {
+        "marqueur": true,
+        "sans_citation": false
+      }
+    },
+    {
+      "id": "Q17",
+      "type": "hors_corpus",
+      "question": "Quel agent est intervenu sur le `ATL-007` le 15 août 2025 ?",
+      "reponse": "SANS_REPONSE",
+      "source": "—",
+      "erreur_attendue": "répondre « R. Vasseur », qui signe toutes les autres interventions sur cette machine. Aucune ligne du registre ne porte cette date.",
+      "sans_reponse": true,
+      "autre_source": "",
+      "reponse_systeme": "La question ne peut pas être répondue à partir des extraits fournis. Aucune information n'est disponible sur les interventions du `ATL-007` le 15 août 2025.",
+      "citations": [],
+      "contextes": [
+        "## Observations **21/03/2024** — Démarrage intempestif du `ATL-007` pendant une intervention :\nl'agent avait relevé le siège en laissant la bougie connectée, et la machine ne\ndispose d'aucune coupure automatique de lame. Sans blessure. Ce fait est à\nl'origine du passage du débranchement de bougie de « recommandé » à\n« obligatoire » dans la révision de procédure du 1er janvier 2025. **05/09/2024** — Moteur du `ATL-014` détruit : de l'essence pure a été versée\ndans le réservoir au lieu du mélange 50:1, les deux bidons portant une étiquette\nmanuscrite décolorée. Remplacement du moteur par un prestataire, machine\nimmobilisée sept semaines. C'est l'incident qui a imposé le code couleur vert\net rouge. **Bilan des heures au 31/12/2024** — `ATL-007` : 396 h. `ATL-003` : 251 h.\n`ATL-014` : 68 h, compteur remis à zéro au remplacement moteur puis recalé à la\nvaleur d'avant incident sur décision de l'atelier, pour ne pas perdre\nl'historique des périodicités.",
+        "# Registre des interventions — atelier municipal Une ligne par intervention. Le compteur est celui relevé au moment de l'acte. ## Année 2025 | Date | Machine | Compteur | Intervention | Agent |\n|---|---|---|---|---|\n| 14/01/2025 | `ATL-007` | 412 h | Vidange d'huile moteur | R. Vasseur |\n| 14/01/2025 | `ATL-007` | 412 h | Affûtage des lames | R. Vasseur |\n| 03/03/2025 | `ATL-014` | 96 h | Nettoyage du filtre à air | M. Kessler |\n| 22/03/2025 | `ATL-007` | 445 h | Remplacement courroie `CR-118` | R. Vasseur |\n| 22/03/2025 | `ATL-007` | 445 h | Contrôle pression pneumatiques | R. Vasseur |\n| 11/04/2025 | `ATL-014` | 104 h | Remplacement filtre à air `FA-3105` | M. Kessler |\n| 11/04/2025 | `ATL-014` | 104 h | Remplacement bougie `BG-441` | M. Kessler |\n| 06/06/2025 | `ATL-007` | 468 h | Vidange d'huile moteur | R. Vasseur |\n| 06/06/2025 | `ATL-007` | 468 h | Remplacement des lames `LM-920` | R. Vasseur |\n| 19/09/2025 | `ATL-014` | 128 h | Graissage des lames | M. Kessler |\n| 30/10/2025 | `ATL-007` | 501 h | Remplacement filtre à air `FA-2210` | R. Vasseur |\n| 30/10/2025 | `ATL-007` | 501 h | Remplacement bougie `BG-441` | R. Vasseur |",
+        "# Registre des interventions — atelier municipal, année 2024 Ce registre est clos. Il est conservé pour l'historique des machines et l'analyse\ndes incidents. Le registre en cours est `registre_interventions.md`. | Date | Machine | Compteur | Intervention | Agent |\n|---|---|---|---|---|\n| 09/02/2024 | `ATL-007` | 318 h | Vidange d'huile moteur | R. Vasseur |\n| 09/02/2024 | `ATL-003` | 202 h | Remplacement chaîne `CH-401` | L. Fournier |\n| 21/03/2024 | `ATL-007` | 341 h | Remplacement bougie `BG-441` | R. Vasseur |\n| 12/05/2024 | `ATL-003` | 218 h | Nettoyage filtre à air `FA-3105` | L. Fournier |\n| 12/05/2024 | `ATL-014` | 41 h | Nettoyage filtre à air | M. Kessler |\n| 27/06/2024 | `ATL-007` | 372 h | Affûtage des lames | R. Vasseur |\n| 05/09/2024 | `ATL-014` | 63 h | **Remplacement moteur complet** | prestataire |\n| 18/11/2024 | `ATL-003` | 244 h | Remplacement guide `GD-408` | L. Fournier |",
+        "## Observations **22/03/2025** — La courroie `CR-118` a cédé à 445 heures, soit bien avant son\ncontrôle des 500 heures. Le carter de coupe était colmaté. Le contrôle est\navancé à toutes les 80 heures sur cette machine, en dérogation à la notice. **11/04/2025** — Le filtre `FA-2210` commandé pour le `ATL-014` ne correspondait\npas : dimensions différentes. Remplacé par un `FA-3105`. C'est cet incident qui\na donné lieu à la procédure P-04. **30/10/2025** — Dernière intervention de l'année sur le `ATL-007`. La machine\nest remisée pour l'hiver, réservoir vidangé."
+      ],
+      "sources_retrouvees": [
+        "registre_interventions.md",
+        "registre_interventions_2024.md"
+      ],
+      "duree_ms": 6796.0,
+      "indices_refus": {
+        "marqueur": true,
+        "sans_citation": true
+      }
+    },
+    {
+      "id": "Q18",
+      "type": "hors_corpus",
+      "question": "Quelle huile est préconisée pour le graissage des lames du TX-40 ?",
+      "reponse": "SANS_REPONSE",
+      "source": "—",
+      "erreur_attendue": "répondre « graisse lithium », qui est la préconisation du H-120. Le TX-40 n'a pas d'opération de graissage des lames : il a un affûtage et un remplacement.",
+      "sans_reponse": true,
+      "autre_source": "",
+      "reponse_systeme": "La question ne se trouve pas dans les extraits fournis.",
+      "citations": [],
+      "contextes": [
+        "# Tondeuse autoportée TX-40 — notice d'entretien ## Identification Modèle TX-40, mise en service le 12 mars 2022, numéro de parc `ATL-007`. Moteur thermique quatre temps, 452 cm³, refroidissement par air. Largeur de coupe 92 cm. Réservoir de carburant : 5,7 litres. Masse à vide : 218 kg. ## Périodicités d'entretien Les périodicités sont exprimées en heures de fonctionnement, relevées au\ncompteur situé sous le volant. À défaut d'usage, aucune opération n'est due. | Opération | Périodicité | Référence de pièce |\n|---|---|---|\n| Vidange d'huile moteur | toutes les 50 heures | huile SAE 30, 1,4 litre |\n| Remplacement du filtre à air | toutes les 100 heures | `FA-2210` |\n| Remplacement de la bougie | toutes les 200 heures | `BG-441` |\n| Affûtage des lames | toutes les 25 heures | — |\n| Remplacement des lames | toutes les 400 heures | `LM-920` (jeu de deux) |\n| Contrôle de la courroie de coupe | toutes les 100 heures | `CR-118` |",
+        "La première vidange fait exception : elle est due au bout de **5 heures** après\nla mise en service, puis la périodicité de 50 heures s'applique. ## Pression des pneumatiques Roues avant : 1,0 bar. Roues arrière : 0,7 bar. Le contrôle se fait à froid,\navant le démarrage. Un écart de plus de 0,2 bar entre les deux roues arrière\nprovoque une coupe irrégulière sur toute la largeur. ## Points de vigilance Le carter de coupe se colmate par temps humide. Un colmatage non traité fait\nchuter la puissance disponible et surcharge la courroie `CR-118`, qui est la\npièce qui casse en premier sur cette machine. Le TX-40 ne dispose **pas** de coupure automatique de lame au relevage du siège. Cette sécurité, présente sur les modèles postérieurs à 2023, doit être suppléée\npar la procédure d'atelier.",
+        "Le filtre à air se **nettoie** toutes les 25 heures et se **remplace** toutes\nles 100 heures : ce sont deux opérations distinctes, et la seconde ne dispense\npas de la première. ## Points de vigilance La référence de bougie `BG-441` est commune au TX-40 et au H-120 ; la référence\nde filtre à air `FA-2210` **ne l'est pas** — sur le H-120 elle désigne le filtre\nd'origine, remplacé depuis par le `FA-3105`, de dimensions différentes. Monter\nun `FA-2210` sur un H-120 après remplacement laisse passer les poussières. Le carburant deux temps se dégrade : un mélange de plus de trente jours est\nécarté, quel que soit son aspect.",
+        "# Procédures de l'atelier municipal ## Champ d'application Ces procédures s'appliquent à l'ensemble du parc thermique de l'atelier, dont la\ntondeuse autoportée TX-40 (`ATL-007`) et le taille-haies H-120 (`ATL-014`). ## P-01 · Consignation avant intervention Toute intervention sur une machine thermique impose, dans cet ordre : 1. arrêt moteur et retrait de la clé ;\n2. **débranchement du capuchon de bougie** ;\n3. attente de dix minutes pour le refroidissement de l'échappement ;\n4. inscription au registre des interventions. L'étape 2 n'est pas facultative sur le TX-40 : cette machine étant dépourvue de\ncoupure automatique de lame au relevage du siège, un démarrage intempestif reste\npossible tant que la bougie est connectée. ## P-02 · Stockage des carburants L'essence pure et le mélange deux temps sont stockés dans des bidons de couleurs\ndistinctes : **vert pour l'essence pure**, **rouge pour le mélange 50:1**. Tout\nbidon rouge est daté de son jour de préparation."
+      ],
+      "sources_retrouvees": [
+        "procedure_atelier.md",
+        "taille_haies_H120.md",
+        "tondeuse_TX40.md"
+      ],
+      "duree_ms": 8871.7,
+      "indices_refus": {
+        "marqueur": false,
+        "sans_citation": true
+      }
+    },
+    {
+      "id": "Q25",
+      "type": "hors_corpus",
+      "question": "Quelle est la longueur du guide du T-85 exprimée en pouces ?",
+      "reponse": "SANS_REPONSE",
+      "source": "—",
+      "erreur_attendue": "convertir les 40 cm en pouces. La conversion est triviale, mais elle n'est pas dans le corpus : un système qui répond « 16 pouces » a calculé, pas récupéré. C'est un cas limite volontaire — la bonne réponse peut se discuter, la trace doit montrer d'où elle vient.",
+      "sans_reponse": true,
+      "autre_source": "",
+      "reponse_systeme": "La longueur du guide du T-85 est indiquée comme étant de 40 cm [1]. Cependant, cette information n'est pas convertie en pouces dans les extraits fournis. Ainsi, la réponse ne se trouve pas dans les extraits.",
+      "citations": [
+        "[1] tronconneuse_T85.md"
+      ],
+      "contextes": [
+        "# Tronçonneuse thermique T-85 — notice d'entretien ## Identification Modèle T-85, mise en service le 17 juin 2021, numéro de parc `ATL-003`. Moteur thermique deux temps, 45,2 cm³. Longueur de guide : 40 cm. Réservoir de carburant : 0,55 litre. Réservoir d'huile de chaîne : 0,26 litre. Masse à vide : 5,6 kg. Comme le H-120, le T-85 fonctionne au mélange deux temps 50:1. Les deux machines\npeuvent donc partager le même bidon rouge, à condition qu'il soit daté. ## Périodicités d'entretien | Opération | Périodicité | Référence de pièce |\n|---|---|---|\n| Nettoyage du filtre à air | toutes les 10 heures | `FA-3105` |\n| Remplacement du filtre à air | toutes les 100 heures | `FA-3105` |\n| Remplacement de la bougie | toutes les 100 heures | `BG-512` |\n| Affûtage de la chaîne | toutes les 5 heures | — |\n| Remplacement de la chaîne | toutes les 150 heures | `CH-401` |\n| Remplacement du guide | toutes les 300 heures | `GD-408` |\n| Contrôle du frein de chaîne | **avant chaque usage** | — |",
+        "Le filtre `FA-3105` est ici la référence d'origine ; c'est la même pièce que\ncelle montée en remplacement sur le H-120. Le T-85 et le H-120 partagent donc\nréellement leur filtre à air — mais **pas** leur bougie : `BG-512` pour le T-85,\n`BG-441` pour le H-120. ## Huile de chaîne Huile spécifique adhésive, jamais d'huile moteur ni d'huile de vidange. Le\nniveau se contrôle à chaque plein de carburant : les deux réservoirs se vident\napproximativement en même temps, et une chaîne tournant à sec détruit le guide\nen quelques minutes. ## Point de vigilance Le frein de chaîne est le seul organe du parc dont le contrôle est dû **avant\nchaque usage** et non selon un compteur horaire. Un contrôle reporté à la\npériodicité horaire est une non-conformité, pas un retard.",
+        "## Observations **22/03/2025** — La courroie `CR-118` a cédé à 445 heures, soit bien avant son\ncontrôle des 500 heures. Le carter de coupe était colmaté. Le contrôle est\navancé à toutes les 80 heures sur cette machine, en dérogation à la notice. **11/04/2025** — Le filtre `FA-2210` commandé pour le `ATL-014` ne correspondait\npas : dimensions différentes. Remplacé par un `FA-3105`. C'est cet incident qui\na donné lieu à la procédure P-04. **30/10/2025** — Dernière intervention de l'année sur le `ATL-007`. La machine\nest remisée pour l'hiver, réservoir vidangé.",
+        "## Observations **21/03/2024** — Démarrage intempestif du `ATL-007` pendant une intervention :\nl'agent avait relevé le siège en laissant la bougie connectée, et la machine ne\ndispose d'aucune coupure automatique de lame. Sans blessure. Ce fait est à\nl'origine du passage du débranchement de bougie de « recommandé » à\n« obligatoire » dans la révision de procédure du 1er janvier 2025. **05/09/2024** — Moteur du `ATL-014` détruit : de l'essence pure a été versée\ndans le réservoir au lieu du mélange 50:1, les deux bidons portant une étiquette\nmanuscrite décolorée. Remplacement du moteur par un prestataire, machine\nimmobilisée sept semaines. C'est l'incident qui a imposé le code couleur vert\net rouge. **Bilan des heures au 31/12/2024** — `ATL-007` : 396 h. `ATL-003` : 251 h.\n`ATL-014` : 68 h, compteur remis à zéro au remplacement moteur puis recalé à la\nvaleur d'avant incident sur décision de l'atelier, pour ne pas perdre\nl'historique des périodicités."
+      ],
+      "sources_retrouvees": [
+        "registre_interventions.md",
+        "registre_interventions_2024.md",
+        "tronconneuse_T85.md"
+      ],
+      "duree_ms": 7794.6,
+      "indices_refus": {
+        "marqueur": false,
+        "sans_citation": false
+      }
+    }
+  ],
+  "ragas": {
+    "id": "run_1",
+    "timestamp": "2026-08-26T20:27:21.976658",
+    "type": "ragas",
+    "pipeline_model": "unknown",
+    "scores": [
+      {
+        "user_input": "Tous les combien faut-il remplacer le filtre à air du TX-40 ?",
+        "retrieved_contexts": [
+          "Le filtre à air se **nettoie** toutes les 25 heures et se **remplace** toutes\nles 100 heures : ce sont deux opérations distinctes, et la seconde ne dispense\npas de la première. ## Points de vigilance La référence de bougie `BG-441` est commune au TX-40 et au H-120 ; la référence\nde filtre à air `FA-2210` **ne l'est pas** — sur le H-120 elle désigne le filtre\nd'origine, remplacé depuis par le `FA-3105`, de dimensions différentes. Monter\nun `FA-2210` sur un H-120 après remplacement laisse passer les poussières. Le carburant deux temps se dégrade : un mélange de plus de trente jours est\nécarté, quel que soit son aspect.",
+          "# Tondeuse autoportée TX-40 — notice d'entretien ## Identification Modèle TX-40, mise en service le 12 mars 2022, numéro de parc `ATL-007`. Moteur thermique quatre temps, 452 cm³, refroidissement par air. Largeur de coupe 92 cm. Réservoir de carburant : 5,7 litres. Masse à vide : 218 kg. ## Périodicités d'entretien Les périodicités sont exprimées en heures de fonctionnement, relevées au\ncompteur situé sous le volant. À défaut d'usage, aucune opération n'est due. | Opération | Périodicité | Référence de pièce |\n|---|---|---|\n| Vidange d'huile moteur | toutes les 50 heures | huile SAE 30, 1,4 litre |\n| Remplacement du filtre à air | toutes les 100 heures | `FA-2210` |\n| Remplacement de la bougie | toutes les 200 heures | `BG-441` |\n| Affûtage des lames | toutes les 25 heures | — |\n| Remplacement des lames | toutes les 400 heures | `LM-920` (jeu de deux) |\n| Contrôle de la courroie de coupe | toutes les 100 heures | `CR-118` |",
+          "## Observations **22/03/2025** — La courroie `CR-118` a cédé à 445 heures, soit bien avant son\ncontrôle des 500 heures. Le carter de coupe était colmaté. Le contrôle est\navancé à toutes les 80 heures sur cette machine, en dérogation à la notice. **11/04/2025** — Le filtre `FA-2210` commandé pour le `ATL-014` ne correspondait\npas : dimensions différentes. Remplacé par un `FA-3105`. C'est cet incident qui\na donné lieu à la procédure P-04. **30/10/2025** — Dernière intervention de l'année sur le `ATL-007`. La machine\nest remisée pour l'hiver, réservoir vidangé.",
+          "La première vidange fait exception : elle est due au bout de **5 heures** après\nla mise en service, puis la périodicité de 50 heures s'applique. ## Pression des pneumatiques Roues avant : 1,0 bar. Roues arrière : 0,7 bar. Le contrôle se fait à froid,\navant le démarrage. Un écart de plus de 0,2 bar entre les deux roues arrière\nprovoque une coupe irrégulière sur toute la largeur. ## Points de vigilance Le carter de coupe se colmate par temps humide. Un colmatage non traité fait\nchuter la puissance disponible et surcharge la courroie `CR-118`, qui est la\npièce qui casse en premier sur cette machine. Le TX-40 ne dispose **pas** de coupure automatique de lame au relevage du siège. Cette sécurité, présente sur les modèles postérieurs à 2023, doit être suppléée\npar la procédure d'atelier."
+        ],
+        "response": "Il faut remplacer le filtre à air du TX-40 toutes les 100 heures [2].",
+        "reference": "Toutes les 100 heures de fonctionnement, référence `FA-2210`.",
+        "faithfulness": 1.0,
+        "answer_relevancy": 0.6782228916621346,
+        "context_precision": 0.9999999999666667,
+        "context_recall": 1.0,
+        "answer_correctness": 0.5516478390794519
+      },
+      {
+        "user_input": "Quelle est la capacité du réservoir de carburant du TX-40 ?",
+        "retrieved_contexts": [
+          "# Tondeuse autoportée TX-40 — notice d'entretien ## Identification Modèle TX-40, mise en service le 12 mars 2022, numéro de parc `ATL-007`. Moteur thermique quatre temps, 452 cm³, refroidissement par air. Largeur de coupe 92 cm. Réservoir de carburant : 5,7 litres. Masse à vide : 218 kg. ## Périodicités d'entretien Les périodicités sont exprimées en heures de fonctionnement, relevées au\ncompteur situé sous le volant. À défaut d'usage, aucune opération n'est due. | Opération | Périodicité | Référence de pièce |\n|---|---|---|\n| Vidange d'huile moteur | toutes les 50 heures | huile SAE 30, 1,4 litre |\n| Remplacement du filtre à air | toutes les 100 heures | `FA-2210` |\n| Remplacement de la bougie | toutes les 200 heures | `BG-441` |\n| Affûtage des lames | toutes les 25 heures | — |\n| Remplacement des lames | toutes les 400 heures | `LM-920` (jeu de deux) |\n| Contrôle de la courroie de coupe | toutes les 100 heures | `CR-118` |",
+          "Le filtre à air se **nettoie** toutes les 25 heures et se **remplace** toutes\nles 100 heures : ce sont deux opérations distinctes, et la seconde ne dispense\npas de la première. ## Points de vigilance La référence de bougie `BG-441` est commune au TX-40 et au H-120 ; la référence\nde filtre à air `FA-2210` **ne l'est pas** — sur le H-120 elle désigne le filtre\nd'origine, remplacé depuis par le `FA-3105`, de dimensions différentes. Monter\nun `FA-2210` sur un H-120 après remplacement laisse passer les poussières. Le carburant deux temps se dégrade : un mélange de plus de trente jours est\nécarté, quel que soit son aspect.",
+          "# Tronçonneuse thermique T-85 — notice d'entretien ## Identification Modèle T-85, mise en service le 17 juin 2021, numéro de parc `ATL-003`. Moteur thermique deux temps, 45,2 cm³. Longueur de guide : 40 cm. Réservoir de carburant : 0,55 litre. Réservoir d'huile de chaîne : 0,26 litre. Masse à vide : 5,6 kg. Comme le H-120, le T-85 fonctionne au mélange deux temps 50:1. Les deux machines\npeuvent donc partager le même bidon rouge, à condition qu'il soit daté. ## Périodicités d'entretien | Opération | Périodicité | Référence de pièce |\n|---|---|---|\n| Nettoyage du filtre à air | toutes les 10 heures | `FA-3105` |\n| Remplacement du filtre à air | toutes les 100 heures | `FA-3105` |\n| Remplacement de la bougie | toutes les 100 heures | `BG-512` |\n| Affûtage de la chaîne | toutes les 5 heures | — |\n| Remplacement de la chaîne | toutes les 150 heures | `CH-401` |\n| Remplacement du guide | toutes les 300 heures | `GD-408` |\n| Contrôle du frein de chaîne | **avant chaque usage** | — |",
+          "# Procédures de l'atelier municipal ## Champ d'application Ces procédures s'appliquent à l'ensemble du parc thermique de l'atelier, dont la\ntondeuse autoportée TX-40 (`ATL-007`) et le taille-haies H-120 (`ATL-014`). ## P-01 · Consignation avant intervention Toute intervention sur une machine thermique impose, dans cet ordre : 1. arrêt moteur et retrait de la clé ;\n2. **débranchement du capuchon de bougie** ;\n3. attente de dix minutes pour le refroidissement de l'échappement ;\n4. inscription au registre des interventions. L'étape 2 n'est pas facultative sur le TX-40 : cette machine étant dépourvue de\ncoupure automatique de lame au relevage du siège, un démarrage intempestif reste\npossible tant que la bougie est connectée. ## P-02 · Stockage des carburants L'essence pure et le mélange deux temps sont stockés dans des bidons de couleurs\ndistinctes : **vert pour l'essence pure**, **rouge pour le mélange 50:1**. Tout\nbidon rouge est daté de son jour de préparation."
+        ],
+        "response": "La capacité du réservoir de carburant du TX-40 est de 5,7 litres [1].",
+        "reference": "5,7 litres.",
+        "faithfulness": 0.5,
+        "answer_relevancy": 0.6717664385812255,
+        "context_precision": 0.9999999999,
+        "context_recall": 1.0,
+        "answer_correctness": 0.9172241120171192
+      },
+      {
+        "user_input": "Dans quelle proportion se prépare le mélange deux temps du H-120 ?",
+        "retrieved_contexts": [
+          "# Taille-haies thermique H-120 — notice d'entretien ## Identification Modèle H-120, mise en service le 4 septembre 2023, numéro de parc `ATL-014`. Moteur thermique deux temps, 25,4 cm³. Longueur de lame : 60 cm. Réservoir de carburant : 0,5 litre. Masse à vide : 5,2 kg. Le H-120 fonctionne au **mélange deux temps**, proportion 50:1 (soit 20 ml\nd'huile deux temps par litre d'essence). L'emploi d'essence pure détruit le\nmoteur en quelques minutes de fonctionnement. ## Périodicités d'entretien | Opération | Périodicité | Référence de pièce |\n|---|---|---|\n| Nettoyage du filtre à air | toutes les 25 heures | `FA-2210` |\n| Remplacement du filtre à air | toutes les 100 heures | `FA-3105` |\n| Remplacement de la bougie | toutes les 100 heures | `BG-441` |\n| Graissage des lames | toutes les 10 heures | graisse lithium |\n| Affûtage des lames | toutes les 50 heures | — |\n| Remplacement du filtre à carburant | toutes les 200 heures | `FC-076` |",
+          "# Procédures de l'atelier municipal ## Champ d'application Ces procédures s'appliquent à l'ensemble du parc thermique de l'atelier, dont la\ntondeuse autoportée TX-40 (`ATL-007`) et le taille-haies H-120 (`ATL-014`). ## P-01 · Consignation avant intervention Toute intervention sur une machine thermique impose, dans cet ordre : 1. arrêt moteur et retrait de la clé ;\n2. **débranchement du capuchon de bougie** ;\n3. attente de dix minutes pour le refroidissement de l'échappement ;\n4. inscription au registre des interventions. L'étape 2 n'est pas facultative sur le TX-40 : cette machine étant dépourvue de\ncoupure automatique de lame au relevage du siège, un démarrage intempestif reste\npossible tant que la bougie est connectée. ## P-02 · Stockage des carburants L'essence pure et le mélange deux temps sont stockés dans des bidons de couleurs\ndistinctes : **vert pour l'essence pure**, **rouge pour le mélange 50:1**. Tout\nbidon rouge est daté de son jour de préparation.",
+          "# Tronçonneuse thermique T-85 — notice d'entretien ## Identification Modèle T-85, mise en service le 17 juin 2021, numéro de parc `ATL-003`. Moteur thermique deux temps, 45,2 cm³. Longueur de guide : 40 cm. Réservoir de carburant : 0,55 litre. Réservoir d'huile de chaîne : 0,26 litre. Masse à vide : 5,6 kg. Comme le H-120, le T-85 fonctionne au mélange deux temps 50:1. Les deux machines\npeuvent donc partager le même bidon rouge, à condition qu'il soit daté. ## Périodicités d'entretien | Opération | Périodicité | Référence de pièce |\n|---|---|---|\n| Nettoyage du filtre à air | toutes les 10 heures | `FA-3105` |\n| Remplacement du filtre à air | toutes les 100 heures | `FA-3105` |\n| Remplacement de la bougie | toutes les 100 heures | `BG-512` |\n| Affûtage de la chaîne | toutes les 5 heures | — |\n| Remplacement de la chaîne | toutes les 150 heures | `CH-401` |\n| Remplacement du guide | toutes les 300 heures | `GD-408` |\n| Contrôle du frein de chaîne | **avant chaque usage** | — |",
+          "Le filtre à air se **nettoie** toutes les 25 heures et se **remplace** toutes\nles 100 heures : ce sont deux opérations distinctes, et la seconde ne dispense\npas de la première. ## Points de vigilance La référence de bougie `BG-441` est commune au TX-40 et au H-120 ; la référence\nde filtre à air `FA-2210` **ne l'est pas** — sur le H-120 elle désigne le filtre\nd'origine, remplacé depuis par le `FA-3105`, de dimensions différentes. Monter\nun `FA-2210` sur un H-120 après remplacement laisse passer les poussières. Le carburant deux temps se dégrade : un mélange de plus de trente jours est\nécarté, quel que soit son aspect."
+        ],
+        "response": "Le mélange deux temps du H-120 se prépare dans une proportion de **50:1** [1].",
+        "reference": "50:1, soit 20 ml d'huile deux temps par litre d'essence.",
+        "faithfulness": 1.0,
+        "answer_relevancy": 0.7643963312685521,
+        "context_precision": 0.9999999999666667,
+        "context_recall": 1.0,
+        "answer_correctness": 0.7932549246342859
+      },
+      {
+        "user_input": "Quelle pression faut-il aux roues avant du TX-40 ?",
+        "retrieved_contexts": [
+          "La première vidange fait exception : elle est due au bout de **5 heures** après\nla mise en service, puis la périodicité de 50 heures s'applique. ## Pression des pneumatiques Roues avant : 1,0 bar. Roues arrière : 0,7 bar. Le contrôle se fait à froid,\navant le démarrage. Un écart de plus de 0,2 bar entre les deux roues arrière\nprovoque une coupe irrégulière sur toute la largeur. ## Points de vigilance Le carter de coupe se colmate par temps humide. Un colmatage non traité fait\nchuter la puissance disponible et surcharge la courroie `CR-118`, qui est la\npièce qui casse en premier sur cette machine. Le TX-40 ne dispose **pas** de coupure automatique de lame au relevage du siège. Cette sécurité, présente sur les modèles postérieurs à 2023, doit être suppléée\npar la procédure d'atelier.",
+          "Le filtre à air se **nettoie** toutes les 25 heures et se **remplace** toutes\nles 100 heures : ce sont deux opérations distinctes, et la seconde ne dispense\npas de la première. ## Points de vigilance La référence de bougie `BG-441` est commune au TX-40 et au H-120 ; la référence\nde filtre à air `FA-2210` **ne l'est pas** — sur le H-120 elle désigne le filtre\nd'origine, remplacé depuis par le `FA-3105`, de dimensions différentes. Monter\nun `FA-2210` sur un H-120 après remplacement laisse passer les poussières. Le carburant deux temps se dégrade : un mélange de plus de trente jours est\nécarté, quel que soit son aspect.",
+          "# Registre des interventions — atelier municipal, année 2024 Ce registre est clos. Il est conservé pour l'historique des machines et l'analyse\ndes incidents. Le registre en cours est `registre_interventions.md`. | Date | Machine | Compteur | Intervention | Agent |\n|---|---|---|---|---|\n| 09/02/2024 | `ATL-007` | 318 h | Vidange d'huile moteur | R. Vasseur |\n| 09/02/2024 | `ATL-003` | 202 h | Remplacement chaîne `CH-401` | L. Fournier |\n| 21/03/2024 | `ATL-007` | 341 h | Remplacement bougie `BG-441` | R. Vasseur |\n| 12/05/2024 | `ATL-003` | 218 h | Nettoyage filtre à air `FA-3105` | L. Fournier |\n| 12/05/2024 | `ATL-014` | 41 h | Nettoyage filtre à air | M. Kessler |\n| 27/06/2024 | `ATL-007` | 372 h | Affûtage des lames | R. Vasseur |\n| 05/09/2024 | `ATL-014` | 63 h | **Remplacement moteur complet** | prestataire |\n| 18/11/2024 | `ATL-003` | 244 h | Remplacement guide `GD-408` | L. Fournier |",
+          "# Tronçonneuse thermique T-85 — notice d'entretien ## Identification Modèle T-85, mise en service le 17 juin 2021, numéro de parc `ATL-003`. Moteur thermique deux temps, 45,2 cm³. Longueur de guide : 40 cm. Réservoir de carburant : 0,55 litre. Réservoir d'huile de chaîne : 0,26 litre. Masse à vide : 5,6 kg. Comme le H-120, le T-85 fonctionne au mélange deux temps 50:1. Les deux machines\npeuvent donc partager le même bidon rouge, à condition qu'il soit daté. ## Périodicités d'entretien | Opération | Périodicité | Référence de pièce |\n|---|---|---|\n| Nettoyage du filtre à air | toutes les 10 heures | `FA-3105` |\n| Remplacement du filtre à air | toutes les 100 heures | `FA-3105` |\n| Remplacement de la bougie | toutes les 100 heures | `BG-512` |\n| Affûtage de la chaîne | toutes les 5 heures | — |\n| Remplacement de la chaîne | toutes les 150 heures | `CH-401` |\n| Remplacement du guide | toutes les 300 heures | `GD-408` |\n| Contrôle du frein de chaîne | **avant chaque usage** | — |"
+        ],
+        "response": "La pression des pneumatiques des roues avant du TX-40 doit être de **1,0 bar** [1].",
+        "reference": "1,0 bar, contrôlée à froid avant le démarrage.",
+        "faithfulness": 0.5,
+        "answer_relevancy": 0.6735154753699429,
+        "context_precision": 0.9999999999,
+        "context_recall": 1.0,
+        "answer_correctness": 0.7725889278269289
+      },
+      {
+        "user_input": "Au bout de combien d'heures la première vidange du TX-40 est-elle due ?",
+        "retrieved_contexts": [
+          "La première vidange fait exception : elle est due au bout de **5 heures** après\nla mise en service, puis la périodicité de 50 heures s'applique. ## Pression des pneumatiques Roues avant : 1,0 bar. Roues arrière : 0,7 bar. Le contrôle se fait à froid,\navant le démarrage. Un écart de plus de 0,2 bar entre les deux roues arrière\nprovoque une coupe irrégulière sur toute la largeur. ## Points de vigilance Le carter de coupe se colmate par temps humide. Un colmatage non traité fait\nchuter la puissance disponible et surcharge la courroie `CR-118`, qui est la\npièce qui casse en premier sur cette machine. Le TX-40 ne dispose **pas** de coupure automatique de lame au relevage du siège. Cette sécurité, présente sur les modèles postérieurs à 2023, doit être suppléée\npar la procédure d'atelier.",
+          "# Tondeuse autoportée TX-40 — notice d'entretien ## Identification Modèle TX-40, mise en service le 12 mars 2022, numéro de parc `ATL-007`. Moteur thermique quatre temps, 452 cm³, refroidissement par air. Largeur de coupe 92 cm. Réservoir de carburant : 5,7 litres. Masse à vide : 218 kg. ## Périodicités d'entretien Les périodicités sont exprimées en heures de fonctionnement, relevées au\ncompteur situé sous le volant. À défaut d'usage, aucune opération n'est due. | Opération | Périodicité | Référence de pièce |\n|---|---|---|\n| Vidange d'huile moteur | toutes les 50 heures | huile SAE 30, 1,4 litre |\n| Remplacement du filtre à air | toutes les 100 heures | `FA-2210` |\n| Remplacement de la bougie | toutes les 200 heures | `BG-441` |\n| Affûtage des lames | toutes les 25 heures | — |\n| Remplacement des lames | toutes les 400 heures | `LM-920` (jeu de deux) |\n| Contrôle de la courroie de coupe | toutes les 100 heures | `CR-118` |",
+          "Le filtre à air se **nettoie** toutes les 25 heures et se **remplace** toutes\nles 100 heures : ce sont deux opérations distinctes, et la seconde ne dispense\npas de la première. ## Points de vigilance La référence de bougie `BG-441` est commune au TX-40 et au H-120 ; la référence\nde filtre à air `FA-2210` **ne l'est pas** — sur le H-120 elle désigne le filtre\nd'origine, remplacé depuis par le `FA-3105`, de dimensions différentes. Monter\nun `FA-2210` sur un H-120 après remplacement laisse passer les poussières. Le carburant deux temps se dégrade : un mélange de plus de trente jours est\nécarté, quel que soit son aspect.",
+          "## Observations **22/03/2025** — La courroie `CR-118` a cédé à 445 heures, soit bien avant son\ncontrôle des 500 heures. Le carter de coupe était colmaté. Le contrôle est\navancé à toutes les 80 heures sur cette machine, en dérogation à la notice. **11/04/2025** — Le filtre `FA-2210` commandé pour le `ATL-014` ne correspondait\npas : dimensions différentes. Remplacé par un `FA-3105`. C'est cet incident qui\na donné lieu à la procédure P-04. **30/10/2025** — Dernière intervention de l'année sur le `ATL-007`. La machine\nest remisée pour l'hiver, réservoir vidangé."
+        ],
+        "response": "La première vidange du TX-40 est due au bout de **5 heures** après la mise en service [1].",
+        "reference": "5 heures après la mise en service. La périodicité de 50 heures ne s'applique qu'ensuite.",
+        "faithfulness": 1.0,
+        "answer_relevancy": 0.7880774637917906,
+        "context_precision": 0.99999999995,
+        "context_recall": 1.0,
+        "answer_correctness": 0.8037019732634672
+      },
+      {
+        "user_input": "Pourquoi le débranchement du capuchon de bougie est-il particulièrement impératif sur le TX-40 ?",
+        "retrieved_contexts": [
+          "# Procédures de l'atelier municipal ## Champ d'application Ces procédures s'appliquent à l'ensemble du parc thermique de l'atelier, dont la\ntondeuse autoportée TX-40 (`ATL-007`) et le taille-haies H-120 (`ATL-014`). ## P-01 · Consignation avant intervention Toute intervention sur une machine thermique impose, dans cet ordre : 1. arrêt moteur et retrait de la clé ;\n2. **débranchement du capuchon de bougie** ;\n3. attente de dix minutes pour le refroidissement de l'échappement ;\n4. inscription au registre des interventions. L'étape 2 n'est pas facultative sur le TX-40 : cette machine étant dépourvue de\ncoupure automatique de lame au relevage du siège, un démarrage intempestif reste\npossible tant que la bougie est connectée. ## P-02 · Stockage des carburants L'essence pure et le mélange deux temps sont stockés dans des bidons de couleurs\ndistinctes : **vert pour l'essence pure**, **rouge pour le mélange 50:1**. Tout\nbidon rouge est daté de son jour de préparation.",
+          "# Procédures de l'atelier municipal — version 2023 (ABROGÉE) > **Ce document est abrogé depuis le 1er janvier 2025.** Il est conservé au titre\n> du suivi documentaire. La version en vigueur est `procedure_atelier.md`. En cas\n> de divergence, c'est la version en vigueur qui s'applique. ## P-01 · Consignation avant intervention (version 2023) Toute intervention sur une machine thermique impose : 1. arrêt moteur et retrait de la clé ;\n2. attente de **cinq minutes** pour le refroidissement de l'échappement ;\n3. inscription au registre des interventions. Le débranchement du capuchon de bougie est **recommandé** sans être obligatoire. ## P-02 · Stockage des carburants (version 2023) L'essence pure et le mélange deux temps sont stockés dans des bidons distincts. Aucune couleur n'est imposée ; l'étiquetage manuscrit suffit. Un mélange de plus de **soixante jours** est vidangé. ## P-03 · Suivi des heures (version 2023) Le compteur horaire est relevé en fin de mois.",
+          "Le filtre à air se **nettoie** toutes les 25 heures et se **remplace** toutes\nles 100 heures : ce sont deux opérations distinctes, et la seconde ne dispense\npas de la première. ## Points de vigilance La référence de bougie `BG-441` est commune au TX-40 et au H-120 ; la référence\nde filtre à air `FA-2210` **ne l'est pas** — sur le H-120 elle désigne le filtre\nd'origine, remplacé depuis par le `FA-3105`, de dimensions différentes. Monter\nun `FA-2210` sur un H-120 après remplacement laisse passer les poussières. Le carburant deux temps se dégrade : un mélange de plus de trente jours est\nécarté, quel que soit son aspect.",
+          "## Observations **21/03/2024** — Démarrage intempestif du `ATL-007` pendant une intervention :\nl'agent avait relevé le siège en laissant la bougie connectée, et la machine ne\ndispose d'aucune coupure automatique de lame. Sans blessure. Ce fait est à\nl'origine du passage du débranchement de bougie de « recommandé » à\n« obligatoire » dans la révision de procédure du 1er janvier 2025. **05/09/2024** — Moteur du `ATL-014` détruit : de l'essence pure a été versée\ndans le réservoir au lieu du mélange 50:1, les deux bidons portant une étiquette\nmanuscrite décolorée. Remplacement du moteur par un prestataire, machine\nimmobilisée sept semaines. C'est l'incident qui a imposé le code couleur vert\net rouge. **Bilan des heures au 31/12/2024** — `ATL-007` : 396 h. `ATL-003` : 251 h.\n`ATL-014` : 68 h, compteur remis à zéro au remplacement moteur puis recalé à la\nvaleur d'avant incident sur décision de l'atelier, pour ne pas perdre\nl'historique des périodicités."
+        ],
+        "response": "Le débranchement du capuchon de bougie est particulièrement impératif sur le TX-40 car cette machine est dépourvue de coupure automatique de lame au relevage du siège, ce qui rend un démarrage intempestif possible tant que la bougie est connectée [1]. Cet incident a même conduit à la modification des procédures, passant du statut de « recommandé » à « obligatoire » [4].",
+        "reference": "Parce que le TX-40 n'a pas de coupure automatique de lame au relevage du siège — sécurité présente seulement sur les modèles postérieurs à 2023. Tant que la bougie est connectée, un démarrage intempestif reste possible, et la procédure P-01 supplée cette absence.",
+        "faithfulness": 1.0,
+        "answer_relevancy": 0.5062610610763015,
+        "context_precision": 0.9166666666361111,
+        "context_recall": 1.0,
+        "answer_correctness": 0.8319997384338657
+      },
+      {
+        "user_input": "Quelle référence de pièce est réellement commune au TX-40 et au H-120 ?",
+        "retrieved_contexts": [
+          "Le filtre à air se **nettoie** toutes les 25 heures et se **remplace** toutes\nles 100 heures : ce sont deux opérations distinctes, et la seconde ne dispense\npas de la première. ## Points de vigilance La référence de bougie `BG-441` est commune au TX-40 et au H-120 ; la référence\nde filtre à air `FA-2210` **ne l'est pas** — sur le H-120 elle désigne le filtre\nd'origine, remplacé depuis par le `FA-3105`, de dimensions différentes. Monter\nun `FA-2210` sur un H-120 après remplacement laisse passer les poussières. Le carburant deux temps se dégrade : un mélange de plus de trente jours est\nécarté, quel que soit son aspect.",
+          "Le filtre `FA-3105` est ici la référence d'origine ; c'est la même pièce que\ncelle montée en remplacement sur le H-120. Le T-85 et le H-120 partagent donc\nréellement leur filtre à air — mais **pas** leur bougie : `BG-512` pour le T-85,\n`BG-441` pour le H-120. ## Huile de chaîne Huile spécifique adhésive, jamais d'huile moteur ni d'huile de vidange. Le\nniveau se contrôle à chaque plein de carburant : les deux réservoirs se vident\napproximativement en même temps, et une chaîne tournant à sec détruit le guide\nen quelques minutes. ## Point de vigilance Le frein de chaîne est le seul organe du parc dont le contrôle est dû **avant\nchaque usage** et non selon un compteur horaire. Un contrôle reporté à la\npériodicité horaire est une non-conformité, pas un retard.",
+          "# Taille-haies thermique H-120 — notice d'entretien ## Identification Modèle H-120, mise en service le 4 septembre 2023, numéro de parc `ATL-014`. Moteur thermique deux temps, 25,4 cm³. Longueur de lame : 60 cm. Réservoir de carburant : 0,5 litre. Masse à vide : 5,2 kg. Le H-120 fonctionne au **mélange deux temps**, proportion 50:1 (soit 20 ml\nd'huile deux temps par litre d'essence). L'emploi d'essence pure détruit le\nmoteur en quelques minutes de fonctionnement. ## Périodicités d'entretien | Opération | Périodicité | Référence de pièce |\n|---|---|---|\n| Nettoyage du filtre à air | toutes les 25 heures | `FA-2210` |\n| Remplacement du filtre à air | toutes les 100 heures | `FA-3105` |\n| Remplacement de la bougie | toutes les 100 heures | `BG-441` |\n| Graissage des lames | toutes les 10 heures | graisse lithium |\n| Affûtage des lames | toutes les 50 heures | — |\n| Remplacement du filtre à carburant | toutes les 200 heures | `FC-076` |",
+          "# Procédures de l'atelier municipal ## Champ d'application Ces procédures s'appliquent à l'ensemble du parc thermique de l'atelier, dont la\ntondeuse autoportée TX-40 (`ATL-007`) et le taille-haies H-120 (`ATL-014`). ## P-01 · Consignation avant intervention Toute intervention sur une machine thermique impose, dans cet ordre : 1. arrêt moteur et retrait de la clé ;\n2. **débranchement du capuchon de bougie** ;\n3. attente de dix minutes pour le refroidissement de l'échappement ;\n4. inscription au registre des interventions. L'étape 2 n'est pas facultative sur le TX-40 : cette machine étant dépourvue de\ncoupure automatique de lame au relevage du siège, un démarrage intempestif reste\npossible tant que la bougie est connectée. ## P-02 · Stockage des carburants L'essence pure et le mélange deux temps sont stockés dans des bidons de couleurs\ndistinctes : **vert pour l'essence pure**, **rouge pour le mélange 50:1**. Tout\nbidon rouge est daté de son jour de préparation."
+        ],
+        "response": "La référence de pièce réellement commune au TX-40 et au H-120 est le filtre à air `FA-3105` [2].",
+        "reference": "La bougie `BG-441`. La référence `FA-2210` figure dans les deux notices mais ne désigne pas la même pièce, ce que rappelle la procédure P-04.",
+        "faithfulness": 0.5,
+        "answer_relevancy": 0.9833407501101911,
+        "context_precision": 0.999999999975,
+        "context_recall": 0.5,
+        "answer_correctness": 0.4839196986680521
+      },
+      {
+        "user_input": "Combien de temps un mélange deux temps peut-il être conservé avant d'être écarté ?",
+        "retrieved_contexts": [
+          "Le filtre à air se **nettoie** toutes les 25 heures et se **remplace** toutes\nles 100 heures : ce sont deux opérations distinctes, et la seconde ne dispense\npas de la première. ## Points de vigilance La référence de bougie `BG-441` est commune au TX-40 et au H-120 ; la référence\nde filtre à air `FA-2210` **ne l'est pas** — sur le H-120 elle désigne le filtre\nd'origine, remplacé depuis par le `FA-3105`, de dimensions différentes. Monter\nun `FA-2210` sur un H-120 après remplacement laisse passer les poussières. Le carburant deux temps se dégrade : un mélange de plus de trente jours est\nécarté, quel que soit son aspect.",
+          "# Procédures de l'atelier municipal — version 2023 (ABROGÉE) > **Ce document est abrogé depuis le 1er janvier 2025.** Il est conservé au titre\n> du suivi documentaire. La version en vigueur est `procedure_atelier.md`. En cas\n> de divergence, c'est la version en vigueur qui s'applique. ## P-01 · Consignation avant intervention (version 2023) Toute intervention sur une machine thermique impose : 1. arrêt moteur et retrait de la clé ;\n2. attente de **cinq minutes** pour le refroidissement de l'échappement ;\n3. inscription au registre des interventions. Le débranchement du capuchon de bougie est **recommandé** sans être obligatoire. ## P-02 · Stockage des carburants (version 2023) L'essence pure et le mélange deux temps sont stockés dans des bidons distincts. Aucune couleur n'est imposée ; l'étiquetage manuscrit suffit. Un mélange de plus de **soixante jours** est vidangé. ## P-03 · Suivi des heures (version 2023) Le compteur horaire est relevé en fin de mois.",
+          "## Ce qui a changé au 1er janvier 2025 | Point | 2023 | En vigueur |\n|---|---|---|\n| Capuchon de bougie | recommandé | **obligatoire**, étape 2 |\n| Refroidissement | 5 minutes | **10 minutes** |\n| Bidons | étiquetage libre | **vert = essence pure, rouge = mélange** |\n| Péremption du mélange | 60 jours | **30 jours** |\n| Relevé des compteurs | mensuel | **hebdomadaire** | La révision fait suite à deux incidents de 2024 : un démarrage intempestif sur\nle `ATL-007` en mars, et un moteur détruit par de l'essence pure versée dans le\n`ATL-014` en septembre.",
+          "Un mélange de plus de trente jours est vidangé et traité en déchet, jamais versé\ndans une machine à essence pure. ## P-03 · Suivi des heures Le compteur horaire de chaque machine est relevé en fin de semaine et reporté au\nregistre. Les périodicités d'entretien des notices constructeur sont exprimées\nen heures de fonctionnement : sans relevé, aucune échéance n'est calculable. Une machine dont le compteur est en panne est retirée du service jusqu'à sa\nréparation. Une périodicité estimée n'est pas une périodicité. ## P-04 · Pièces communes au parc Certaines références sont partagées entre machines, d'autres ne le sont pas\nmalgré un numéro identique. Avant toute commande, la référence est vérifiée sur\nla notice de **la machine concernée**, et non sur celle d'une machine voisine. Le cas connu de l'atelier est le filtre à air : la référence `FA-2210` figure\ndans les deux notices, sans désigner la même pièce."
+        ],
+        "response": "Un mélange deux temps peut être conservé **jusqu'à trente jours** avant d'être écarté [1]. Cette durée est mentionnée dans le contexte de la péremption du mélange, qui est écarté si son âge dépasse cette période.",
+        "reference": "Trente jours. Au-delà il est vidangé et traité en déchet, jamais versé dans une machine à essence pure.",
+        "faithfulness": 1.0,
+        "answer_relevancy": 0.5598389629246804,
+        "context_precision": 0.999999999975,
+        "context_recall": 1.0,
+        "answer_correctness": 0.8429115878053428
+      },
+      {
+        "user_input": "Le filtre à air `FA-2210` est-il utilisable indifféremment sur le TX-40 et sur le H-120 ?",
+        "retrieved_contexts": [
+          "Le filtre à air se **nettoie** toutes les 25 heures et se **remplace** toutes\nles 100 heures : ce sont deux opérations distinctes, et la seconde ne dispense\npas de la première. ## Points de vigilance La référence de bougie `BG-441` est commune au TX-40 et au H-120 ; la référence\nde filtre à air `FA-2210` **ne l'est pas** — sur le H-120 elle désigne le filtre\nd'origine, remplacé depuis par le `FA-3105`, de dimensions différentes. Monter\nun `FA-2210` sur un H-120 après remplacement laisse passer les poussières. Le carburant deux temps se dégrade : un mélange de plus de trente jours est\nécarté, quel que soit son aspect.",
+          "Le filtre `FA-3105` est ici la référence d'origine ; c'est la même pièce que\ncelle montée en remplacement sur le H-120. Le T-85 et le H-120 partagent donc\nréellement leur filtre à air — mais **pas** leur bougie : `BG-512` pour le T-85,\n`BG-441` pour le H-120. ## Huile de chaîne Huile spécifique adhésive, jamais d'huile moteur ni d'huile de vidange. Le\nniveau se contrôle à chaque plein de carburant : les deux réservoirs se vident\napproximativement en même temps, et une chaîne tournant à sec détruit le guide\nen quelques minutes. ## Point de vigilance Le frein de chaîne est le seul organe du parc dont le contrôle est dû **avant\nchaque usage** et non selon un compteur horaire. Un contrôle reporté à la\npériodicité horaire est une non-conformité, pas un retard.",
+          "# Taille-haies thermique H-120 — notice d'entretien ## Identification Modèle H-120, mise en service le 4 septembre 2023, numéro de parc `ATL-014`. Moteur thermique deux temps, 25,4 cm³. Longueur de lame : 60 cm. Réservoir de carburant : 0,5 litre. Masse à vide : 5,2 kg. Le H-120 fonctionne au **mélange deux temps**, proportion 50:1 (soit 20 ml\nd'huile deux temps par litre d'essence). L'emploi d'essence pure détruit le\nmoteur en quelques minutes de fonctionnement. ## Périodicités d'entretien | Opération | Périodicité | Référence de pièce |\n|---|---|---|\n| Nettoyage du filtre à air | toutes les 25 heures | `FA-2210` |\n| Remplacement du filtre à air | toutes les 100 heures | `FA-3105` |\n| Remplacement de la bougie | toutes les 100 heures | `BG-441` |\n| Graissage des lames | toutes les 10 heures | graisse lithium |\n| Affûtage des lames | toutes les 50 heures | — |\n| Remplacement du filtre à carburant | toutes les 200 heures | `FC-076` |",
+          "# Tondeuse autoportée TX-40 — notice d'entretien ## Identification Modèle TX-40, mise en service le 12 mars 2022, numéro de parc `ATL-007`. Moteur thermique quatre temps, 452 cm³, refroidissement par air. Largeur de coupe 92 cm. Réservoir de carburant : 5,7 litres. Masse à vide : 218 kg. ## Périodicités d'entretien Les périodicités sont exprimées en heures de fonctionnement, relevées au\ncompteur situé sous le volant. À défaut d'usage, aucune opération n'est due. | Opération | Périodicité | Référence de pièce |\n|---|---|---|\n| Vidange d'huile moteur | toutes les 50 heures | huile SAE 30, 1,4 litre |\n| Remplacement du filtre à air | toutes les 100 heures | `FA-2210` |\n| Remplacement de la bougie | toutes les 200 heures | `BG-441` |\n| Affûtage des lames | toutes les 25 heures | — |\n| Remplacement des lames | toutes les 400 heures | `LM-920` (jeu de deux) |\n| Contrôle de la courroie de coupe | toutes les 100 heures | `CR-118` |"
+        ],
+        "response": "Le filtre à air `FA-2210` est utilisable sur le TX-40, car il est référencé comme étant la référence d'origine pour le remplacement sur ce modèle [4]. Cependant, il n'est **pas** utilisable indifféremment sur le H-120, car sur ce modèle, le `FA-2210` désigne le filtre d'origine, remplacé depuis par le `FA-3105` [1]. Monter un `FA-2210` sur un H-120 après remplacement laisse passer les poussières.",
+        "reference": "Non. Sur le H-120, `FA-2210` désigne le filtre d'origine, remplacé depuis par le `FA-3105`, de dimensions différentes. Monter un `FA-2210` sur un H-120 laisse passer les poussières.",
+        "faithfulness": 0.8333333333333334,
+        "answer_relevancy": 0.7240036920099217,
+        "context_precision": 0.999999999975,
+        "context_recall": 1.0,
+        "answer_correctness": 0.7212968359657196
+      },
+      {
+        "user_input": "Tous les combien faut-il nettoyer le filtre à air du TX-40 ?",
+        "retrieved_contexts": [
+          "Le filtre à air se **nettoie** toutes les 25 heures et se **remplace** toutes\nles 100 heures : ce sont deux opérations distinctes, et la seconde ne dispense\npas de la première. ## Points de vigilance La référence de bougie `BG-441` est commune au TX-40 et au H-120 ; la référence\nde filtre à air `FA-2210` **ne l'est pas** — sur le H-120 elle désigne le filtre\nd'origine, remplacé depuis par le `FA-3105`, de dimensions différentes. Monter\nun `FA-2210` sur un H-120 après remplacement laisse passer les poussières. Le carburant deux temps se dégrade : un mélange de plus de trente jours est\nécarté, quel que soit son aspect.",
+          "# Tondeuse autoportée TX-40 — notice d'entretien ## Identification Modèle TX-40, mise en service le 12 mars 2022, numéro de parc `ATL-007`. Moteur thermique quatre temps, 452 cm³, refroidissement par air. Largeur de coupe 92 cm. Réservoir de carburant : 5,7 litres. Masse à vide : 218 kg. ## Périodicités d'entretien Les périodicités sont exprimées en heures de fonctionnement, relevées au\ncompteur situé sous le volant. À défaut d'usage, aucune opération n'est due. | Opération | Périodicité | Référence de pièce |\n|---|---|---|\n| Vidange d'huile moteur | toutes les 50 heures | huile SAE 30, 1,4 litre |\n| Remplacement du filtre à air | toutes les 100 heures | `FA-2210` |\n| Remplacement de la bougie | toutes les 200 heures | `BG-441` |\n| Affûtage des lames | toutes les 25 heures | — |\n| Remplacement des lames | toutes les 400 heures | `LM-920` (jeu de deux) |\n| Contrôle de la courroie de coupe | toutes les 100 heures | `CR-118` |",
+          "## Observations **22/03/2025** — La courroie `CR-118` a cédé à 445 heures, soit bien avant son\ncontrôle des 500 heures. Le carter de coupe était colmaté. Le contrôle est\navancé à toutes les 80 heures sur cette machine, en dérogation à la notice. **11/04/2025** — Le filtre `FA-2210` commandé pour le `ATL-014` ne correspondait\npas : dimensions différentes. Remplacé par un `FA-3105`. C'est cet incident qui\na donné lieu à la procédure P-04. **30/10/2025** — Dernière intervention de l'année sur le `ATL-007`. La machine\nest remisée pour l'hiver, réservoir vidangé.",
+          "La première vidange fait exception : elle est due au bout de **5 heures** après\nla mise en service, puis la périodicité de 50 heures s'applique. ## Pression des pneumatiques Roues avant : 1,0 bar. Roues arrière : 0,7 bar. Le contrôle se fait à froid,\navant le démarrage. Un écart de plus de 0,2 bar entre les deux roues arrière\nprovoque une coupe irrégulière sur toute la largeur. ## Points de vigilance Le carter de coupe se colmate par temps humide. Un colmatage non traité fait\nchuter la puissance disponible et surcharge la courroie `CR-118`, qui est la\npièce qui casse en premier sur cette machine. Le TX-40 ne dispose **pas** de coupure automatique de lame au relevage du siège. Cette sécurité, présente sur les modèles postérieurs à 2023, doit être suppléée\npar la procédure d'atelier."
+        ],
+        "response": "Le filtre à air du TX-40 doit être **remplacé** toutes les 100 heures [2]. Cependant, il est précisé que le filtre à air se **nettoie** toutes les 25 heures [1]. Ainsi, il faut nettoyer le filtre à air toutes les 25 heures.",
+        "reference": "La notice du TX-40 ne prévoit aucun nettoyage du filtre à air, mais son remplacement toutes les 100 heures. Le nettoyage toutes les 25 heures est une opération du H-120.",
+        "faithfulness": 1.0,
+        "answer_relevancy": 0.6249796739236115,
+        "context_precision": 0.9166666666361111,
+        "context_recall": 1.0,
+        "answer_correctness": 0.8266601872584213
+      },
+      {
+        "user_input": "Tous les combien la courroie `CR-118` du `ATL-007` doit-elle être contrôlée aujourd'hui ?",
+        "retrieved_contexts": [
+          "## Observations **22/03/2025** — La courroie `CR-118` a cédé à 445 heures, soit bien avant son\ncontrôle des 500 heures. Le carter de coupe était colmaté. Le contrôle est\navancé à toutes les 80 heures sur cette machine, en dérogation à la notice. **11/04/2025** — Le filtre `FA-2210` commandé pour le `ATL-014` ne correspondait\npas : dimensions différentes. Remplacé par un `FA-3105`. C'est cet incident qui\na donné lieu à la procédure P-04. **30/10/2025** — Dernière intervention de l'année sur le `ATL-007`. La machine\nest remisée pour l'hiver, réservoir vidangé.",
+          "La première vidange fait exception : elle est due au bout de **5 heures** après\nla mise en service, puis la périodicité de 50 heures s'applique. ## Pression des pneumatiques Roues avant : 1,0 bar. Roues arrière : 0,7 bar. Le contrôle se fait à froid,\navant le démarrage. Un écart de plus de 0,2 bar entre les deux roues arrière\nprovoque une coupe irrégulière sur toute la largeur. ## Points de vigilance Le carter de coupe se colmate par temps humide. Un colmatage non traité fait\nchuter la puissance disponible et surcharge la courroie `CR-118`, qui est la\npièce qui casse en premier sur cette machine. Le TX-40 ne dispose **pas** de coupure automatique de lame au relevage du siège. Cette sécurité, présente sur les modèles postérieurs à 2023, doit être suppléée\npar la procédure d'atelier.",
+          "## Observations **21/03/2024** — Démarrage intempestif du `ATL-007` pendant une intervention :\nl'agent avait relevé le siège en laissant la bougie connectée, et la machine ne\ndispose d'aucune coupure automatique de lame. Sans blessure. Ce fait est à\nl'origine du passage du débranchement de bougie de « recommandé » à\n« obligatoire » dans la révision de procédure du 1er janvier 2025. **05/09/2024** — Moteur du `ATL-014` détruit : de l'essence pure a été versée\ndans le réservoir au lieu du mélange 50:1, les deux bidons portant une étiquette\nmanuscrite décolorée. Remplacement du moteur par un prestataire, machine\nimmobilisée sept semaines. C'est l'incident qui a imposé le code couleur vert\net rouge. **Bilan des heures au 31/12/2024** — `ATL-007` : 396 h. `ATL-003` : 251 h.\n`ATL-014` : 68 h, compteur remis à zéro au remplacement moteur puis recalé à la\nvaleur d'avant incident sur décision de l'atelier, pour ne pas perdre\nl'historique des périodicités.",
+          "# Registre des interventions — atelier municipal Une ligne par intervention. Le compteur est celui relevé au moment de l'acte. ## Année 2025 | Date | Machine | Compteur | Intervention | Agent |\n|---|---|---|---|---|\n| 14/01/2025 | `ATL-007` | 412 h | Vidange d'huile moteur | R. Vasseur |\n| 14/01/2025 | `ATL-007` | 412 h | Affûtage des lames | R. Vasseur |\n| 03/03/2025 | `ATL-014` | 96 h | Nettoyage du filtre à air | M. Kessler |\n| 22/03/2025 | `ATL-007` | 445 h | Remplacement courroie `CR-118` | R. Vasseur |\n| 22/03/2025 | `ATL-007` | 445 h | Contrôle pression pneumatiques | R. Vasseur |\n| 11/04/2025 | `ATL-014` | 104 h | Remplacement filtre à air `FA-3105` | M. Kessler |\n| 11/04/2025 | `ATL-014` | 104 h | Remplacement bougie `BG-441` | M. Kessler |\n| 06/06/2025 | `ATL-007` | 468 h | Vidange d'huile moteur | R. Vasseur |\n| 06/06/2025 | `ATL-007` | 468 h | Remplacement des lames `LM-920` | R. Vasseur |\n| 19/09/2025 | `ATL-014` | 128 h | Graissage des lames | M. Kessler |\n| 30/10/2025 | `ATL-007` | 501 h | Remplacement filtre à air `FA-2210` | R. Vasseur |\n| 30/10/2025 | `ATL-007` | 501 h | Remplacement bougie `BG-441` | R. Vasseur |"
+        ],
+        "response": "La courroie `CR-118` du `ATL-007` doit être contrôlée toutes les 80 heures, en dérogation à la notice [1].",
+        "reference": "Toutes les 80 heures. La notice prévoit 100 heures, mais après la rupture du 22/03/2025 à 445 heures sur carter colmaté, le contrôle a été avancé à 80 heures en dérogation à la notice.",
+        "faithfulness": 1.0,
+        "answer_relevancy": 0.6421108786634752,
+        "context_precision": 0.999999999975,
+        "context_recall": 1.0,
+        "answer_correctness": 0.7035208121921515
+      },
+      {
+        "user_input": "Au 1er février 2025, quelle était la périodicité de contrôle de la courroie du `ATL-007` ?",
+        "retrieved_contexts": [
+          "## Observations **22/03/2025** — La courroie `CR-118` a cédé à 445 heures, soit bien avant son\ncontrôle des 500 heures. Le carter de coupe était colmaté. Le contrôle est\navancé à toutes les 80 heures sur cette machine, en dérogation à la notice. **11/04/2025** — Le filtre `FA-2210` commandé pour le `ATL-014` ne correspondait\npas : dimensions différentes. Remplacé par un `FA-3105`. C'est cet incident qui\na donné lieu à la procédure P-04. **30/10/2025** — Dernière intervention de l'année sur le `ATL-007`. La machine\nest remisée pour l'hiver, réservoir vidangé.",
+          "## Observations **21/03/2024** — Démarrage intempestif du `ATL-007` pendant une intervention :\nl'agent avait relevé le siège en laissant la bougie connectée, et la machine ne\ndispose d'aucune coupure automatique de lame. Sans blessure. Ce fait est à\nl'origine du passage du débranchement de bougie de « recommandé » à\n« obligatoire » dans la révision de procédure du 1er janvier 2025. **05/09/2024** — Moteur du `ATL-014` détruit : de l'essence pure a été versée\ndans le réservoir au lieu du mélange 50:1, les deux bidons portant une étiquette\nmanuscrite décolorée. Remplacement du moteur par un prestataire, machine\nimmobilisée sept semaines. C'est l'incident qui a imposé le code couleur vert\net rouge. **Bilan des heures au 31/12/2024** — `ATL-007` : 396 h. `ATL-003` : 251 h.\n`ATL-014` : 68 h, compteur remis à zéro au remplacement moteur puis recalé à la\nvaleur d'avant incident sur décision de l'atelier, pour ne pas perdre\nl'historique des périodicités.",
+          "# Tondeuse autoportée TX-40 — notice d'entretien ## Identification Modèle TX-40, mise en service le 12 mars 2022, numéro de parc `ATL-007`. Moteur thermique quatre temps, 452 cm³, refroidissement par air. Largeur de coupe 92 cm. Réservoir de carburant : 5,7 litres. Masse à vide : 218 kg. ## Périodicités d'entretien Les périodicités sont exprimées en heures de fonctionnement, relevées au\ncompteur situé sous le volant. À défaut d'usage, aucune opération n'est due. | Opération | Périodicité | Référence de pièce |\n|---|---|---|\n| Vidange d'huile moteur | toutes les 50 heures | huile SAE 30, 1,4 litre |\n| Remplacement du filtre à air | toutes les 100 heures | `FA-2210` |\n| Remplacement de la bougie | toutes les 200 heures | `BG-441` |\n| Affûtage des lames | toutes les 25 heures | — |\n| Remplacement des lames | toutes les 400 heures | `LM-920` (jeu de deux) |\n| Contrôle de la courroie de coupe | toutes les 100 heures | `CR-118` |",
+          "# Registre des interventions — atelier municipal Une ligne par intervention. Le compteur est celui relevé au moment de l'acte. ## Année 2025 | Date | Machine | Compteur | Intervention | Agent |\n|---|---|---|---|---|\n| 14/01/2025 | `ATL-007` | 412 h | Vidange d'huile moteur | R. Vasseur |\n| 14/01/2025 | `ATL-007` | 412 h | Affûtage des lames | R. Vasseur |\n| 03/03/2025 | `ATL-014` | 96 h | Nettoyage du filtre à air | M. Kessler |\n| 22/03/2025 | `ATL-007` | 445 h | Remplacement courroie `CR-118` | R. Vasseur |\n| 22/03/2025 | `ATL-007` | 445 h | Contrôle pression pneumatiques | R. Vasseur |\n| 11/04/2025 | `ATL-014` | 104 h | Remplacement filtre à air `FA-3105` | M. Kessler |\n| 11/04/2025 | `ATL-014` | 104 h | Remplacement bougie `BG-441` | M. Kessler |\n| 06/06/2025 | `ATL-007` | 468 h | Vidange d'huile moteur | R. Vasseur |\n| 06/06/2025 | `ATL-007` | 468 h | Remplacement des lames `LM-920` | R. Vasseur |\n| 19/09/2025 | `ATL-014` | 128 h | Graissage des lames | M. Kessler |\n| 30/10/2025 | `ATL-007` | 501 h | Remplacement filtre à air `FA-2210` | R. Vasseur |\n| 30/10/2025 | `ATL-007` | 501 h | Remplacement bougie `BG-441` | R. Vasseur |"
+        ],
+        "response": "Au 1er février 2025, la périodicité de contrôle de la courroie du `ATL-007` était toutes les 80 heures [1].",
+        "reference": "100 heures, celle de la notice. La dérogation à 80 heures ne date que du 22 mars 2025.",
+        "faithfulness": 0.0,
+        "answer_relevancy": 0.884607567292853,
+        "context_precision": 0.8055555555287036,
+        "context_recall": 1.0,
+        "answer_correctness": 0.6863338145730316
+      },
+      {
+        "user_input": "Quelle bougie équipait le `ATL-014` au 1er avril 2025 ?",
+        "retrieved_contexts": [
+          "## Ce qui a changé au 1er janvier 2025 | Point | 2023 | En vigueur |\n|---|---|---|\n| Capuchon de bougie | recommandé | **obligatoire**, étape 2 |\n| Refroidissement | 5 minutes | **10 minutes** |\n| Bidons | étiquetage libre | **vert = essence pure, rouge = mélange** |\n| Péremption du mélange | 60 jours | **30 jours** |\n| Relevé des compteurs | mensuel | **hebdomadaire** | La révision fait suite à deux incidents de 2024 : un démarrage intempestif sur\nle `ATL-007` en mars, et un moteur détruit par de l'essence pure versée dans le\n`ATL-014` en septembre.",
+          "## Observations **21/03/2024** — Démarrage intempestif du `ATL-007` pendant une intervention :\nl'agent avait relevé le siège en laissant la bougie connectée, et la machine ne\ndispose d'aucune coupure automatique de lame. Sans blessure. Ce fait est à\nl'origine du passage du débranchement de bougie de « recommandé » à\n« obligatoire » dans la révision de procédure du 1er janvier 2025. **05/09/2024** — Moteur du `ATL-014` détruit : de l'essence pure a été versée\ndans le réservoir au lieu du mélange 50:1, les deux bidons portant une étiquette\nmanuscrite décolorée. Remplacement du moteur par un prestataire, machine\nimmobilisée sept semaines. C'est l'incident qui a imposé le code couleur vert\net rouge. **Bilan des heures au 31/12/2024** — `ATL-007` : 396 h. `ATL-003` : 251 h.\n`ATL-014` : 68 h, compteur remis à zéro au remplacement moteur puis recalé à la\nvaleur d'avant incident sur décision de l'atelier, pour ne pas perdre\nl'historique des périodicités.",
+          "## Observations **22/03/2025** — La courroie `CR-118` a cédé à 445 heures, soit bien avant son\ncontrôle des 500 heures. Le carter de coupe était colmaté. Le contrôle est\navancé à toutes les 80 heures sur cette machine, en dérogation à la notice. **11/04/2025** — Le filtre `FA-2210` commandé pour le `ATL-014` ne correspondait\npas : dimensions différentes. Remplacé par un `FA-3105`. C'est cet incident qui\na donné lieu à la procédure P-04. **30/10/2025** — Dernière intervention de l'année sur le `ATL-007`. La machine\nest remisée pour l'hiver, réservoir vidangé.",
+          "# Procédures de l'atelier municipal ## Champ d'application Ces procédures s'appliquent à l'ensemble du parc thermique de l'atelier, dont la\ntondeuse autoportée TX-40 (`ATL-007`) et le taille-haies H-120 (`ATL-014`). ## P-01 · Consignation avant intervention Toute intervention sur une machine thermique impose, dans cet ordre : 1. arrêt moteur et retrait de la clé ;\n2. **débranchement du capuchon de bougie** ;\n3. attente de dix minutes pour le refroidissement de l'échappement ;\n4. inscription au registre des interventions. L'étape 2 n'est pas facultative sur le TX-40 : cette machine étant dépourvue de\ncoupure automatique de lame au relevage du siège, un démarrage intempestif reste\npossible tant que la bougie est connectée. ## P-02 · Stockage des carburants L'essence pure et le mélange deux temps sont stockés dans des bidons de couleurs\ndistinctes : **vert pour l'essence pure**, **rouge pour le mélange 50:1**. Tout\nbidon rouge est daté de son jour de préparation."
+        ],
+        "response": "La question ne peut pas être répondue à partir des extraits fournis. Aucune information n'est donnée sur le type de bougie équipant le `ATL-014` au 1er avril 2025.",
+        "reference": "Sa bougie d'origine. Le remplacement par une `BG-441` n'a eu lieu que le 11 avril 2025, à 104 heures au compteur.",
+        "faithfulness": 0.5,
+        "answer_relevancy": 0.0,
+        "context_precision": 0.999999999975,
+        "context_recall": 0.0,
+        "answer_correctness": 0.492210999516365
+      },
+      {
+        "user_input": "Combien de temps faut-il attendre après l'arrêt moteur avant d'intervenir sur une machine thermique ?",
+        "retrieved_contexts": [
+          "# Procédures de l'atelier municipal — version 2023 (ABROGÉE) > **Ce document est abrogé depuis le 1er janvier 2025.** Il est conservé au titre\n> du suivi documentaire. La version en vigueur est `procedure_atelier.md`. En cas\n> de divergence, c'est la version en vigueur qui s'applique. ## P-01 · Consignation avant intervention (version 2023) Toute intervention sur une machine thermique impose : 1. arrêt moteur et retrait de la clé ;\n2. attente de **cinq minutes** pour le refroidissement de l'échappement ;\n3. inscription au registre des interventions. Le débranchement du capuchon de bougie est **recommandé** sans être obligatoire. ## P-02 · Stockage des carburants (version 2023) L'essence pure et le mélange deux temps sont stockés dans des bidons distincts. Aucune couleur n'est imposée ; l'étiquetage manuscrit suffit. Un mélange de plus de **soixante jours** est vidangé. ## P-03 · Suivi des heures (version 2023) Le compteur horaire est relevé en fin de mois.",
+          "# Procédures de l'atelier municipal ## Champ d'application Ces procédures s'appliquent à l'ensemble du parc thermique de l'atelier, dont la\ntondeuse autoportée TX-40 (`ATL-007`) et le taille-haies H-120 (`ATL-014`). ## P-01 · Consignation avant intervention Toute intervention sur une machine thermique impose, dans cet ordre : 1. arrêt moteur et retrait de la clé ;\n2. **débranchement du capuchon de bougie** ;\n3. attente de dix minutes pour le refroidissement de l'échappement ;\n4. inscription au registre des interventions. L'étape 2 n'est pas facultative sur le TX-40 : cette machine étant dépourvue de\ncoupure automatique de lame au relevage du siège, un démarrage intempestif reste\npossible tant que la bougie est connectée. ## P-02 · Stockage des carburants L'essence pure et le mélange deux temps sont stockés dans des bidons de couleurs\ndistinctes : **vert pour l'essence pure**, **rouge pour le mélange 50:1**. Tout\nbidon rouge est daté de son jour de préparation.",
+          "La première vidange fait exception : elle est due au bout de **5 heures** après\nla mise en service, puis la périodicité de 50 heures s'applique. ## Pression des pneumatiques Roues avant : 1,0 bar. Roues arrière : 0,7 bar. Le contrôle se fait à froid,\navant le démarrage. Un écart de plus de 0,2 bar entre les deux roues arrière\nprovoque une coupe irrégulière sur toute la largeur. ## Points de vigilance Le carter de coupe se colmate par temps humide. Un colmatage non traité fait\nchuter la puissance disponible et surcharge la courroie `CR-118`, qui est la\npièce qui casse en premier sur cette machine. Le TX-40 ne dispose **pas** de coupure automatique de lame au relevage du siège. Cette sécurité, présente sur les modèles postérieurs à 2023, doit être suppléée\npar la procédure d'atelier.",
+          "## Observations **21/03/2024** — Démarrage intempestif du `ATL-007` pendant une intervention :\nl'agent avait relevé le siège en laissant la bougie connectée, et la machine ne\ndispose d'aucune coupure automatique de lame. Sans blessure. Ce fait est à\nl'origine du passage du débranchement de bougie de « recommandé » à\n« obligatoire » dans la révision de procédure du 1er janvier 2025. **05/09/2024** — Moteur du `ATL-014` détruit : de l'essence pure a été versée\ndans le réservoir au lieu du mélange 50:1, les deux bidons portant une étiquette\nmanuscrite décolorée. Remplacement du moteur par un prestataire, machine\nimmobilisée sept semaines. C'est l'incident qui a imposé le code couleur vert\net rouge. **Bilan des heures au 31/12/2024** — `ATL-007` : 396 h. `ATL-003` : 251 h.\n`ATL-014` : 68 h, compteur remis à zéro au remplacement moteur puis recalé à la\nvaleur d'avant incident sur décision de l'atelier, pour ne pas perdre\nl'historique des périodicités."
+        ],
+        "response": "Selon la procédure en vigueur, il faut attendre **dix minutes** après l'arrêt moteur avant d'intervenir sur une machine thermique [2].",
+        "reference": "Dix minutes. La version 2023 disait cinq minutes, mais elle est abrogée depuis le 1er janvier 2025.",
+        "faithfulness": 1.0,
+        "answer_relevancy": 0.6217662790052653,
+        "context_precision": 0.9166666666361111,
+        "context_recall": 1.0,
+        "answer_correctness": 0.6824402432561808
+      },
+      {
+        "user_input": "Le débranchement du capuchon de bougie est-il obligatoire avant une intervention ?",
+        "retrieved_contexts": [
+          "# Procédures de l'atelier municipal — version 2023 (ABROGÉE) > **Ce document est abrogé depuis le 1er janvier 2025.** Il est conservé au titre\n> du suivi documentaire. La version en vigueur est `procedure_atelier.md`. En cas\n> de divergence, c'est la version en vigueur qui s'applique. ## P-01 · Consignation avant intervention (version 2023) Toute intervention sur une machine thermique impose : 1. arrêt moteur et retrait de la clé ;\n2. attente de **cinq minutes** pour le refroidissement de l'échappement ;\n3. inscription au registre des interventions. Le débranchement du capuchon de bougie est **recommandé** sans être obligatoire. ## P-02 · Stockage des carburants (version 2023) L'essence pure et le mélange deux temps sont stockés dans des bidons distincts. Aucune couleur n'est imposée ; l'étiquetage manuscrit suffit. Un mélange de plus de **soixante jours** est vidangé. ## P-03 · Suivi des heures (version 2023) Le compteur horaire est relevé en fin de mois.",
+          "# Procédures de l'atelier municipal ## Champ d'application Ces procédures s'appliquent à l'ensemble du parc thermique de l'atelier, dont la\ntondeuse autoportée TX-40 (`ATL-007`) et le taille-haies H-120 (`ATL-014`). ## P-01 · Consignation avant intervention Toute intervention sur une machine thermique impose, dans cet ordre : 1. arrêt moteur et retrait de la clé ;\n2. **débranchement du capuchon de bougie** ;\n3. attente de dix minutes pour le refroidissement de l'échappement ;\n4. inscription au registre des interventions. L'étape 2 n'est pas facultative sur le TX-40 : cette machine étant dépourvue de\ncoupure automatique de lame au relevage du siège, un démarrage intempestif reste\npossible tant que la bougie est connectée. ## P-02 · Stockage des carburants L'essence pure et le mélange deux temps sont stockés dans des bidons de couleurs\ndistinctes : **vert pour l'essence pure**, **rouge pour le mélange 50:1**. Tout\nbidon rouge est daté de son jour de préparation.",
+          "## Observations **21/03/2024** — Démarrage intempestif du `ATL-007` pendant une intervention :\nl'agent avait relevé le siège en laissant la bougie connectée, et la machine ne\ndispose d'aucune coupure automatique de lame. Sans blessure. Ce fait est à\nl'origine du passage du débranchement de bougie de « recommandé » à\n« obligatoire » dans la révision de procédure du 1er janvier 2025. **05/09/2024** — Moteur du `ATL-014` détruit : de l'essence pure a été versée\ndans le réservoir au lieu du mélange 50:1, les deux bidons portant une étiquette\nmanuscrite décolorée. Remplacement du moteur par un prestataire, machine\nimmobilisée sept semaines. C'est l'incident qui a imposé le code couleur vert\net rouge. **Bilan des heures au 31/12/2024** — `ATL-007` : 396 h. `ATL-003` : 251 h.\n`ATL-014` : 68 h, compteur remis à zéro au remplacement moteur puis recalé à la\nvaleur d'avant incident sur décision de l'atelier, pour ne pas perdre\nl'historique des périodicités.",
+          "## Ce qui a changé au 1er janvier 2025 | Point | 2023 | En vigueur |\n|---|---|---|\n| Capuchon de bougie | recommandé | **obligatoire**, étape 2 |\n| Refroidissement | 5 minutes | **10 minutes** |\n| Bidons | étiquetage libre | **vert = essence pure, rouge = mélange** |\n| Péremption du mélange | 60 jours | **30 jours** |\n| Relevé des compteurs | mensuel | **hebdomadaire** | La révision fait suite à deux incidents de 2024 : un démarrage intempestif sur\nle `ATL-007` en mars, et un moteur détruit par de l'essence pure versée dans le\n`ATL-014` en septembre."
+        ],
+        "response": "Oui, le débranchement du capuchon de bougie est **obligatoire** avant une intervention. Cette mesure a été rendue obligatoire à partir du 1er janvier 2025, suite à un incident de démarrage intempestif sur le `ATL-007` en mars 2024 [3]. La procédure en vigueur indique clairement que le débranchement du capuchon de bougie est une étape obligatoire [2].",
+        "reference": "Oui, depuis le 1er janvier 2025 — c'est l'étape 2 de la procédure P-01 en vigueur. Il n'était que recommandé dans la version 2023.",
+        "faithfulness": 1.0,
+        "answer_relevancy": 0.49102936599804387,
+        "context_precision": 0.999999999975,
+        "context_recall": 1.0,
+        "answer_correctness": 0.6015759499415076
+      },
+      {
+        "user_input": "Quelles machines de l'atelier partagent réellement le même filtre à air ?",
+        "retrieved_contexts": [
+          "Le filtre `FA-3105` est ici la référence d'origine ; c'est la même pièce que\ncelle montée en remplacement sur le H-120. Le T-85 et le H-120 partagent donc\nréellement leur filtre à air — mais **pas** leur bougie : `BG-512` pour le T-85,\n`BG-441` pour le H-120. ## Huile de chaîne Huile spécifique adhésive, jamais d'huile moteur ni d'huile de vidange. Le\nniveau se contrôle à chaque plein de carburant : les deux réservoirs se vident\napproximativement en même temps, et une chaîne tournant à sec détruit le guide\nen quelques minutes. ## Point de vigilance Le frein de chaîne est le seul organe du parc dont le contrôle est dû **avant\nchaque usage** et non selon un compteur horaire. Un contrôle reporté à la\npériodicité horaire est une non-conformité, pas un retard.",
+          "# Tronçonneuse thermique T-85 — notice d'entretien ## Identification Modèle T-85, mise en service le 17 juin 2021, numéro de parc `ATL-003`. Moteur thermique deux temps, 45,2 cm³. Longueur de guide : 40 cm. Réservoir de carburant : 0,55 litre. Réservoir d'huile de chaîne : 0,26 litre. Masse à vide : 5,6 kg. Comme le H-120, le T-85 fonctionne au mélange deux temps 50:1. Les deux machines\npeuvent donc partager le même bidon rouge, à condition qu'il soit daté. ## Périodicités d'entretien | Opération | Périodicité | Référence de pièce |\n|---|---|---|\n| Nettoyage du filtre à air | toutes les 10 heures | `FA-3105` |\n| Remplacement du filtre à air | toutes les 100 heures | `FA-3105` |\n| Remplacement de la bougie | toutes les 100 heures | `BG-512` |\n| Affûtage de la chaîne | toutes les 5 heures | — |\n| Remplacement de la chaîne | toutes les 150 heures | `CH-401` |\n| Remplacement du guide | toutes les 300 heures | `GD-408` |\n| Contrôle du frein de chaîne | **avant chaque usage** | — |",
+          "Un mélange de plus de trente jours est vidangé et traité en déchet, jamais versé\ndans une machine à essence pure. ## P-03 · Suivi des heures Le compteur horaire de chaque machine est relevé en fin de semaine et reporté au\nregistre. Les périodicités d'entretien des notices constructeur sont exprimées\nen heures de fonctionnement : sans relevé, aucune échéance n'est calculable. Une machine dont le compteur est en panne est retirée du service jusqu'à sa\nréparation. Une périodicité estimée n'est pas une périodicité. ## P-04 · Pièces communes au parc Certaines références sont partagées entre machines, d'autres ne le sont pas\nmalgré un numéro identique. Avant toute commande, la référence est vérifiée sur\nla notice de **la machine concernée**, et non sur celle d'une machine voisine. Le cas connu de l'atelier est le filtre à air : la référence `FA-2210` figure\ndans les deux notices, sans désigner la même pièce.",
+          "## Observations **22/03/2025** — La courroie `CR-118` a cédé à 445 heures, soit bien avant son\ncontrôle des 500 heures. Le carter de coupe était colmaté. Le contrôle est\navancé à toutes les 80 heures sur cette machine, en dérogation à la notice. **11/04/2025** — Le filtre `FA-2210` commandé pour le `ATL-014` ne correspondait\npas : dimensions différentes. Remplacé par un `FA-3105`. C'est cet incident qui\na donné lieu à la procédure P-04. **30/10/2025** — Dernière intervention de l'année sur le `ATL-007`. La machine\nest remisée pour l'hiver, réservoir vidangé."
+        ],
+        "response": "Les machines de l'atelier qui partagent réellement le même filtre à air sont le T-85 et le H-120 [1].",
+        "reference": "Le T-85 et le H-120, tous deux en `FA-3105` — d'origine sur le T-85, en remplacement sur le H-120. Le TX-40 utilise un `FA-2210`, qui porte la même référence que l'ancien filtre du H-120 sans être la même pièce.",
+        "faithfulness": 1.0,
+        "answer_relevancy": 0.7119673848524523,
+        "context_precision": 0.999999999975,
+        "context_recall": 1.0,
+        "answer_correctness": 0.6243297058315831
+      },
+      {
+        "user_input": "Pourquoi le code couleur vert et rouge des bidons a-t-il été imposé ?",
+        "retrieved_contexts": [
+          "## Observations **21/03/2024** — Démarrage intempestif du `ATL-007` pendant une intervention :\nl'agent avait relevé le siège en laissant la bougie connectée, et la machine ne\ndispose d'aucune coupure automatique de lame. Sans blessure. Ce fait est à\nl'origine du passage du débranchement de bougie de « recommandé » à\n« obligatoire » dans la révision de procédure du 1er janvier 2025. **05/09/2024** — Moteur du `ATL-014` détruit : de l'essence pure a été versée\ndans le réservoir au lieu du mélange 50:1, les deux bidons portant une étiquette\nmanuscrite décolorée. Remplacement du moteur par un prestataire, machine\nimmobilisée sept semaines. C'est l'incident qui a imposé le code couleur vert\net rouge. **Bilan des heures au 31/12/2024** — `ATL-007` : 396 h. `ATL-003` : 251 h.\n`ATL-014` : 68 h, compteur remis à zéro au remplacement moteur puis recalé à la\nvaleur d'avant incident sur décision de l'atelier, pour ne pas perdre\nl'historique des périodicités.",
+          "# Procédures de l'atelier municipal ## Champ d'application Ces procédures s'appliquent à l'ensemble du parc thermique de l'atelier, dont la\ntondeuse autoportée TX-40 (`ATL-007`) et le taille-haies H-120 (`ATL-014`). ## P-01 · Consignation avant intervention Toute intervention sur une machine thermique impose, dans cet ordre : 1. arrêt moteur et retrait de la clé ;\n2. **débranchement du capuchon de bougie** ;\n3. attente de dix minutes pour le refroidissement de l'échappement ;\n4. inscription au registre des interventions. L'étape 2 n'est pas facultative sur le TX-40 : cette machine étant dépourvue de\ncoupure automatique de lame au relevage du siège, un démarrage intempestif reste\npossible tant que la bougie est connectée. ## P-02 · Stockage des carburants L'essence pure et le mélange deux temps sont stockés dans des bidons de couleurs\ndistinctes : **vert pour l'essence pure**, **rouge pour le mélange 50:1**. Tout\nbidon rouge est daté de son jour de préparation.",
+          "# Procédures de l'atelier municipal — version 2023 (ABROGÉE) > **Ce document est abrogé depuis le 1er janvier 2025.** Il est conservé au titre\n> du suivi documentaire. La version en vigueur est `procedure_atelier.md`. En cas\n> de divergence, c'est la version en vigueur qui s'applique. ## P-01 · Consignation avant intervention (version 2023) Toute intervention sur une machine thermique impose : 1. arrêt moteur et retrait de la clé ;\n2. attente de **cinq minutes** pour le refroidissement de l'échappement ;\n3. inscription au registre des interventions. Le débranchement du capuchon de bougie est **recommandé** sans être obligatoire. ## P-02 · Stockage des carburants (version 2023) L'essence pure et le mélange deux temps sont stockés dans des bidons distincts. Aucune couleur n'est imposée ; l'étiquetage manuscrit suffit. Un mélange de plus de **soixante jours** est vidangé. ## P-03 · Suivi des heures (version 2023) Le compteur horaire est relevé en fin de mois.",
+          "# Tronçonneuse thermique T-85 — notice d'entretien ## Identification Modèle T-85, mise en service le 17 juin 2021, numéro de parc `ATL-003`. Moteur thermique deux temps, 45,2 cm³. Longueur de guide : 40 cm. Réservoir de carburant : 0,55 litre. Réservoir d'huile de chaîne : 0,26 litre. Masse à vide : 5,6 kg. Comme le H-120, le T-85 fonctionne au mélange deux temps 50:1. Les deux machines\npeuvent donc partager le même bidon rouge, à condition qu'il soit daté. ## Périodicités d'entretien | Opération | Périodicité | Référence de pièce |\n|---|---|---|\n| Nettoyage du filtre à air | toutes les 10 heures | `FA-3105` |\n| Remplacement du filtre à air | toutes les 100 heures | `FA-3105` |\n| Remplacement de la bougie | toutes les 100 heures | `BG-512` |\n| Affûtage de la chaîne | toutes les 5 heures | — |\n| Remplacement de la chaîne | toutes les 150 heures | `CH-401` |\n| Remplacement du guide | toutes les 300 heures | `GD-408` |\n| Contrôle du frein de chaîne | **avant chaque usage** | — |"
+        ],
+        "response": "Le code couleur vert et rouge des bidons a été imposé pour distinguer l'essence pure du mélange deux temps. L'essence pure est stockée dans des bidons verts, tandis que le mélange 50:1 est stocké dans des bidons rouges. Cette mesure a été introduite dans la procédure en vigueur, en remplacement de l'étiquetage manuscrit qui ne suffisait plus, notamment après l'incident du moteur du `ATL-014` causé par la confusion entre l'essence pure et le mélange deux temps [2].",
+        "reference": "À la suite de l'incident du 5 septembre 2024 : le moteur du `ATL-014` a été détruit par de l'essence pure versée à la place du mélange 50:1, les deux bidons portant des étiquettes manuscrites décolorées. Machine immobilisée sept semaines.",
+        "faithfulness": 1.0,
+        "answer_relevancy": 0.4647092287578182,
+        "context_precision": 0.9999999999666667,
+        "context_recall": 1.0,
+        "answer_correctness": 0.6500927594528301
+      },
+      {
+        "user_input": "Tous les combien contrôle-t-on le frein de chaîne du T-85 ?",
+        "retrieved_contexts": [
+          "Le filtre `FA-3105` est ici la référence d'origine ; c'est la même pièce que\ncelle montée en remplacement sur le H-120. Le T-85 et le H-120 partagent donc\nréellement leur filtre à air — mais **pas** leur bougie : `BG-512` pour le T-85,\n`BG-441` pour le H-120. ## Huile de chaîne Huile spécifique adhésive, jamais d'huile moteur ni d'huile de vidange. Le\nniveau se contrôle à chaque plein de carburant : les deux réservoirs se vident\napproximativement en même temps, et une chaîne tournant à sec détruit le guide\nen quelques minutes. ## Point de vigilance Le frein de chaîne est le seul organe du parc dont le contrôle est dû **avant\nchaque usage** et non selon un compteur horaire. Un contrôle reporté à la\npériodicité horaire est une non-conformité, pas un retard.",
+          "## Observations **22/03/2025** — La courroie `CR-118` a cédé à 445 heures, soit bien avant son\ncontrôle des 500 heures. Le carter de coupe était colmaté. Le contrôle est\navancé à toutes les 80 heures sur cette machine, en dérogation à la notice. **11/04/2025** — Le filtre `FA-2210` commandé pour le `ATL-014` ne correspondait\npas : dimensions différentes. Remplacé par un `FA-3105`. C'est cet incident qui\na donné lieu à la procédure P-04. **30/10/2025** — Dernière intervention de l'année sur le `ATL-007`. La machine\nest remisée pour l'hiver, réservoir vidangé.",
+          "# Tronçonneuse thermique T-85 — notice d'entretien ## Identification Modèle T-85, mise en service le 17 juin 2021, numéro de parc `ATL-003`. Moteur thermique deux temps, 45,2 cm³. Longueur de guide : 40 cm. Réservoir de carburant : 0,55 litre. Réservoir d'huile de chaîne : 0,26 litre. Masse à vide : 5,6 kg. Comme le H-120, le T-85 fonctionne au mélange deux temps 50:1. Les deux machines\npeuvent donc partager le même bidon rouge, à condition qu'il soit daté. ## Périodicités d'entretien | Opération | Périodicité | Référence de pièce |\n|---|---|---|\n| Nettoyage du filtre à air | toutes les 10 heures | `FA-3105` |\n| Remplacement du filtre à air | toutes les 100 heures | `FA-3105` |\n| Remplacement de la bougie | toutes les 100 heures | `BG-512` |\n| Affûtage de la chaîne | toutes les 5 heures | — |\n| Remplacement de la chaîne | toutes les 150 heures | `CH-401` |\n| Remplacement du guide | toutes les 300 heures | `GD-408` |\n| Contrôle du frein de chaîne | **avant chaque usage** | — |",
+          "La première vidange fait exception : elle est due au bout de **5 heures** après\nla mise en service, puis la périodicité de 50 heures s'applique. ## Pression des pneumatiques Roues avant : 1,0 bar. Roues arrière : 0,7 bar. Le contrôle se fait à froid,\navant le démarrage. Un écart de plus de 0,2 bar entre les deux roues arrière\nprovoque une coupe irrégulière sur toute la largeur. ## Points de vigilance Le carter de coupe se colmate par temps humide. Un colmatage non traité fait\nchuter la puissance disponible et surcharge la courroie `CR-118`, qui est la\npièce qui casse en premier sur cette machine. Le TX-40 ne dispose **pas** de coupure automatique de lame au relevage du siège. Cette sécurité, présente sur les modèles postérieurs à 2023, doit être suppléée\npar la procédure d'atelier."
+        ],
+        "response": "On contrôle le frein de chaîne du T-85 **avant chaque usage** [3].",
+        "reference": "Avant chaque usage. C'est le seul organe du parc dont le contrôle ne suit pas un compteur horaire.",
+        "faithfulness": 1.0,
+        "answer_relevancy": 0.7180578236591426,
+        "context_precision": 0.999999999975,
+        "context_recall": 1.0,
+        "answer_correctness": 0.7827009857805427
+      },
+      {
+        "user_input": "Au 1er juin 2024, un mélange deux temps préparé quarante-cinq jours plus tôt pouvait-il être utilisé ?",
+        "retrieved_contexts": [
+          "## Ce qui a changé au 1er janvier 2025 | Point | 2023 | En vigueur |\n|---|---|---|\n| Capuchon de bougie | recommandé | **obligatoire**, étape 2 |\n| Refroidissement | 5 minutes | **10 minutes** |\n| Bidons | étiquetage libre | **vert = essence pure, rouge = mélange** |\n| Péremption du mélange | 60 jours | **30 jours** |\n| Relevé des compteurs | mensuel | **hebdomadaire** | La révision fait suite à deux incidents de 2024 : un démarrage intempestif sur\nle `ATL-007` en mars, et un moteur détruit par de l'essence pure versée dans le\n`ATL-014` en septembre.",
+          "## Observations **21/03/2024** — Démarrage intempestif du `ATL-007` pendant une intervention :\nl'agent avait relevé le siège en laissant la bougie connectée, et la machine ne\ndispose d'aucune coupure automatique de lame. Sans blessure. Ce fait est à\nl'origine du passage du débranchement de bougie de « recommandé » à\n« obligatoire » dans la révision de procédure du 1er janvier 2025. **05/09/2024** — Moteur du `ATL-014` détruit : de l'essence pure a été versée\ndans le réservoir au lieu du mélange 50:1, les deux bidons portant une étiquette\nmanuscrite décolorée. Remplacement du moteur par un prestataire, machine\nimmobilisée sept semaines. C'est l'incident qui a imposé le code couleur vert\net rouge. **Bilan des heures au 31/12/2024** — `ATL-007` : 396 h. `ATL-003` : 251 h.\n`ATL-014` : 68 h, compteur remis à zéro au remplacement moteur puis recalé à la\nvaleur d'avant incident sur décision de l'atelier, pour ne pas perdre\nl'historique des périodicités.",
+          "# Procédures de l'atelier municipal — version 2023 (ABROGÉE) > **Ce document est abrogé depuis le 1er janvier 2025.** Il est conservé au titre\n> du suivi documentaire. La version en vigueur est `procedure_atelier.md`. En cas\n> de divergence, c'est la version en vigueur qui s'applique. ## P-01 · Consignation avant intervention (version 2023) Toute intervention sur une machine thermique impose : 1. arrêt moteur et retrait de la clé ;\n2. attente de **cinq minutes** pour le refroidissement de l'échappement ;\n3. inscription au registre des interventions. Le débranchement du capuchon de bougie est **recommandé** sans être obligatoire. ## P-02 · Stockage des carburants (version 2023) L'essence pure et le mélange deux temps sont stockés dans des bidons distincts. Aucune couleur n'est imposée ; l'étiquetage manuscrit suffit. Un mélange de plus de **soixante jours** est vidangé. ## P-03 · Suivi des heures (version 2023) Le compteur horaire est relevé en fin de mois.",
+          "Un mélange de plus de trente jours est vidangé et traité en déchet, jamais versé\ndans une machine à essence pure. ## P-03 · Suivi des heures Le compteur horaire de chaque machine est relevé en fin de semaine et reporté au\nregistre. Les périodicités d'entretien des notices constructeur sont exprimées\nen heures de fonctionnement : sans relevé, aucune échéance n'est calculable. Une machine dont le compteur est en panne est retirée du service jusqu'à sa\nréparation. Une périodicité estimée n'est pas une périodicité. ## P-04 · Pièces communes au parc Certaines références sont partagées entre machines, d'autres ne le sont pas\nmalgré un numéro identique. Avant toute commande, la référence est vérifiée sur\nla notice de **la machine concernée**, et non sur celle d'une machine voisine. Le cas connu de l'atelier est le filtre à air : la référence `FA-2210` figure\ndans les deux notices, sans désigner la même pièce."
+        ],
+        "response": "Non, au 1er juin 2024, un mélange deux temps préparé quarante-cinq jours plus tôt ne pouvait pas être utilisé. En effet, la péremption du mélange a été réduite de 60 jours à 30 jours à partir du 1er janvier 2025 [1]. Cela signifie que, avant cette date, la péremption était de 60 jours. Or, le 1er juin 2024 est antérieur au 1er janvier 2025, donc la péremption restait de 60 jours. Ainsi, un mélange préparé quarante-cinq jours avant le 1er juin 2024 (soit le 1er janvier 2024) était encore dans la période de validité de 60 jours [3]. Par conséquent, il pouvait être utilisé.",
+        "reference": "Oui. La limite était alors de soixante jours. Elle n'est passée à trente jours qu'au 1er janvier 2025.",
+        "faithfulness": 0.8571428571428571,
+        "answer_relevancy": 0.6273928058600262,
+        "context_precision": 0.999999999975,
+        "context_recall": 1.0,
+        "answer_correctness": 0.6294618678955214
+      }
+    ],
+    "averages": {
+      "faithfulness": 0.8258145363408522,
+      "answer_relevancy": 0.63873916183197,
+      "context_precision": 0.9766081870980019,
+      "context_recall": 0.9210526315789473,
+      "answer_correctness": 0.7051512085995985
+    }
+  },
+  "ragas_conditions": {
+    "modele_juge": "qwen3:8b",
+    "modele_embeddings": "nomic-embed-text",
+    "n_questions": 19,
+    "questions_sans_passage": []
+  }
+}

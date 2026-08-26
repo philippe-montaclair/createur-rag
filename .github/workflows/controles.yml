@@ -42,3 +42,9 @@ jobs:
       # celle qu'il prétend décrire.
       - name: lecteur de jeux d'évaluation
         run: python3 tests/test_jeu.py
+
+      # Le comparateur porte la règle qui refuse d'appeler « gain » un écart
+      # indistinguable du bruit. C'est celle qu'on a envie de contourner le jour
+      # où le profil qu'on préfère passe devant de trois millisecondes.
+      - name: comparateur de profils
+        run: python3 tests/test_comparaison.py

@@ -23,7 +23,7 @@ de briques dans un fichier YAML, pas du code.
 
 ## Les trois profils
 
-| | `minimal` | `moyen` | `total` |
+| | `minimal` | `moyen` | `complet` |
 |---|---|---|---|
 | Briques | 5 | 8 | 10 |
 | Ce que ça ajoute | le plus petit RAG qui réponde | BM25 + fusion RRF + reranking cross-encoder | routeur en amont, validateur de chunks en aval |
@@ -37,7 +37,15 @@ Des mesures plutôt que des promesses. Sur le corpus d'exemple livré, profil
 |---|---|
 | Questions hors-corpus refusées | **6/6** — relevé à la main |
 | Pièges évités | **4/5** — le cinquième produit l'erreur qui avait été prédite par écrit |
+| `context_precision` / `context_recall` | **0,977** / **0,921** |
+| `faithfulness` / `answer_correctness` | **0,826** / **0,705** |
+| `answer_relevancy` | **0,639** |
 | Latence médiane | **8 980 ms** (écart-type 3 089 ms, 25 mesures) |
+
+La récupération est presque parfaite, la génération est le maillon faible : sur
+ce corpus, ce n'est pas retrouver le bon passage qui coûte, c'est en tirer une
+réponse qui réponde. Un résultat attendu sur 14 chunks — et qui indique où
+régler.
 
 Et sur le réglage, une expérience conservée en mémoire : décharger le reranker
 entre deux questions fait passer le temps total de **12 197 ms à 8 274 ms** — soit
@@ -48,7 +56,7 @@ le nom du corpus d'un client.
 
 ## État
 
-Les 243 assertions de trois fichiers montent les briques, les trois profils, la
+Les 271 assertions de quatre fichiers montent les briques, les trois profils, la
 mémoire de réglage et le lecteur de jeux d'évaluation **sans aucun modèle, sans
 Ollama et sans index** — PyYAML est leur seule dépendance, parce que les profils
 sont des fichiers YAML. C'est exactement ce que fait la CI :
@@ -58,6 +66,7 @@ pip install pyyaml
 python3 tests/test_briques.py     # 179 réussis, 0 échoués, ~1 s
 python3 tests/test_regleur.py     #  39 réussis, 0 échoués
 python3 tests/test_jeu.py         #  25 réussis, 0 échoués
+python3 tests/test_comparaison.py #  28 réussis, 0 échoués
 ```
 
 `tests/test_non_regression.py` est d'une autre nature : il exige `chromadb` et une
@@ -91,9 +100,11 @@ python mesures/mesurer.py --depuis-json \
     --refus-valides tous --pieges-reussis Q9,Q11,Q19,Q20
 ```
 
-`mesures/dernier_run.json` est le seul contrat entre les trois étapes, et
-l'étape 3 ne réinterroge rien : intégrer un verdict humain ne coûte pas une
-nouvelle campagne.
+`mesures/runs/<profil>.json` est le seul contrat entre les étapes, et un fichier
+par profil : mesurer `complet` n'efface pas la campagne `moyen`, sans quoi toute
+comparaison coûterait de tout relancer — dont une demi-heure de notation. Les
+étapes 3 et 4 ne réinterrogent rien : intégrer un verdict humain ou comparer
+deux profils ne coûte pas une nouvelle campagne.
 
 **Pourquoi trois environnements et pas un.** `createur-rag` a besoin de
 chromadb, sentence-transformers et torch ; [`rag-evaluation-agent`](https://github.com/philippe-montaclair/rag-evaluation-agent)
@@ -177,7 +188,7 @@ pour l'embeddeur, 400 Mo pour le reranker du profil `moyen`, et 5 Go pour
 python createur.py --source ./mes_documents --collection mon_corpus --profil moyen
 
 # Réutiliser un index déjà construit
-python createur.py --collection mon_corpus --profil total --pas-de-reindex
+python createur.py --collection mon_corpus --profil complet --pas-de-reindex
 
 # Une seule question, avec le détail des temps par brique
 python createur.py --collection mon_corpus --question "Ma question ?" --traces
@@ -188,7 +199,7 @@ En Python — c'est l'usage qui compte, parce que c'est celui des deux autres ag
 ```python
 from createur import creer_rag
 
-rag = creer_rag("./mes_documents", profil="total", collection="mon_corpus")
+rag = creer_rag("./mes_documents", profil="complet", collection="mon_corpus")
 r = rag.interroger("Ma question ?")
 
 r["reponse"]    # le texte
@@ -199,7 +210,7 @@ r["bilan"]      # temps par brique, goulot, ids récupérés — pour l'agent r�
 
 ## Les trois niveaux
 
-| | minimal | moyen | total |
+| | minimal | moyen | complet |
 |---|---|---|---|
 | recherche vectorielle | ✅ | ✅ | ✅ |
 | BM25 + fusion RRF | | ✅ | ✅ |
@@ -402,7 +413,7 @@ createur-rag/
 ├── ingestion.py       lecture, découpage, vectorisation, index
 ├── backends/ollama.py moteur de génération
 ├── briques/           une brique = un agent du REGISTRE
-├── profils/           minimal · moyen · total
+├── profils/           minimal · moyen · complet
 └── tests/
 ```
 

@@ -51,7 +51,10 @@ def main() -> int:
                                  formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--agent-eval", default="../agent_evaluation_rag",
                     help="dossier du dépôt rag-evaluation-agent")
-    ap.add_argument("--json", default="mesures/dernier_run.json")
+    ap.add_argument("--profil", default="moyen",
+                    help="profil dont la campagne doit être notée")
+    ap.add_argument("--json", default=None,
+                    help="chemin explicite ; par défaut mesures/runs/<profil>.json")
     ap.add_argument("--modele-juge", default="qwen3:8b",
                     help="modèle Ollama qui note. Privilégier un modèle *instruct* "
                          "non « thinking » : RAGAS attend du JSON propre.")
@@ -61,10 +64,13 @@ def main() -> int:
                     help="secondes par métrique. Un backend local est lent.")
     args = ap.parse_args()
 
-    chemin = RACINE / args.json
+    chemin = RACINE / (args.json or f"mesures/runs/{args.profil}.json")
     if not chemin.exists():
+        dispo = sorted(p.stem for p in (RACINE / "mesures" / "runs").glob("*.json"))
         print(f"⛔ {chemin} absent.")
-        print("   Lancer d'abord : python mesures/mesurer.py --sans-ragas")
+        print(f"   Lancer d'abord : python mesures/mesurer.py --profil {args.profil} --sans-ragas")
+        if dispo:
+            print(f"   Campagnes déjà faites : {', '.join(dispo)}")
         return 1
 
     donnees = json.loads(chemin.read_text(encoding="utf-8"))
@@ -163,9 +169,9 @@ def main() -> int:
         if isinstance(valeur, (int, float)):
             print(f"  {cle:24s} {valeur:.3f}")
 
-    print(f"\n✅ Scores réinjectés dans {args.json}")
+    print(f"\n✅ Scores réinjectés dans {chemin.relative_to(RACINE)}")
     print("\nDernière étape, dans n'importe quel python :")
-    print("  python mesures/mesurer.py --depuis-json \\")
+    print(f"  python mesures/mesurer.py --depuis-json --profil {args.profil} \\")
     print("      --refus-valides tous --pieges-reussis Q9,Q11,Q19,Q20")
     return 0
 

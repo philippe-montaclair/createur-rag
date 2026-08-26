@@ -1,4 +1,4 @@
-# Conception — phase 3 : options du profil « total », autonomie, mémoire
+# Conception — phase 3 : options du profil « complet », autonomie, mémoire
 
 > Note de conception rédigée le 26/07/2026. **Les six décisions ont été tranchées le 31/07/2026**
 > (§5). Le corps de la note est conservé tel quel : il porte les arguments qui ont servi à
@@ -221,7 +221,7 @@ un **profil de départ justifié** — puis laisser le régleur l'affiner. C'est
 | 2 | Mode d'évaluation | **Deux étages** : recall@k / MRR sans LLM en boucle interne, triade RAG à la barrière de promotion | Triade partout : ~100 essais/jour, et le juge étant bruité il faudrait 3-5 répétitions, soit ~20 essais utiles |
 | 3 | Jeu de référence | **Le juge propose, le mainteneur relit et corrige, on gèle et on versionne** — dev et test séparés dès la v1 | Annotation intégrale : plusieurs heures sur le chemin critique. Consensus : conservateur par construction, l'agent optimiserait vers son propre point de départ |
 | 4 | Enveloppe d'autonomie | **Classe « libre » seulement** — aucune réindexation sans validation humaine | Tout sous quota : un essai coûte des heures et invalide les mesures antérieures |
-| 5 | Options du profil `total` | **Repli sur erreur · filtres par métadonnées · fusion pondérée** dans cette phase ; **reformulateur + agent d'interface** retenus mais reportés | Rien d'écarté : le lot 6 est différé, pas abandonné (voir la réserve ci-dessous) |
+| 5 | Options du profil `complet` | **Repli sur erreur · filtres par métadonnées · fusion pondérée** dans cette phase ; **reformulateur + agent d'interface** retenus mais reportés | Rien d'écarté : le lot 6 est différé, pas abandonné (voir la réserve ci-dessous) |
 | 6 | Support de la mémoire | **JSONL append-only** | Chroma : « déjà testé ? » est une égalité, pas une similarité — une réponse « à peu près » serait pire que pas de réponse. SQLite : binaire, mal versionné, illisible à l'œil |
 
 ### Réserves consignées le 31/07
@@ -248,6 +248,6 @@ reviendrait à l'ajouter sans jamais pouvoir dire s'il sert.
 3. Filtres par métadonnées
 4. Mémoire d'expériences en JSONL
 5. Mode automatique du créateur
-6. Points ouverts de la phase 1 (`total.yaml` en float16 ; nom de l'embeddeur en métadonnées)
+6. Points ouverts de la phase 1 (`complet.yaml` en float16 ; nom de l'embeddeur en métadonnées)
 7. Vérification : tests de logique pure + non-régression 7/7 intacte
 8. Mise à jour de `banque-agents/` et du handoff
