@@ -180,14 +180,21 @@ def ecrire_rapport(chemin: Path, profil: str, questions, notables_res, hors_res,
         "",
     ]
 
-    if scores_ragas:
+    # L'agent d'évaluation renvoie {"scores": [par question], "averages": {…}}.
+    # Lire scores_ragas à plat donnerait un tableau vide sans le moindre message.
+    moyennes = (scores_ragas or {}).get("averages") or {}
+    if moyennes:
         lignes += ["| Métrique | Score |", "|---|---|"]
-        for cle, valeur in sorted(scores_ragas.items()):
+        for cle, valeur in sorted(moyennes.items()):
             if isinstance(valeur, (int, float)):
                 lignes.append(f"| `{cle}` | {valeur:.3f} |")
         lignes += ["",
                    f"Calculé par RAGAS sur les {len(notables_res)} questions notables,",
-                   "backend Ollama local — aucun appel sortant."]
+                   "backend Ollama local — aucun appel sortant.",
+                   "",
+                   "Les hors-corpus sont exclues de ce calcul : « fidélité aux passages",
+                   "récupérés » n'a pas de sens quand la bonne réponse est de ne rien",
+                   "affirmer. Leur mesure est la section suivante."]
     else:
         lignes += ["**Non calculé** : l'agent d'évaluation n'était pas joignable lors de",
                    "ce relevé. Les réponses brutes sont conservées dans `mesures/dernier_run.json`.",

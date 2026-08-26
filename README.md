@@ -77,16 +77,35 @@ python createur.py --source corpus_exemple --collection demo --profil moyen \
 
 ## Mesurer
 
+En trois temps, chacun dans l'environnement qui lui convient :
+
 ```bash
-python mesures/mesurer.py --profil moyen
+# 1. produire les réponses — environnement de createur-rag
+python mesures/mesurer.py --profil moyen --sans-ragas
+
+# 2. les noter — environnement de rag-evaluation-agent
+python mesures/noter_ragas.py --agent-eval ../agent_evaluation_rag
+
+# 3. écrire le rapport — n'importe quel python
+python mesures/mesurer.py --depuis-json \
+    --refus-valides tous --pieges-reussis Q9,Q11,Q19,Q20
 ```
 
-Fait tourner le jeu d'évaluation sur le corpus, chronomètre chaque question, et
-écrit un `MESURES.md` daté. La notation de qualité passe par
-[`rag-evaluation-agent`](https://github.com/philippe-montaclair/rag-evaluation-agent)
-— RAGAS sur backend Ollama, donc **aucun appel sortant** — attendu par défaut
-dans un dossier voisin, sinon `--agent-eval <chemin>`. Sans lui,
-`--sans-ragas` produit quand même les réponses et la latence.
+`mesures/dernier_run.json` est le seul contrat entre les trois étapes, et
+l'étape 3 ne réinterroge rien : intégrer un verdict humain ne coûte pas une
+nouvelle campagne.
+
+**Pourquoi trois environnements et pas un.** `createur-rag` a besoin de
+chromadb, sentence-transformers et torch ; [`rag-evaluation-agent`](https://github.com/philippe-montaclair/rag-evaluation-agent)
+a besoin de ragas, datasets et d'un `langchain-community` verrouillé sous 0.4
+— au-dessus, `import ragas` casse. Les fondre dans un seul environnement, c'est
+se donner un conflit de dépendances à arbitrer à chaque mise à jour de l'un ou
+de l'autre. La notation tourne sur Ollama en local : **aucun appel sortant**.
+
+L'étape 2 refuse d'écrire si RAGAS n'est pas installé dans l'environnement
+courant. L'agent d'évaluation s'importe très bien sans lui — il se dégrade en
+silence — et un rapport qui annoncerait une notation sans le moindre score
+serait pire que pas de rapport du tout.
 
 **Le point de méthode qui vaut le détour.** Les questions dont la réponse est
 dans le corpus et les questions hors-corpus sont mesurées **séparément**, sur

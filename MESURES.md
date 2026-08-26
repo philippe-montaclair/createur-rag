@@ -1,6 +1,6 @@
 # Mesures
 
-Relevé le 26/08/2026 à 17:01, profil `moyen`, corpus `corpus_exemple`,
+Relevé le 26/08/2026 à 17:09, profil `moyen`, corpus `corpus_exemple`,
 jeu `jeux_eval/exemple/questions.md`.
 
 Ce fichier est produit par `mesures/mesurer.py`. Il n'est pas écrit à la
