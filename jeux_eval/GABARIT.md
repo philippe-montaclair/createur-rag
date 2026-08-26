@@ -5,7 +5,7 @@ les chemins de fichiers, les `chunk_id` et le texte verbatim du corpus qu'il év
 Publier un jeu, c'est publier le corpus. Le `.gitignore` exclut donc `jeux_eval/*`
 et ne laisse passer que ce gabarit.
 
-Ce fichier dit **comment en fabriquer un** sur ton propre corpus.
+Ce fichier dit **comment en fabriquer un** sur son propre corpus.
 
 ---
 
@@ -60,15 +60,15 @@ champ qui rend un jeu impubliable** : il porte l'arborescence du client.
 
 ## Ce qui fait un jeu honnête
 
-**Les quotas suivent le corpus, pas ton intérêt.** Si un thème pèse 40 % des chunks
+**Les quotas suivent le corpus, pas la commodité.** Si un thème pèse 40 % des chunks
 et 5 % des questions, la mesure ne dit rien de l'usage réel.
 
 **Il faut des questions sans réponse.** Le tirage part de chunks existants : par
 construction, toutes les questions générées ont une réponse dans le corpus. Un jeu
 qui ne contient que celles-là ne teste jamais la promesse la plus importante — que
 le système répond « je ne sais pas ». **Ajoute-les à la main** : plausibles, dans le
-domaine, formulées comme les autres, et dont tu sais que la réponse n'est nulle
-part. Une question manifestement absurde ne teste rien.
+domaine, formulées comme les autres, et dont on sait que la réponse ne figure
+nulle part. Une question manifestement absurde ne teste rien.
 
 **Écris les réponses attendues avant d'interroger le système.** Après, on écrit sans
 le vouloir les questions auxquelles il sait répondre, et le jeu mesure la

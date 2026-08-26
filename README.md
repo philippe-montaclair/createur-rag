@@ -2,10 +2,10 @@
 
 [![contrôles](https://github.com/philippe-montaclair/createur-rag/actions/workflows/controles.yml/badge.svg)](https://github.com/philippe-montaclair/createur-rag/actions/workflows/controles.yml)
 
-Tu as un dossier de documents et tu veux pouvoir l'interroger en langage naturel,
-sur ta machine, sans qu'ils sortent de chez toi. `createur.py --source mon_dossier`
-construit la chaîne complète — découpage, index, récupération, génération sourcée —
-et te rend un objet avec une méthode `interroger()`.
+Interroger un dossier de documents en langage naturel, sur sa propre machine, sans
+que rien n'en sorte. `createur.py --source mon_dossier` construit la chaîne complète
+— découpage, index, récupération, génération sourcée — et rend un objet muni d'une
+méthode `interroger()`.
 
 Le même moteur sert un tuteur de formation, un assistant juridique ou une base
 documentaire d'artisan. **Seul le profil change** : la chaîne est une liste ordonnée
@@ -13,13 +13,13 @@ de briques dans un fichier YAML, pas du code.
 
 ## Pour qui
 
-- **Tu montes un RAG pour un client** et tu ne veux pas réécrire la même chaîne à
-  chaque domaine — tu veux partir d'un plancher qui marche et régler à partir de là.
-- **Tu veux savoir ce que chaque brique t'apporte réellement.** Le profil `minimal`
-  existe pour ça : c'est le niveau contre lequel on mesure les autres. Une brique
-  qui ne bat pas le plancher n'a pas à être dans la chaîne.
-- **Tes documents ne doivent pas quitter la machine.** Tout tourne en local, via
-  Ollama. Aucun appel sortant.
+- **Monter un RAG pour un client sans réécrire la même chaîne à chaque domaine** :
+  partir d'un plancher qui fonctionne, puis régler à partir de là.
+- **Savoir ce que chaque brique apporte réellement.** Le profil `minimal` existe pour
+  cela : c'est le niveau contre lequel les autres se mesurent. Une brique qui ne bat
+  pas le plancher n'a rien à faire dans la chaîne.
+- **Garder les documents sur la machine.** Tout tourne en local, via Ollama. Aucun
+  appel sortant.
 
 ## Les trois profils
 
@@ -51,8 +51,8 @@ python3 tests/test_regleur.py     #  39 réussis, 0 échoués
 ```
 
 `tests/test_non_regression.py` est d'une autre nature : il exige `chromadb` et une
-collection déjà indexée, donc il ne tourne pas en CI et ne peut pas tourner chez
-toi sans corpus. C'est le témoin 7/7, il se lance à la main.
+collection déjà indexée, donc il ne tourne ni en CI ni sur une machine dépourvue de
+corpus. C'est le témoin 7/7, et il se lance à la main.
 
 **Phase 1 — local uniquement.** Le déploiement VPS est une étape séparée et
 ultérieure. Ce qui manque aussi, et c'est dit franchement : il n'y a pas encore de
@@ -87,7 +87,7 @@ n'existe »*.
 
 ```bash
 pip install chromadb sentence-transformers rank_bm25 ollama pyyaml --break-system-packages
-pip install pdfplumber python-docx --break-system-packages   # selon tes fichiers
+pip install pdfplumber python-docx --break-system-packages   # selon les formats du corpus
 ollama serve && ollama pull qwen3:8b
 ```
 
@@ -305,7 +305,7 @@ Deux pièges qu'il neutralise :
 ```bash
 python tests/test_briques.py            # 179 tests de logique pure, ~1 s, aucun modèle
 python tests/test_non_regression.py --lister
-python tests/test_non_regression.py --collection <ta_collection> --sans-generation
+python tests/test_non_regression.py --collection <nom_de_la_collection> --sans-generation
 ```
 
 Le second doit tourner sur le Mac : il charge Marsilia, CamemBERT et Chroma.
