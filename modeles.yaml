@@ -1,0 +1,154 @@
+# modeles.yaml — Catalogue des modèles du créateur de RAG
+# =========================================================
+# Les profils référencent un ALIAS court (ex. `fr-finance`) plutôt qu'un chemin
+# Hugging Face. Le catalogue porte de quoi CHOISIR en connaissance de cause, et
+# de quoi REFUSER une configuration dangereuse.
+#
+# Champs :
+#   nom          identifiant réel (Hugging Face, ou tag Ollama)
+#   langue       fr | multilingue | en
+#   domaine      generaliste | finance | juridique | ... ← le piège se voit ici
+#   parametres   en millions
+#   dimension    taille du vecteur (déclarée ; VÉRIFIÉE au chargement réel)
+#   prefixe_*    certains modèles exigent un préfixe, sans quoi la qualité chute
+#                sans aucune erreur visible (cas des e5)
+#   disponible   local | vps | les deux   ← prépare le groupe F, ne construit rien
+#
+# ⚠️ Changer d'embeddeur IMPOSE de réindexer : deux modèles ne produisent pas
+#    des vecteurs comparables, même à dimension égale. Le créateur vérifie la
+#    compatibilité au démarrage et refuse de partir plutôt que de renvoyer du
+#    bruit silencieusement.
+
+embeddeurs:
+
+  fr-finance:
+    nom: sujet-ai/Marsilia-Embeddings-FR-Base
+    langue: fr
+    domaine: finance
+    parametres: 278.0
+    dimension: 768
+    empreinte_float32_mo: 1061
+    empreinte_float16_mo: 530
+    licence: apache-2.0
+    disponible: local
+    note: >
+      Fine-tuné sur Sujet-Financial-RAG-FR-Dataset. Excellent en finance et
+      probablement en juridique. Utilisé par défaut dans les projets du mainteneur
+      par HÉRITAGE (il était déjà en cache), pas par choix raisonné — voir
+      rag-finance. À NE PAS supposer bon hors de son domaine sans mesure.
+
+  multi-e5-base:
+    nom: intfloat/multilingual-e5-base
+    langue: multilingue
+    domaine: generaliste
+    parametres: 278.0
+    dimension: 768
+    empreinte_float32_mo: 1061
+    empreinte_float16_mo: 530
+    licence: mit
+    prefixe_requete: "query: "
+    prefixe_document: "passage: "
+    disponible: local
+    note: >
+      Référence multilingue solide. ATTENTION aux préfixes : sans « query: » et
+      « passage: », la qualité chute nettement et SANS message d'erreur. C'est
+      la raison d'être des champs prefixe_* de ce catalogue.
+
+  multi-e5-small:
+    nom: intfloat/multilingual-e5-small
+    langue: multilingue
+    domaine: generaliste
+    parametres: 118.0
+    dimension: 384
+    empreinte_float32_mo: 450
+    empreinte_float16_mo: 225
+    licence: mit
+    prefixe_requete: "query: "
+    prefixe_document: "passage: "
+    disponible: local
+    note: >
+      Deux fois plus léger, vecteurs deux fois plus courts (index plus petit,
+      recherche plus rapide). Le bon candidat quand la RAM est le facteur
+      limitant — cas du Mac M4/16 Go quand un 8B tourne à côté.
+
+  bge-m3:
+    nom: BAAI/bge-m3
+    langue: multilingue
+    domaine: generaliste
+    parametres: 568.0
+    dimension: 1024
+    empreinte_float32_mo: 2167
+    empreinte_float16_mo: 1084
+    licence: mit
+    disponible: vps
+    note: >
+      Très bon en français, contexte long (8k). Mais 2,2 Go en float32 :
+      difficile à faire cohabiter avec un 8B sur 16 Go partagés. Marqué `vps`
+      pour cette raison — c'est une contrainte matérielle, pas une préférence.
+
+  fr-camembert:
+    nom: dangvantuan/sentence-camembert-base
+    langue: fr
+    domaine: generaliste
+    parametres: 110.0
+    dimension: 768
+    empreinte_float32_mo: 422
+    empreinte_float16_mo: 211
+    licence: apache-2.0
+    disponible: local
+    note: >
+      Français généraliste, léger. Bon point de comparaison face à fr-finance
+      pour isoler l'effet « fine-tuné finance » sur un corpus hors finance.
+
+rerankers:
+
+  fr-camembert-mmarco:
+    nom: antoinelouis/crossencoder-camembert-base-mmarcoFR
+    langue: fr
+    domaine: generaliste
+    parametres: 110.6
+    empreinte_float32_mo: 422
+    empreinte_float16_mo: 211
+    licence: mit
+    disponible: local
+    note: >
+      Cross-encoder FR. float16 VALIDÉ le 25/07/2026 : récupération identique
+      7/7 face à float32, 211 Mo rendus. Un reranker n'écrit rien dans l'index,
+      changer sa précision ou son modèle n'oblige donc jamais à réindexer.
+
+llm:
+  # Tags Ollama. La disponibilité RÉELLE se vérifie avec `ollama list` —
+  # ce catalogue déclare ce qui est pertinent, pas ce qui est téléchargé.
+  # `python createur.py --modeles` confronte les deux.
+
+  qwen3-8b:
+    nom: qwen3:8b
+    langue: multilingue
+    parametres: 8000.0
+    quantization: Q4
+    empreinte_mo: 5000
+    disponible: les deux
+    note: >
+      Modèle de référence des projets du mainteneur. ~5 Go en Q4 : sur 16 Go
+      partagés, c'est le poste dominant et le goulot de latence du pipeline.
+
+  qwen3-4b:
+    nom: qwen3:4b
+    langue: multilingue
+    parametres: 4000.0
+    quantization: Q4
+    empreinte_mo: 2600
+    disponible: les deux
+    note: >
+      Deux fois plus léger. Le repli quand la marge avant swap est trop mince —
+      une réponse correcte en 20 s vaut mieux qu'une bonne réponse en 200 s
+      parce que la machine pagine. À comparer sur l'éval, pas à supposer.
+
+  mistral-7b:
+    nom: mistral:7b
+    langue: multilingue
+    parametres: 7000.0
+    quantization: Q4
+    empreinte_mo: 4400
+    disponible: les deux
+    note: Bon en français. Alternative à qwen3:8b à empreinte comparable.

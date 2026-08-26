@@ -1,0 +1,44 @@
+# ─────────────────────────────────────────────────────────────────────
+# Corpus et dérivés — matériel de tiers. Ne doit JAMAIS entrer dans git.
+# Un fichier retiré après un commit reste dans l'historique : la seule
+# protection est qu'il n'y entre pas une seule fois.
+# ─────────────────────────────────────────────────────────────────────
+traces.jsonl
+memoire.jsonl
+chroma_db/
+corpus/
+
+# Les jeux d'évaluation contiennent les questions générées et les chunk_id
+# complets (chemins de fichiers .docx inclus). Seul le gabarit est publié.
+jeux_eval/*
+!jeux_eval/GABARIT.md
+
+# Notes de session — l'historique, c'est git.
+session_handoff.md
+prompt_reprise_*.md
+
+# Caches et artefacts locaux
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.DS_Store
+
+# ─────────────────────────────────────────────────────────────────────
+# Outils écrits POUR le corpus d'un client : ils nomment ses fichiers,
+# ses intervenants et le détail de son contenu dans leurs docstrings.
+# Ils restent utiles en local, ils n'ont rien à faire dans le dépôt —
+# et un moteur générique n'en a de toute façon pas l'usage.
+# ─────────────────────────────────────────────────────────────────────
+tools/marquer_transcriptions.py
+tools/preparer_corpus_v4.py
+tools/preparer_corpus_v5.py
+
+# Dépend de ../banque-agents/ qui n'est pas dans ce dépôt : inexécutable ailleurs.
+tools/maj_fiches_banque.py
+
+# Outillage de publication : nomme le client dans ses motifs de contrôle,
+# donc reste local au même titre que le corpus lui-même.
+PREPARER_DEPOT.sh
+MOTIFS_CORPUS.txt

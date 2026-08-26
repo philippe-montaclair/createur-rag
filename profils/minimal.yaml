@@ -1,0 +1,41 @@
+nom: minimal
+description: >
+  Ingestion + recherche vectorielle + génération. Le plus petit RAG qui réponde.
+  Aucun modèle chargé en dehors de l'embeddeur : ni BM25, ni cross-encoder.
+  Sert de plancher de comparaison — c'est le niveau contre lequel on mesure ce
+  que les briques suivantes apportent réellement.
+
+index:
+  chroma_dir: chroma_db
+
+ingestion:
+  chunking:
+    max_mots: 300
+    overlap: 30
+  embeddings:
+    modele: fr-finance          # alias du catalogue (modeles.yaml)
+    # 278 M paramètres = 1 061 Mo en float32 (mesuré le 25/07/2026).
+    # float16 ≈ 530 Mo. À ne basculer qu'après test de non-régression.
+    precision: float32
+  exclure: []
+
+backend:
+  hote: http://localhost:11434
+
+# Liste ORDONNÉE. C'est la surface que l'agent régleur manipule : il retire,
+# ajoute ou reparamètre une entrée, sans jamais toucher au code.
+pipeline:
+  - recherche_vectorielle:
+      top_k: 20          # pas besoin de classer tout le corpus sans fusion derrière
+  - constructeur_contexte:
+      k: 4
+  - prompt_engineering: {}
+  - agent_llm:
+      backend: ollama
+      modele: qwen3-8b   # alias du catalogue
+      temperature: 0.0
+  - post_processing: {}
+
+observabilite:
+  actif: true
+  fichier: traces.jsonl

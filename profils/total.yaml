@@ -1,0 +1,82 @@
+nom: total
+description: >
+  Pipeline N1→N4 complet du REGISTRE : routage en amont, recherche hybride,
+  reranking, validation des chunks, génération sourcée, vérification des
+  citations. Observabilité détaillée activée.
+  C'est le profil destiné à être piloté par l'agent régleur et jugé par l'agent
+  évaluateur.
+
+index:
+  chroma_dir: chroma_db
+
+ingestion:
+  chunking:
+    max_mots: 300
+    overlap: 30
+  embeddings:
+    modele: fr-finance          # alias du catalogue (modeles.yaml)
+    # 278 M paramètres = 1 061 Mo en float32 (mesuré le 25/07/2026).
+    # float16 ≈ 530 Mo. À ne basculer qu'après test de non-régression.
+    precision: float32
+  exclure: []
+
+reranker:
+  modele: fr-camembert-mmarco   # alias du catalogue
+  # 110,6 M paramètres = 422 Mo en float32. float16 ≈ 211 Mo.
+  # Aligné sur moyen.yaml le 31/07/2026 : la demi-précision a rendu 211 Mo
+  # sans changer la récupération (7/7 identiques, précision réellement chargée
+  # vérifiée à l'exécution). Réserve : 7 questions × 4 passages restent un petit
+  # échantillon — feu vert, pas preuve.
+  precision: float16
+
+backend:
+  hote: http://localhost:11434
+
+# sur_erreur (défaut : arreter) — principe de repli du PDF source.
+#   ignorer  : la brique saute, le contexte est restauré tel qu'avant elle,
+#              le pipeline continue dégradé plutôt que de s'arrêter.
+#   arreter  : l'exception remonte (comportement historique).
+# Après `max_echecs` échecs CONSÉCUTIFS (défaut 3), une brique 'ignorer' repasse
+# d'office en 'arreter' : le repli couvre l'incident, pas la panne installée.
+#
+# Ne sont repliables que les briques dont l'absence dégrade sans empêcher de
+# répondre. Les deux recherches et agent_llm restent en 'arreter' : sans passage
+# ou sans modèle, il n'y a pas de réponse à dégrader, seulement à inventer.
+pipeline:
+  - routeur:
+      regles_actives: true
+      defaut: hybride
+      seuil_mots_courts: 3
+      sur_erreur: ignorer      # sans routage, la route par défaut reste 'hybride' 
+  - recherche_vectorielle:
+      top_k: null
+  - recherche_bm25:
+      top_n: null
+  - fusion:
+      k: 60
+      pool: 20           # panier plus large qu'en 'moyen' : le validateur va en retirer
+      sur_erreur: ignorer      # sans fusion, la dernière liste de recherche fait foi
+  - reranker:
+      garde: 8
+      sur_erreur: ignorer      # « si le reranker plante, on utilise les chunks bruts »
+  - validateur_chunks:
+      seuil_doublon: 0.85
+      mots_min: 12
+      score_min: null    # à activer une fois la distribution des scores observée
+      couverture_min: 3
+      sur_erreur: ignorer      # sans validation, on garde les candidats non filtrés
+  - constructeur_contexte:
+      k: 4
+  - prompt_engineering: {}
+  - agent_llm:
+      backend: ollama
+      modele: qwen3-8b   # alias du catalogue
+      temperature: 0.0
+      decharger_reranker: true
+  - post_processing:
+      retirer_raisonnement: true
+      sur_erreur: ignorer      # une réponse brute vaut mieux que pas de réponse
+
+observabilite:
+  actif: true
+  fichier: traces.jsonl

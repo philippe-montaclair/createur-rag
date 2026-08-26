@@ -1,0 +1,56 @@
+nom: moyen
+description: >
+  Recherche hybride (vectoriel + BM25 fusionnés par RRF) puis reranking
+  cross-encoder. C'est la configuration de tuteur-local/tuteur.py, à
+  l'identique : mêmes paramètres, même ordre. Elle sert de TÉMOIN de
+  non-régression — si ce profil ne reproduit pas le comportement de tuteur.py,
+  c'est que l'extraction des briques a cassé quelque chose.
+
+index:
+  chroma_dir: chroma_db
+
+ingestion:
+  chunking:
+    max_mots: 300
+    overlap: 30
+  embeddings:
+    modele: fr-finance          # alias du catalogue (modeles.yaml)
+    # 278 M paramètres = 1 061 Mo en float32 (mesuré le 25/07/2026).
+    # float16 ≈ 530 Mo. À ne basculer qu'après test de non-régression.
+    precision: float32
+  exclure: []
+
+reranker:
+  modele: fr-camembert-mmarco   # alias du catalogue
+  # 110,6 M paramètres = 422 Mo en float32. float16 ≈ 211 Mo.
+  precision: float16
+
+backend:
+  hote: http://localhost:11434
+
+pipeline:
+  # top_k et top_n à null = tout le corpus classé. Indispensable à la fidélité
+  # de la fusion : la RRF compare des RANGS, donc les deux moteurs doivent
+  # avoir classé le même ensemble.
+  - recherche_vectorielle:
+      top_k: null
+  - recherche_bm25:
+      top_n: null
+  - fusion:
+      k: 60              # constante d'amortissement de la RRF
+      pool: 10           # le panier soumis au reranker
+  - reranker:
+      garde: null        # réordonne les 10 sans en écarter (comportement tuteur.py)
+  - constructeur_contexte:
+      k: 4               # les 4 passages qui entrent dans le prompt
+  - prompt_engineering: {}
+  - agent_llm:
+      backend: ollama
+      modele: qwen3-8b   # alias du catalogue
+      temperature: 0.0
+      decharger_reranker: true    # rend ~0,5 Go avant de charger le LLM
+  - post_processing: {}
+
+observabilite:
+  actif: true
+  fichier: traces.jsonl

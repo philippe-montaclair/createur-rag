@@ -1,0 +1,29 @@
+# Le seul contrôle du dépôt, et il suffit : les 218 assertions de
+# test_briques.py et test_regleur.py montent les briques, les trois profils
+# et la mémoire de réglage SANS aucun modèle, sans Ollama et sans index.
+# Si l'un tombe, c'est qu'une brique ne tient plus le contrat du README.
+name: contrôles
+
+on: [push, pull_request]
+
+jobs:
+  briques:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      # PyYAML et rien d'autre. Les profils sont des fichiers YAML : c'est la
+      # seule dépendance que ces contrôles exigent. Le jour où cette ligne
+      # s'allonge, les contrôles ont cessé d'être ce qu'ils prétendent être —
+      # exécutables sur une machine où aucun modèle n'est installé.
+      - name: la seule dépendance des contrôles
+        run: pip install pyyaml
+
+      - name: montage des briques et des trois profils
+        run: python3 tests/test_briques.py
+
+      - name: mémoire de réglage et comparabilité des mesures
+        run: python3 tests/test_regleur.py

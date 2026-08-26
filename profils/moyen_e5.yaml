@@ -1,0 +1,76 @@
+nom: moyen-e5
+description: >
+  Copie EXACTE de moyen.yaml, à une seule ligne près : l'embeddeur passe de
+  `fr-finance` (un fine-tune du domaine financier) à `multi-e5-base`
+  (généraliste multilingue). Tout le reste est identique — chunking, précisions,
+  fusion, reranker, pool, k, backend.
+
+  POURQUOI CE PROFIL EXISTE (01/08/2026)
+  La comparaison des deux juges a montré que 6 des 20 questions de Claude ne
+  retrouvent pas leur chunk, alors qu'elles retrouvent toutes le bon DOCUMENT,
+  et haut (voisin en rang 1 à 5). Le cas décisif :
+
+    chunk  « libérer les torsions intra-osseuses »
+    Claude « déformations situées à l'intérieur même d'un os » → absent du top-10
+    qwen   « torsions des os »                                 → rang 1
+
+  Franchir cette synonymie est le travail d'un embeddeur généraliste. Celui en
+  place a été retenu en mars parce qu'il était déjà en cache, jamais parce qu'il
+  avait été mesuré hors finance — c'est le point ouvert le plus ancien du projet.
+
+  DEUX EXPLICATIONS SE SÉPARENT ICI
+    · les questions de Claude sont trop vagues  → les échecs persisteront ;
+    · fr-finance ne franchit pas la synonymie   → les échecs se rattraperont
+      pendant que qwen restera à 1.
+
+  UNE SEULE VARIABLE CHANGE. C'est la règle de l'agent régleur : faire varier
+  une chose et remesurer. Si l'on profitait de la réindexation pour ajuster le
+  chunking ou la précision, le résultat ne serait imputable à rien.
+
+  ⚠️ Les préfixes « query: » / « passage: » que la famille e5 exige ne sont PAS
+  écrits ici : le catalogue les déclare (modeles.yaml) et le créateur les
+  applique des deux côtés. Les oublier ferait chuter la qualité sans le moindre
+  message d'erreur — c'est la raison d'être du catalogue.
+
+index:
+  chroma_dir: chroma_db
+
+ingestion:
+  chunking:
+    max_mots: 300
+    overlap: 30
+  embeddings:
+    modele: multi-e5-base       # ← LA SEULE DIFFÉRENCE avec moyen.yaml
+    precision: float32
+  exclure: []
+
+reranker:
+  modele: fr-camembert-mmarco
+  precision: float16
+
+backend:
+  hote: http://localhost:11434
+
+pipeline:
+  - recherche_vectorielle:
+      top_k: null
+  - recherche_bm25:
+      top_n: null
+  - fusion:
+      k: 60
+      pool: 10
+  - reranker:
+      garde: null
+  - constructeur_contexte:
+      k: 4
+  - prompt_engineering: {}
+  - agent_llm:
+      backend: ollama
+      modele: qwen3-8b
+      temperature: 0.0
+      decharger_reranker: true
+  - post_processing: {}
+
+observabilite:
+  actif: true
+  fichier: traces.jsonl
