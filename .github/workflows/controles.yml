@@ -2,9 +2,17 @@
 # test_briques.py et test_regleur.py montent les briques, les trois profils
 # et la mémoire de réglage SANS aucun modèle, sans Ollama et sans index.
 # Si l'un tombe, c'est qu'une brique ne tient plus le contrat du README.
-name: contrôles
+name: controles
 
-on: [push, pull_request]
+# workflow_dispatch permet de relancer les contrôles à la main depuis
+# l'onglet Actions ou avec `gh workflow run controles.yml`, sans avoir à
+# fabriquer un commit vide juste pour voir si ça passe.
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
 
 jobs:
   briques:
