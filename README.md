@@ -21,6 +21,43 @@ de briques dans un fichier YAML, pas du code.
 - **Garder les documents sur la machine.** Tout tourne en local, via Ollama. Aucun
   appel sortant.
 
+## Une vraie sortie, telle qu'enregistrée
+
+Deux questions de la campagne du 26/08/2026, profil `minimal`, corpus `corpus_exemple` (notices d'un atelier d'espaces verts), modèle `qwen3-8b` en local. Relevé brut dans `mesures/runs/minimal.json`, ni retouché ni reformulé.
+
+**La question à laquelle le système doit répondre :**
+
+```
+Question   Tous les combien faut-il remplacer le filtre à air du TX-40 ?
+
+Réponse    Il faut remplacer le filtre à air du TX-40 toutes les
+           100 heures [2].
+Citations  [2] tondeuse_TX40.md
+Attendu    Toutes les 100 heures de fonctionnement, référence FA-2210.   ✔
+```
+
+**La question à laquelle il doit refuser de répondre :**
+
+```
+Question   Tous les combien faut-il remplacer le filtre à carburant
+           du TX-40 ?
+
+Piège      la notice du H-120 donne « toutes les 200 heures, réf. FC-076 ».
+           Le TX-40 n'a aucun filtre à carburant documenté. Un modèle qui
+           répond de mémoire attrape la périodicité du mauvais engin.
+
+Réponse    La notice d'entretien du TX-40 ne mentionne pas la périodicité
+           de remplacement du filtre à carburant [2]. Par conséquent, il
+           n'est pas possible de répondre à cette question en se basant
+           uniquement sur les extraits fournis.
+Citations  [2] tondeuse_TX40.md
+Attendu    SANS_REPONSE                                                  ✔
+```
+
+Sur les 25 questions du jeu, 6 sont de ce type — des pièges où la réponse plausible se trouve dans le corpus mais concerne un autre matériel. Les trois profils les refusent 6 fois sur 6. C'est la propriété qui décide si un tel système est utilisable en atelier ou non : le coût d'une réponse fausse et fluide est plus élevé que celui d'une absence de réponse.
+
+Le détail des 25 questions, les scores RAGAS et les latences des trois profils sont dans `MESURES_minimal.md`, `MESURES_moyen.md`, `MESURES_complet.md` et `COMPARAISON.md`.
+
 ## Les trois profils
 
 | | `minimal` | `moyen` | `complet` |
@@ -49,6 +86,8 @@ corpus d'exemple livré, 25 questions chacun, avec RAGAS sur backend Ollama loca
 bouger aucune métrique au-delà du bruit, et coûtent une à quatre secondes par
 question. C'est précisément ce que le profil `minimal` existe pour rendre
 visible : une brique qui ne bat pas le plancher n'a rien à faire dans la chaîne.
+
+Le résultat inverse existe et il est publié : sur le corpus de droit locatif d'[`assistant-gestion-locative`](https://github.com/philippe-montaclair/assistant-gestion-locative) — textes de loi denses, 22 questions — le même reranking fait passer le bon passage en tête de 10/22 à 17/22. Le levier décisif là-bas ne sert à rien ici. C'est la raison d'être du profil `minimal` : sans plancher de comparaison, on aurait embarqué le reranker sur la foi de la mesure précédente.
 
 **Et c'est un résultat sur ce corpus, pas une conclusion sur la méthode.** Sept
 documents font 14 chunks : `k: 4` en retient 29 %, il n'y a presque rien à
@@ -404,13 +443,24 @@ Deux pièges qu'il neutralise :
 
 ## Tests
 
+**Les quatre que la CI exécute** — logique pure, aucun modèle, aucun index, `pyyaml` pour seule dépendance. Ils tournent en quelques secondes sur n'importe quelle machine :
+
 ```bash
-python tests/test_briques.py            # 179 tests de logique pure, ~1 s, aucun modèle
+python tests/test_briques.py       # 179 — montage des briques et des trois profils
+python tests/test_regleur.py       #  39 — mémoire de réglage, comparabilité des mesures
+python tests/test_jeu.py           #  25 — lecteur des jeux d'évaluation
+python tests/test_comparaison.py   #  28 — règle du bruit du comparateur de profils
+                                   # ─── 271 assertions au total
+```
+
+**Celui que la CI n'exécute pas**, et pourquoi : `test_non_regression.py` charge Chroma, Marsilia et CamemBERT sur un index déjà construit. Il ne peut pas tourner sur un exécuteur GitHub sans modèle ni collection — l'y mettre le ferait échouer en permanence, ou obligerait à installer des gigaoctets de dépendances pour un contrôle qui n'en a pas besoin. Il se lance à la main, sur la machine qui porte l'index :
+
+```bash
 python tests/test_non_regression.py --lister
 python tests/test_non_regression.py --collection <nom_de_la_collection> --sans-generation
 ```
 
-Le second doit tourner sur le Mac : il charge Marsilia, CamemBERT et Chroma.
+Ce que le badge vert prouve donc : les briques tiennent leur contrat et les profils se montent. Ce qu'il ne prouve pas : qu'une installation complète démarre, ni qu'un index existant répond toujours pareil. Ces deux-là s'éprouvent à la main.
 
 ## Structure
 
