@@ -48,3 +48,39 @@ jobs:
       # où le profil qu'on préfère passe devant de trois millisecondes.
       - name: comparateur de profils
         run: python3 tests/test_comparaison.py
+
+  # ── Second job : l'épreuve que le job « briques » ne fait pas ────────
+  # Les contrôles ci-dessus prouvent que les briques tiennent leur contrat.
+  # Ils ne prouvent PAS qu'un inconnu qui clone ce dépôt arrive à
+  # l'installer : ils n'installent que pyyaml. Ce job-ci fait exactement
+  # ce que ferait ce visiteur, sur une machine vide — installer
+  # requirements.txt, puis importer chaque module. Aucun modèle n'est
+  # téléchargé, aucune génération n'est lancée : on vérifie que le paquet
+  # se monte, pas qu'il répond.
+  #
+  # Le jour où il passe au rouge sans qu'on ait touché au code, c'est
+  # qu'une dépendance tierce a bougé sous nos pieds. C'est le genre de
+  # chose qu'il vaut mieux apprendre ici que par un client.
+  installation:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+
+      - name: installation telle qu'elle est documentee dans le README
+        run: pip install -r requirements.txt
+
+      - name: chaque module s'importe sur une machine nue
+        run: |
+          python -c "import contrat, catalogue, memoire, observabilite, ingestion, createur"
+          python -c "import briques.recherche_vectorielle, briques.recherche_bm25, briques.fusion"
+          python -c "import briques.reranker, briques.routeur, briques.validateur_chunks"
+          python -c "import briques.agent_llm, briques.prompt_engineering"
+          python -c "import briques.constructeur_contexte, briques.post_processing"
+          python -c "import backends.ollama, mesures.jeu, mesures.comparer_profils"
+
+      - name: les trois profils se lisent et se montent
+        run: python tests/test_briques.py

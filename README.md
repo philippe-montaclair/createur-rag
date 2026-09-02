@@ -11,6 +11,16 @@ Le même moteur sert un tuteur de formation, un assistant juridique ou une base
 documentaire d'artisan. **Seul le profil change** : la chaîne est une liste ordonnée
 de briques dans un fichier YAML, pas du code.
 
+**En une minute**
+
+| | |
+|---|---|
+| **Ce que c'est** | Un moteur de RAG local générique. La chaîne est une liste ordonnée de briques dans un fichier YAML : on change de profil, pas de code. |
+| **Pour qui** | Monter un RAG sur les documents d'un métier sans réécrire la chaîne à chaque fois — et savoir ce que chaque brique apporte vraiment. |
+| **État** | **Actif.** C'est le dépôt courant ; les deux RAG de domaine publiés avant lui en sont les prototypes. |
+| **Ce qui est mesuré** | Trois profils × 25 questions sur le corpus d'exemple livré : RAGAS en local, latences, refus hors-corpus. Daté et rejouable (`COMPARAISON.md`). 271 assertions en intégration continue. |
+| **Ce que ça ne fait pas** | Rien à distance : Ollama et les modèles tournent sur votre machine. Pas d'orchestration autonome — la phase 3 est conçue, pas implémentée. |
+
 ## Pour qui
 
 - **Monter un RAG pour un client sans réécrire la même chaîne à chaque domaine** :
