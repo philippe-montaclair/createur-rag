@@ -103,12 +103,12 @@ verifier("l'avertissement sur l'absence de répétition est présent",
 # « est meilleur » ne doit apparaître QUE dans la mise en garde, jamais dans une
 # affirmation du rapport. Le test le vérifie ligne à ligne : une citation en bloc
 # commence par '>', une conclusion non.
-affirmations = [l for l in texte.splitlines()
-                if "meilleur" in l and not l.lstrip().startswith(">")]
+affirmations = [ligne for ligne in texte.splitlines()
+                if "meilleur" in ligne and not ligne.lstrip().startswith(">")]
 verifier("aucun profil n'est déclaré meilleur hors mise en garde",
          not affirmations, "; ".join(affirmations)[:80] or "aucune affirmation")
 verifier("et la mise en garde, elle, est bien là",
-         any("meilleur" in l and l.lstrip().startswith(">") for l in texte.splitlines()))
+         any("meilleur" in ligne and ligne.lstrip().startswith(">") for ligne in texte.splitlines()))
 verifier("la limite du corpus est rappelée", "14 chunks" in texte)
 
 c = faux_run("minimal", autour(900),  {"faithfulness": 0.70, "answer_relevancy": 0.55})

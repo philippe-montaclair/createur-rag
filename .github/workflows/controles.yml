@@ -84,3 +84,28 @@ jobs:
 
       - name: les trois profils se lisent et se montent
         run: python tests/test_briques.py
+
+  # ── Troisième job : le linter que le projet declare ──────────────────
+  # Un outil de style configure et jamais lance ne garantit rien. Celui-ci
+  # tourne, et il est vert : les 8 signalements de ruff du 02/09/2026
+  # (imports inutilises, f-strings sans variable, variables nommees `l`)
+  # ont ete corriges avant de l'activer, pour que le premier passage dise
+  # quelque chose de vrai plutot que d'installer un rouge permanent.
+  #
+  # ruff seul, jamais black : sur ce code il defait un alignement de
+  # commentaires en colonnes qui est delibere, sur 32 fichiers. Il a ete
+  # retire de rag-evaluation-agent le 02/09/2026 pour la meme raison, et
+  # il n'a jamais ete declare ici. Le choix est assume.
+  style:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: ruff, version figee
+        run: pip install "ruff==0.15.*"
+
+      - name: aucun signalement
+        run: ruff check --output-format concise .

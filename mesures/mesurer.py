@@ -235,7 +235,7 @@ def ecrire_rapport(chemin: Path, profil: str, questions, notables_res, hors_res,
             ]
         non_valides = [r["id"] for r in hors_res if r["id"] not in refus_valides]
         if non_valides:
-            lignes += [f"Questions où le refus n'a **pas** été jugé valable : "
+            lignes += ["Questions où le refus n'a **pas** été jugé valable : "
                        + ", ".join(f"`{i}`" for i in non_valides) + ".", ""]
     else:
         lignes += [
@@ -292,7 +292,7 @@ def ecrire_rapport(chemin: Path, profil: str, questions, notables_res, hors_res,
                "chunks, où la récupération devient le facteur limitant.",
                ""]
 
-    chemin.write_text("\n".join(l for l in lignes if l is not None), encoding="utf-8")
+    chemin.write_text("\n".join(ligne for ligne in lignes if ligne is not None), encoding="utf-8")
 
 
 def main() -> int:
@@ -387,7 +387,6 @@ def main() -> int:
         except ImportError:
             manquants.append(paquet)
     if manquants:
-        import shutil
         print(f"\n⛔ Modules absents de cet environnement : {', '.join(manquants)}")
         print(f"   python utilisé : {sys.executable}")
         if "VIRTUAL_ENV" in os.environ:

@@ -124,7 +124,7 @@ def nettoyer(brut: str) -> str:
     première ligne qui ressemble à une question plutôt que d'échouer.
     """
     txt = re.sub(r"<think>.*?</think>", "", brut, flags=re.S | re.I).strip()
-    lignes = [l.strip() for l in txt.splitlines() if l.strip()]
+    lignes = [brute.strip() for brute in txt.splitlines() if brute.strip()]
     for ligne in lignes:
         ligne = re.sub(r"^\s*(?:\d+[\.\)]|[-*•])\s*", "", ligne)
         # Retire une amorce du type "Voici la question :" ou "Question :".

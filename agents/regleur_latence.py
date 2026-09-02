@@ -402,7 +402,7 @@ def rapporter(r: dict, parametre: str, profil: str) -> str:
             "  CE QUE JE PROPOSE — je n'ai modifié aucun fichier :",
             f"    dans profils/{profil}.yaml, remplacer",
             f"        {parametre.split('.')[-1]}: {r['avant']!r}",
-            f"    par",
+            "    par",
             f"        {parametre.split('.')[-1]}: {r['apres']!r}",
             "",
             "  À vérifier avant d'appliquer : ce verdict porte sur la VITESSE seule.",
@@ -480,7 +480,7 @@ def main() -> int:
             print(f"\n{_message(e)}")
             return 1
         total = 2 * (args.n + 1)
-        print(f"Plan d'expérience")
+        print("Plan d'expérience")
         print(f"  profil        {args.profil}   collection {args.collection}")
         print(f"  paramètre     {args.parametre} : {avant!r} → {valeur!r}")
         print(f"  question      {args.question!r}")
